@@ -18,7 +18,7 @@ ul {list-style: none;}
 .wrapper {
 	width: 1024px;
 	margin: 0 auto;
-	border: 1px dashed red;
+	border: 1px dashed lawngreen;
 	position: relative;
 }
 .clear:after {
@@ -77,36 +77,36 @@ header {
 	width: 100%;
 	height: 100px;
 }
-header .logos {
+#logos {
 	position: absolute;
-	left: 10px;
 	top: 50px;
+	left: 10px;
 	margin-top: -20px;
-	/* border:1px dashed black; */
+	border: 1px dashed red;
 }
-header .logos > * {
+#logos > * {
 	float: left;
 }
-header .logo {
+#logo {
 	margin: auto 0;
-	/* border: 1px dashed red; */
 }
-header #headerLogoBtn {
+/* header #headerLogoBtn */
+#headerLogoBtn {
 	width: 30px;
 	height: 30px;
-	/* border: 1px dashed red; */
 	text-indent: 31px;
 	overflow: hidden;
 	margin: 18px 0 0 10px;
 	background: url("../images/arrows.jpg") no-repeat;
 	cursor: pointer;
 }
-header #headerLogoBtn.up {
+#headerLogoBtn.up {
 	background-position: 0% 0%;
 }
-header #headerLogoBtn.down {
+#headerLogoBtn.down {
 	background-position: 33% 0%;
 }
+/* header #logoBtnMenu */
 #logoBtnMenu {
 	position: absolute;
 	top: 50px;
@@ -127,7 +127,6 @@ header #headerLogoBtn.down {
 	color: #333;
 	height: 100%;
 	line-height: 30px;
-
 }
 #logoBtnMenu > li > a > * {
 	float: left;
@@ -137,4 +136,28 @@ header #headerLogoBtn.down {
 	width: 30px;
 	height: 30px;
 	margin-right: 10px;
+}
+/* header #searchArea */
+#searchArea {
+	width: 300px;
+	position: absolute;
+	top: 30px;
+	left: 50%;
+	margin-left: calc(-300px / 2);
+	border: 1px dashed red;
+}
+#searchArea > * {
+	float: left;
+	/* border: 1px dashed black; */
+}
+.btn_search {
+	display: inline-block;
+	height: 30px;
+}
+#searchBar {
+	display: inline-block;
+	width: 230px;
+	height: 30px;
+	border: 2px solid #aaa;
+	border-radius: 5px;
 }
