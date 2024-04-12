@@ -1,70 +1,200 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BOOK_OFF</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/jquery-2.1.1.js"></script>
-    <script src="js/common.js"></script>
-		<link rel="icon" href="logo_bookoff.ico">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BOOK_OFF</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery-2.1.1.js"></script>
+	<script src="js/common.js"></script>
+	<link rel="icon" href="logo_bookoff.ico">
 </head>
 <body>
+	<div id="container">
 		<!-- header -->
-    <header id="header">
+		<header id="header">
 			<div class="wrapper">
-				<!-- logos -->
-				<div id="logos" class="clear">
-					<h1 id="logo"><img src="images/logo_bookOff.png" alt="logo" width="163px" height="39px"></h1>
-					<a type="button" id="headerLogoBtn" class="up">btn</a>
-					<ul class="" id="logoBtnMenu">
-						<li><a href="#" class="clear"><img src="images/question_logo.jpg" alt="logo"><span>QnA</span></a></li>
-						<li><a href="#" class="clear"><img src="images/bookoff_logo.gif" alt="logo"><span>Book Off Site</span></a></li>
-						<li><a href="#" class="clear"><img src="images/location_logo.jpg" alt="logo"><span>Search for shop</span></a></li>
-						<li><a href="#" class="clear"><img src="images/parcel_logo.jpg" alt="logo"><span>Buy Out</span>></a></li>
+				<div class="grp">
+					<!-- logo -->
+					<h1 class="logo"><a href="index.html"><img src="" alt="logo"></a></h1>
+
+					<!-- searchArea -->
+					<section class="searchArea">
+						<h1 class="hidden">search</h1>
+						<form action="search.php" method="post" id="searchForm" name="searchForm">
+							<label for="keyword">
+								<img src="" alt="magnifier" id="magnifier" class="btn">
+								<input type="text" id="keyword" name="keyword">
+								<img src="" alt="xbar" id="xbar" class="btn">
+							</label>
+						</form>
+					</section>
+	
+					<!-- infoLink -->
+					<ul class="infoLink">
+						<li><a href="#">info01</a></li>
+						<li><a href="#">info02</a></li>
+						<li><a href="#">info03</a></li>
+						<li><a href="#">info04</a></li>
+					</ul>					
+				</div>
+				<!-- grp end -->
+
+				<!-- gnb -->
+				<nav id="gnb">
+					<h1 class="hidden">main Menu</h1>
+					<ul class="mainMenu">
+						<li>
+							<a href="#">Nav01</a>
+							<ul class="subMenu">
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Nav02</a>
+							<ul class="subMenu">
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Nav03</a>
+							<ul class="subMenu">
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Nav04</a>
+							<ul class="subMenu">
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+								<li><a href="#"></a></li>
+							</ul>
+						</li>
 					</ul>
-				</div>
-
-				<!-- searchArea -->
-				<div id="searchArea">
-					<a href="#" id="magnifier" class="btn_search"><img src="images/magnifier.jpg" alt="magnifier"></a>
-					<input id="searchBar" type="text" placeholder="input keyword">
-					<a href="#" id="xbar" class="btn_search hidden"><img src="images/xbar.png" alt="x-bar"></a>
-				</div>
-
-                <!-- utilArea -->
-                <div id="utilArea">
-                    <a href="#"><img src="" alt="button"></a>
-                    <a href="#"><img src="" alt="button"></a>
-                    <a href="#"><img src="" alt="button"></a>
-                    <a href="#"><img src="" alt="button"></a>
-                </div>
-
-                <!-- navigation -->
-                <ul id="gnb">
-                    <li><a href="#">Book</a></li>
-                    <li><a href="#">Comic</a></li>
-                    <li><a href="#">CD</a></li>
-                    <li><a href="#">DVD•Blueray</a></li>
-                    <li><a href="#">Game</a></li>
-                    <li><a href="#">Set</a></li>
-                </ul>
-
+				</nav>
 			</div>
 		</header>
 
-		<!-- contents -->
-		<section id="contents">
+
+		<!-- alerts -->
+		<section id="alerts">
+			<div class="wrapper">
+				<p class="alt-letter">No charge on delievery from $12</p>
+			</div>
+		</section>
+
+		
+		<!-- banners -->
+		<section id="banners">
+			<div class="wrapper">
+				<div id="campaign"></div>
+				<article class="banner"></article>
+				<article class="banner"></article>
+				<article class="banner"></article>
+				<article class="banner"></article>
+				<div id="promotion"></div>
+			</div>
+		</section>
+
+
+		<!-- midNav -->
+		<section id="midNav">
+			<div class="wrapper">
+				<div class="card"></div>
+				<div class="card"></div>
+				<div class="card"></div>
+				<div class="card"></div>
+				<div class="card"></div>
+				<div class="card"></div>
+			</div>
+		</section>
+
+
+		<!-- news -->
+		<section id="news">
 			<div class="wrapper">
 
 			</div>
 		</section>
 
+
+		<!-- coupons -->
+		<section id="coupons">
+			<div class="wrapper">
+				
+			</div>
+
+		</section>
+
+
+		<!-- special -->
+		<section id="special">
+			<div class="wrapper">
+				
+			</div>
+
+		</section>
+
+
+		<!-- recommen -->
+		<section id="recommen">
+			<div class="wrapper">
+				
+			</div>
+
+		</section>
+
+
+		<!-- weeklyRank -->
+		<section id="weeklyRank">
+			<div class="wrapper">
+				
+			</div>
+		</section>
+
+
+
+		<!-- recentChecked -->
+		<section id="recentChecked">
+			<div class="wrapper">
+				
+			</div>
+		</section>
+
+
+		<!-- merits -->
+		<section id="merits">
+			<div class="wrapper">
+				
+			</div>
+		</section>
+
+
+		<!-- notices -->
+		<section id="notices">
+			<div class="wrapper">
+				
+			</div>
+		</section>
+
+
 		<!-- footer -->
 		<footer id="footer">
 			<div class="wrapper">
-
+				
 			</div>
 		</footer>
+	</div>
 </body>
 </html>
