@@ -1,9 +1,9 @@
 window.onload = function() {
-  const headerLogoBtn = document.getElementById("headerLogoBtn");
-  const logoBtnMenu = document.getElementById("logoBtnMenu");
-  let sts_headerLogoBtn;
+  // const headerLogoBtn = document.getElementById("headerLogoBtn");
+  // const logoBtnMenu = document.getElementById("logoBtnMenu");
+  // let sts_headerLogoBtn;
 
-  headerLogoBtn.addEventListener("click", function() {
+  // headerLogoBtn.addEventListener("click", function() {
     // sts_headerLogoBtn = headerLogoBtn.className;
     // if(sts_headerLogoBtn == "up") {
     //   headerLogoBtn.classList.remove("up");
@@ -14,6 +14,6 @@ window.onload = function() {
     //   headerLogoBtn.classList.add("up");
     //   logoBtnMenu.style.display = "none";
     // }
-  });
+  // });
   
 }

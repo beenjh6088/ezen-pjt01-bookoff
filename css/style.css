@@ -11,6 +11,9 @@ a:link, a:visited, a:hover, a:focus {
   text-decoration: none;
 }
 ul {list-style: none;}
+img[alt] {
+	font-size: 16px;
+}
 .wrapper {
 	width: 1024px;
 	height: 100%;
@@ -20,6 +23,7 @@ ul {list-style: none;}
 .grp {
 	width: 100%;
 	display: block;
+	position: relative;
 }
 .clear:after {
 	content: "";
@@ -30,6 +34,33 @@ ul {list-style: none;}
 	position: absolute;
 	left: -9999em;
 }
+.icon {
+	border-radius: 50%;
+	padding: 8px;
+}
+.card {
+	border-radius: 6px;
+	box-shadow: 2px 1px 4px rgba(0,0,0,0.2);
+	transition: all 0.3s;
+}
+.btn {
+	border-radius: 50%;
+	transition: all 0.3s;
+	padding: 3px 20px;
+}
+.btn:hover, .card:hover {
+	opacity: 0.6;
+}
+.col-cnt01 { width: 100%; }
+.col-cnt02 { width: 50%; }
+.col-cnt03 { width: 33.33%; }
+.col-cnt04 { width: 25%; }
+.col-cnt06 { width: 16.66%; }
+.col-cnt12 { width: 8.33%; }
+.brdr {border: 1px dashed red;}
+.brdg {border: 1px dashed green;}
+.brdb {border: 1px dashed blue;}
+
 
 /* web font */
 @font-face {
@@ -77,6 +108,11 @@ ul {list-style: none;}
 /* header */
 #header {
 	height: 90px;
+}
+#header .logo {
+	width: 164px;
+	height: 40px;
+	
 }
 
 
