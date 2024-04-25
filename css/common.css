@@ -449,11 +449,79 @@ img[alt] {
 	background-color: #003894;
 }
 
+
 /* weeklyRank */
 #weeklyRank {
-	height: 365px;
+	height: 390px;
+}
+#weeklyRank .title span {
+	/* letter-spacing: -0.0375em; */
+	letter-spacing: 0.0375em;
+}
+#weeklyRank .tabs {
+	border: 1px dashed red;
+	position: relative;
+}
+#weeklyRank .tabs > li {
+	width: 110px;
+	height: 30px;
+	line-height: 30px;
+	float: left;
+	text-align: center;
+	/* position: relative; */
+	border: 1px dashed blue;
+}
+#weeklyRank .tabs > li > a {
+	display: block;
 }
 
+#weeklyRank .slider {
+	width: 675px;
+	height: 180px;
+	/* margin: 20px auto 20px; */
+	/* margin: 0 auto; */
+	position: absolute;
+	top: 30px;
+	left: 50%;
+	margin-left: calc(-675px / 2);
+	overflow: hidden;
+	border: 1px dashed green;
+}
+#weeklyRank .slider .imagesets {
+	width: calc(675px * 3);
+	/* height: 180px; */
+	/* border: 1px dashed green; */
+}
+#weeklyRank .slider .imagesets .image {
+	width: 675px;
+	margin: 0 auto;
+	height: 180px;
+	float: left;
+	/* text-align: center; */
+	/* border: 1px dashed blue; */
+}
+#weeklyRank .slider .imagesets .image > li {
+	width: 105px;
+	height: 180px;
+	margin: 0 12.5px;
+	float: left;
+}
+#weeklyRank .slider .imagesets .image > li:first-child {
+	margin-left: 25px;
+}
+#weeklyRank .slider .imagesets .image > li:last-child {
+	margin-right: 25px;
+}
+#weeklyRank .slider .imagesets .image > li .pic {
+	width: 105px;
+	height: 124px;
+	background-image: linear-gradient(to bottom, #FFF000 0%, #FFF49F 50%, #FFDB1E 100%);
+}
+#weeklyRank .slider .imagesets .image > li .info {
+	padding-top: 9px;
+	font-size: 12px;
+	color: #9a9a9a;
+}
 
 /* recentlyChecked */
 #recentlyChecked {
