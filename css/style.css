@@ -1,4 +1,4 @@
-@charset "utf-8";
+/* @charset "utf-8";
 
 /* default */
 * {
@@ -253,7 +253,55 @@ img[alt] {
 
 /* banners */
 #banners {
-	height: 252px;
+	height: 260px;
+}
+#banners .wrapper {
+	height: 260px;
+	/* border: 1px dashed red; */
+}
+#banners .wrapper .banner {
+	width: 174px;
+	height: 200px;
+	border: 1px solid #eee;
+	float: left;
+	margin-top: 30px;
+	margin-right: 9.5px;
+	border-radius: 10px;
+	box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+	overflow: hidden;
+}
+#banners .wrapper .banner:hover {
+	opacity: 0.5;
+}
+#banners .wrapper .banner:first-child {
+	margin-left: 9.5px;
+}
+#banners .wrapper .banner .pic {
+	width: 174px;
+	height: 134px;
+	background: url(../images/bookOff.jpg) no-repeat center top;
+}
+#banners .wrapper .banner .title {
+	position: relative;
+	padding: 15px 18px;
+}
+#banners .wrapper .banner .title:after {
+	content: '';
+	padding: 1px 5px;
+	background-color: #e6001e;
+	text-align: center;
+	font-size: 10px;
+	font-weight: bold;
+	color: #fff;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#banners .wrapper .banner .title.campaign:after {
+	content: 'campaign';
+}
+#banners .wrapper .banner .title.special:after {
+	content: 'special';
 }
 
 /* midNav */
@@ -315,4 +363,4 @@ img[alt] {
 #footer {
 	height: 175px;
 	background-color: #003894;
-}
+} */
