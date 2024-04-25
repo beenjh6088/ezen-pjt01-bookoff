@@ -19,7 +19,7 @@ img[alt] {
 	height: 100%;
 	margin: 0 auto;
 	position: relative;
-	/* border: 1px dashed lawngreen; */
+	/* border: 0.1px dashed lawngreen; */
 }
 .grp {
 	width: 100%;
@@ -98,11 +98,12 @@ img[alt] {
 			 url('font/webcafeIcon.svg#webcaferegular') format('svg');
 }
 
+
 /* container */
 #container {
 	font-size: 16px;
 	font-family: "Nanum";
-	background-color: #fafafa;
+	background-color: #fff;
 }
 
 
@@ -112,7 +113,7 @@ img[alt] {
 }
 #header .grp {
 	height: 50px;
-	clear: both;
+	/* clear: both; */
 }
 #header .logo {
 	width: 150px;
@@ -233,9 +234,11 @@ img[alt] {
 	width: 100%;
 	height: 90px;
 	background: #fff;
+	transition: all 0.3s;
 	z-index: 1;
 	/* border: 1px dashed blue; */
 }
+
 
 /* notices */
 #notices {
@@ -251,6 +254,7 @@ img[alt] {
 	/* border: 1px dashed blue; */
 }
 
+
 /* banners */
 #banners {
 	height: 260px;
@@ -259,7 +263,7 @@ img[alt] {
 	height: 260px;
 	/* border: 1px dashed red; */
 }
-#banners .wrapper .banner {
+#banners .banner {
 	width: 174px;
 	height: 200px;
 	border: 1px solid #eee;
@@ -270,22 +274,22 @@ img[alt] {
 	box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
 	overflow: hidden;
 }
-#banners .wrapper .banner:hover {
+#banners .banner:hover {
 	opacity: 0.5;
 }
-#banners .wrapper .banner:first-child {
+#banners .banner:first-child {
 	margin-left: 9.5px;
 }
-#banners .wrapper .banner .pic {
+#banners .banner .pic {
 	width: 174px;
 	height: 134px;
 	background: url(../images/bookOff.jpg) no-repeat center top;
 }
-#banners .wrapper .banner .title {
+#banners .banner .title {
 	position: relative;
 	padding: 15px 18px;
 }
-#banners .wrapper .banner .title:after {
+#banners .banner .title:after {
 	content: '';
 	padding: 1px 5px;
 	background-color: #e6001e;
@@ -297,18 +301,20 @@ img[alt] {
 	top: 0;
 	left: 0;
 }
-#banners .wrapper .banner .title.campaign:after {
+#banners .banner .title.campaign:after {
 	content: 'campaign';
 }
-#banners .wrapper .banner .title.special:after {
+#banners .banner .title.special:after {
 	content: 'special';
 }
+
 
 /* midNav */
 #midNav {
 	background-color: #2454a3;
 	height: 125px;
 }
+
 
 /* news */
 #news {
@@ -321,17 +327,127 @@ img[alt] {
 	height: 154px;
 }
 
+
 /* special */
 #special {
 	height: 260px;
 }
-
+#special .title span {
+	letter-spacing: 0.0375em;
+}
 
 /* recommen */
 #recommen {
 	height: 315px;
+	/* border: 1px dashed red; */
 }
-
+#recommen .title span {
+	/* letter-spacing: -0.0375em; */
+	letter-spacing: 0.0375em;
+}
+#recommen .slider {
+	width: 675px;
+	height: 180px;
+	margin: 20px auto 20px;
+	position: relative;
+	overflow: hidden;
+	/* border: 1px dashed green; */
+}
+#recommen .slider .imagesets {
+	width: calc(675px * 3);
+	/* height: 180px; */
+	/* border: 1px dashed green; */
+}
+#recommen .slider .imagesets .image {
+	width: 675px;
+	margin: 0 auto;
+	height: 180px;
+	float: left;
+	/* text-align: center; */
+	/* border: 1px dashed blue; */
+}
+#recommen .slider .imagesets .image > li {
+	width: 105px;
+	height: 180px;
+	margin: 0 12.5px;
+	float: left;
+}
+#recommen .slider .imagesets .image > li:first-child {
+	margin-left: 25px;
+}
+#recommen .slider .imagesets .image > li:last-child {
+	margin-right: 25px;
+}
+#recommen .slider .imagesets .image > li .pic {
+	width: 105px;
+	height: 124px;
+	background-image: linear-gradient(to right, #2454a3 0%, #547FC7 100%);
+}
+#recommen .slider .imagesets .image > li .info {
+	padding-top: 9px;
+	font-size: 12px;
+	color: #9a9a9a;
+}
+.arrows div {
+	width: 30px;
+	height: 30px;
+	line-height: 28px;
+	text-align: center;
+	font-size: 28px;
+	color: #cecece;
+	font-weight: 900;
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	margin-top: -15px;
+	/* border: 1px dashed red; */
+}
+.arrows div:hover {
+	color: #003894;
+}
+.arrows div.prev {
+	left: 0;
+}
+.arrows div.next {
+	right: 0;
+}
+.locations {
+	/* border: 1px dashed red; */
+	position: absolute;
+	left: 50%;
+	/* 
+		-7px * 2 :  start point + end point
+		-11px * n : -11px is a value whose size cotains content, padding, margin.
+								n is mutable with quantity of middle of circles
+	*/
+	margin-left: calc(((-7px * 2) + (-11px * 1)) / 2);
+	/* bottom: calc(-11px + -20px) */
+	/* bottom: 0; */
+}
+.locations li {
+	float: left;
+	padding: 2px;
+	cursor: pointer;
+	margin: 0 2px;
+	/* border: 1px dashed red; */
+}
+.locations li:first-child {
+	margin: 0;
+}
+.locations li:last-child {
+	margin: 0;
+}
+.locations li span {
+	/* display: inline-block; */
+	display: block;
+	width: 7px;
+	height: 7px;
+	background-color: #cccccc;
+	border-radius: 4px;
+}
+.locations li.active span {
+	background-color: #003894;
+}
 
 /* weeklyRank */
 #weeklyRank {
@@ -351,7 +467,6 @@ img[alt] {
 }
 
 
-
 /* guides */
 #guides {
 	height: 52px;
@@ -363,4 +478,4 @@ img[alt] {
 #footer {
 	height: 175px;
 	background-color: #003894;
-} */
+}
