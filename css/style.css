@@ -15,10 +15,11 @@ img[alt] {
 	font-size: 16px;
 }
 .wrapper {
-	width: 1024px;
+	width: 746px;
 	height: 100%;
 	margin: 0 auto;
-	border: 1px dashed lawngreen;
+	position: relative;
+	/* border: 1px dashed lawngreen; */
 }
 .grp {
 	width: 100%;
@@ -109,17 +110,145 @@ img[alt] {
 #header {
 	height: 90px;
 }
-#header .logo {
-	width: 164px;
-	height: 40px;
-	
+#header .grp {
+	height: 50px;
+	clear: both;
 }
-
+#header .logo {
+	width: 150px;
+	height: 50px;
+	margin-right: 27px;
+	border: 1px dashed rgba(0,0,0,0.3);
+	position: relative;
+	float: left;
+}
+#header .logo:after {
+	content:"Logo";
+	background-color: #fff;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+	line-height: 50px;
+	font-size: 16px;
+	font-weight: normal;
+}
+#header .searchArea {
+	width: 327px;
+	height: 50px;
+	margin-right: 48px;
+	border: 1px dashed rgba(0,0,0,0.3);
+	position: relative;
+	float: left;
+}
+#header .searchArea:after {
+	content:"Searchbar";
+	background-color: #fff;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+	line-height: 50px;
+	font-size: 16px;
+	font-weight: normal;
+}
+#header .icons {
+	width: 194px;
+	height: 50px;
+	border: 1px dashed rgba(0,0,0,0.3);
+	position: relative;
+	float: right;
+}
+#header .icons:after {
+	content:"Icons";
+	background-color: #fff;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+	line-height: 50px;
+	font-size: 16px;
+	font-weight: normal;
+}
+#header .icons li {
+	float: left;
+}
+#header #gnb {
+	width: 100%;
+	height: 40px;
+	border: 1px dashed rgba(0,0,0,0.3);
+}
+#header #gnb .mainMenu {
+	width: 98%;
+	height: 40px;
+	margin: 0 auto;
+	/* border: 1px dashed red; */
+}
+#header #gnb .mainMenu > li {
+	width: 120px;
+	height: 40px;
+	float: left;
+	text-align : center;
+	line-height: 40px;
+	font-weight: bold;
+	position: relative;
+}
+#header #gnb .mainMenu > li > a {
+	display: block;
+}
+#header #gnb .mainMenu > li > a:hover {
+	background-color: #003894;
+	color: #fbfbfb;
+}
+#header #gnb .mainMenu .submenu {
+	position: absolute;
+	z-index: 10;
+	display: none;
+	/* border: 1px solid red; */
+}
+#header #gnb .mainMenu.active .submenu {
+	display: block;
+}
+#header #gnb .mainMenu .submenu li {
+	width: 120px;
+	height: 30px;
+	line-height: 30px;
+	/* border: 1px solid blue; */
+}
+#header #gnb .mainMenu .submenu li > a {
+	display: block;
+}
+#header #gnb .mainMenu .submenu li > a:hover {
+	background-color: #003894;
+	color: #fbfbfb;
+}
+#header .top {
+	position: absolute;
+	width: 100%;
+	height: 90px;
+	background: #fff;
+	z-index: 1;
+	/* border: 1px dashed blue; */
+}
 
 /* notices */
 #notices {
 	background-color: #ebebeb;
-	height: 30px;
+	/* border: 1px dashed red; */
+}
+#notices .alt-letter {
+	height: 25px;
+	line-height:25px;
+	text-align: center;
+	color: #e6001e;
+	font-weight: bold;
+	/* border: 1px dashed blue; */
 }
 
 /* banners */
