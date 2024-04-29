@@ -1,6 +1,23 @@
 @charset "utf-8";
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+a:link, a:visited, a:hover, a:focus {
+  color: #000;
+  text-decoration: none;
+}
+ul {list-style: none;}
+img[alt] {
+	font-size: 16px;
+}
 
-/* notices */
+/* 
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+notices
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
 #notices {
 	background-color: #ebebeb;
 	/* border: 1px dashed red; */
@@ -15,7 +32,11 @@
 }
 
 
-/* banners */
+/* 
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+banners
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
 #banners {
 	height: 260px;
 }
@@ -69,34 +90,180 @@
 }
 
 
-/* midNav */
+/* 
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+midNav
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
 #midNav {
 	background-color: #2454a3;
 	height: 125px;
 }
+#midNav .cards {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  /* border: 1px dashed red; */
+}
+#midNav .cards .card {
+  width: 112px;
+  height: 95px;
+  border-radius: 5px;
+  background-color: #fff;
+  position: relative;
+  /* border: 1px dashed green; */
+}
+#midNav .cards .card:hover {
+  opacity: 0.6;
+}
+#midNav .cards .card img {
+  width: 45px;
+  height: 38px;
+  border: 2px solid #003894;
+  border-radius: 5px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+#midNav .cards .card .info {
+  width: 50px;
+  height: 29px;
+  font-size: 12px;
+  padding: 5px 0 0 0;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
 
 
-/* news */
+/* 
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+news 
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
 #news {
-	height: 204px;
+	height: 230px;
+}
+#news .container {
+  width: 100%;
+  height: 100%;
+  /* border: 1px dashed red; */
+}
+#news .container .theme {
+  width: 50%;
+  height: 100%;
+  float: left;
+  /* border: 1px dashed blue; */
+  padding: 30px 8px 50px 0;
+}
+#news .container .theme:before {
+  content: "";
+  float: left;
+  width: 4px;
+  height: 24px;
+  background-color: #003894;
+  border-radius: 2px;
+  margin-right: 7px;
+}
+#news .container .theme .title {
+  /* border: 1px dashed red; */
+  display: inline-block;
+  margin-bottom: 22px;
+}
+#news .container .theme li {
+  border-top : 1px solid #ebebeb;
+  border-bottom : 1px solid #ebebeb;
+  overflow: hidden;
+  /* border: 1px dashed blue; */
+}
+#news .container .theme li:hover {
+  opacity: 0.6;
+}
+#news .container .latest li {
+  padding: 21.5px 0;
+}
+#news .container .hits li {
+  padding: 11px 0;
+}
+#news .container .theme li img {
+  /* display: block; */
+  height: 24px;
+  float: left;
+  margin-right: 8px;
+  /* border: 1px dashed blue; */
+}
+#news .container .theme li .subtitle {
+  /* display: block; */
+  width: 88%;
+  height: 24px;
+  line-height: 24px;
+  float: left;
+  /* border: 1px dashed blue; */
+}
+#news .container .theme li .arrow:before {
+  content:">";
+  /* display: block; */
+  box-sizing: border-box;
+  height: 24px;
+  line-height: 24px;
+  font-size: 16px;
+  float: right;
+  /* border: 1px dashed blue; */
 }
 
-
-/* events */
+/* 
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+events 
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
 #events {
-	height: 154px;
+	height: 150px;
+}
+#events .container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 13px;
+  /* border: 1px dashed red; */
+}
+#events .container .event {
+  max-width: 100%;
+  width: 230px;
+  height: 40px;
+  background: linear-gradient(to right, #666 0% , #ebebeb 100%);
 }
 
 
-/* special */
+/* 
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+special 
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
 #special {
-	height: 260px;
+	height: 255px;
 }
 #special .title span {
 	letter-spacing: 0.0375em;
 }
 
-/* recommen */
+
+/* 
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+recommen
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
 #recommen {
 	height: 315px;
 	/* border: 1px dashed red; */
@@ -173,9 +340,9 @@
 	width: 32px;
 	height: 32px;
 	border-radius: 100%;
-	color: #ccc;
+	color: #003894;
 	background-color: white;
-	border: 1px solid #ccc;
+	border: 1px solid #003894;
 	cursor: pointer;
 	/* border: 1px dashed red; */
 }
@@ -203,19 +370,31 @@
 }
 
 
-/* weeklyRank */
+/* 
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+weeklyRank 
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
 #weeklyRank {
-	height: 365px;
+	height: 385px;
 }
 
 
-/* recentlyChecked */
+/* 
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+recentlyChecked 
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
 #recentlyChecked {
-	height: 310px;
+	height: 318px;
 }
 
 
-/* merits */
+/* 
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+merits 
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
 #merits {
 	height: 254px;
 }
