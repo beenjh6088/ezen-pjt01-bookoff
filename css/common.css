@@ -341,113 +341,50 @@ img[alt] {
 	height: 315px;
 	/* border: 1px dashed red; */
 }
-#recommen .title span {
-	/* letter-spacing: -0.0375em; */
-	letter-spacing: 0.0375em;
-}
-#recommen .slider {
-	width: 675px;
-	height: 180px;
-	margin: 20px auto 20px;
+#recommen .slide {
+	display: flex;
+	flex-wrap: nowrap;
+	/* overflow: hidden; */
 	position: relative;
-	overflow: hidden;
-	/* border: 1px dashed green; */
+	width: 100%;
+
+	/* to stop dragging DOM elements */
+	/* user-select: none; */
 }
-#recommen .slider .imagesets {
-	width: calc(675px * 3);
-	/* height: 180px; */
-	/* border: 1px dashed green; */
-}
-#recommen .slider .imagesets .image {
-	width: 675px;
-	margin: 0 auto;
+#recommen .slide_item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  position: relative;
+  left: 0px;
+	width: 100%;
 	height: 180px;
-	float: left;
-	/* text-align: center; */
-	/* border: 1px dashed blue; */
+	flex-shrink: 0;
+	transition: left 0.15s;
+	border: 1px dashed red;
 }
-#recommen .slider .imagesets .image > li {
-	width: 105px;
-	height: 180px;
-	margin: 0 12.5px;
-	float: left;
-}
-#recommen .slider .imagesets .image > li:first-child {
-	margin-left: 25px;
-}
-#recommen .slider .imagesets .image > li:last-child {
-	margin-right: 25px;
-}
-#recommen .slider .imagesets .image > li .pic {
-	width: 105px;
-	height: 124px;
-	background-image: linear-gradient(to right, #2454a3 0%, #547FC7 100%);
-}
-#recommen .slider .imagesets .image > li .info {
-	padding-top: 9px;
-	font-size: 12px;
-	color: #9a9a9a;
-}
-.arrows div {
-	width: 30px;
-	height: 30px;
-	line-height: 28px;
-	text-align: center;
-	font-size: 28px;
-	color: #cecece;
-	font-weight: 900;
-	cursor: pointer;
+#recommen .slide_button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	position: absolute;
-	top: 50%;
-	margin-top: -15px;
-	/* border: 1px dashed red; */
-}
-.arrows div:hover {
-	color: #003894;
-}
-.arrows div.prev {
-	left: 0;
-}
-.arrows div.next {
-	right: 0;
-}
-.locations {
-	/* border: 1px dashed red; */
-	position: absolute;
-	left: 50%;
-	/* 
-		-7px * 2 :  start point + end point
-		-11px * n : -11px is a value whose size cotains content, padding, margin.
-								n is mutable with quantity of middle of circles
-	*/
-	margin-left: calc(((-7px * 2) + (-11px * 1)) / 2);
-	/* bottom: calc(-11px + -20px) */
-	/* bottom: 0; */
-}
-.locations li {
-	float: left;
-	padding: 2px;
+	top: calc(50% - 16px);
+	width: 32px;
+	height: 32px;
+	border-radius: 100%;
+	color: #ccc;
+	background-color: white;
+	border: 1px solid #ccc;
 	cursor: pointer;
-	margin: 0 2px;
-	/* border: 1px dashed red; */
 }
-.locations li:first-child {
-	margin: 0;
+#recommen .slide_prev_button {
+	left: 10px;
 }
-.locations li:last-child {
-	margin: 0;
+#recommen .slide_next_button {
+  right: 10px;
 }
-.locations li span {
-	/* display: inline-block; */
-	display: block;
-	width: 7px;
-	height: 7px;
-	background-color: #cccccc;
-	border-radius: 4px;
-}
-.locations li.active span {
-	background-color: #003894;
-}
+
+
 
 /* weeklyRank */
 #weeklyRank {

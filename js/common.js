@@ -22,50 +22,6 @@ $(function() {
 
   
   // recommen slider
-  slideRotation= setInterval(() => {
-    if(bln_ongoingRotaion == false) {
-      $rcm_imagesets.animate({
-        'marginLeft':'-675px'
-      }, function() {
-        $(".image:first", this).appendTo(this);
-        $(this).css({ 'marginLeft':'0' });
   
-        // tracking location
-        num_sliderIndex = (++num_sliderIndex) % $rcm_locations.children().length;
-        $rcm_locations.children("li:eq("+num_sliderIndex+")").addClass("active")
-        .siblings().removeClass("active");
-      })
-    }
-  }, 3000);
-  setInterval(() => {
-    if(bln_ongoingRotaion == true) bln_ongoingRotaion = false;
-  }, 2000);
-
-  $(".arrows .next").click(function() {
-    // clearInterval(slideRotation);
-    bln_ongoingRotaion = true;
-    $rcm_imagesets.stop().animate({
-      'marginLeft':'-675px'
-    }, function() {
-      $(".image:first", this).appendTo(this);
-      $(this).css({ 'marginLeft':'0' });
-
-      // tracking location
-      num_sliderIndex = (++num_sliderIndex) % $rcm_locations.children().length;
-      $rcm_locations.children("li:eq("+num_sliderIndex+")").addClass("active")
-      .siblings().removeClass("active");
-    })
-  });
-  $(".arrows .prev").click(function() {
-    // clearInterval(slideRotation);
-    bln_ongoingRotaion = true;
-    num_sliderIndex == 0 ? num_sliderIndex = $rcm_locations.children().length-1 : num_sliderIndex--;
-    // console.log(num_sliderIndex)
-    $rcm_imagesets.animate({
-      'marginLeft':(-675)*num_sliderIndex+"px"
-    })
-    $rcm_locations.children("li:eq("+num_sliderIndex+")").addClass("active")
-      .siblings().removeClass("active");
-  })
 
 });
