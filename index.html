@@ -5,238 +5,149 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>BOOK_OFF</title>
 	<link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/main.css">
 	<script src="js/jquery-2.1.1.js"></script>
 	<script src="js/common.js"></script>
 	<link rel="icon" href="logo_bookoff.ico">
+
 </head>
 <body>
+	
 	<div id="container">
 		<!-- header -->
-		<header id="header">
-			<div class="top">
-				<div	div class="wrapper">
-					<div class="grp">
-						<!-- logo -->
-						<h1 class="logo "><a href="index.html"><img src="" alt="logo"></a></h1>
-						
-						<!-- searchArea -->
-						<section class="searchArea">
-						</section>
-		
-						<!-- icons -->
-						<ul class="icons">
-							<li><a href="#"><img src="" alt="icon01"></a></li>
-							<li><a href="#"><img src="" alt="icon02"></a></li>
-							<li><a href="#"><img src="" alt="icon03"></a></li>
-						</ul>					
-					</div>
-					<!-- grp end -->
-	
-					<!-- gnb -->
-					<nav id="gnb">
-						<h1 class="hidden">main Menu</h1>
-						<ul class="mainMenu ">
-							<li>
-								<a href="#">Nav01</a>
-								<ul class="submenu">
-									<li><a href="#">sub01-01</a></li>
-									<li><a href="#">sub01-02</a></li>
-									<li><a href="#">sub01-03</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="#">Nav02</a>
-								<ul class="submenu">
-									<li><a href="#">sub02-01</a></li>
-									<li><a href="#">sub02-02</a></li>
-									<li><a href="#">sub02-03</a></li>
-									<li><a href="#">sub02-04</a></li>
-									<li><a href="#">sub02-05</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="#">Nav03</a>
-								<ul class="submenu">
-									<li><a href="#">sub03-01</a></li>
-									<li><a href="#">sub03-02</a></li>
-									<li><a href="#">sub03-03</a></li>
-									<li><a href="#">sub03-04</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="#">Nav04</a>
-								<ul class="submenu">
-									<li><a href="#">sub04-01</a></li>
-									<li><a href="#">sub04-02</a></li>
-									<li><a href="#">sub04-03</a></li>
-									<li><a href="#">sub04-04</a></li>
-									<li><a href="#">sub04-05</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="#">Nav05</a>
-								<ul class="submenu">
-									<li><a href="#">sub05-01</a></li>
-									<li><a href="#">sub05-02</a></li>
-									<li><a href="#">sub05-03</a></li>
-									<li><a href="#">sub05-04</a></li>
-									<li><a href="#">sub05-05</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="#">Nav06</a>
-								<ul class="submenu">
-									<li><a href="#">sub06-01</a></li>
-									<li><a href="#">sub06-02</a></li>
-									<li><a href="#">sub06-03</a></li>
-									<li><a href="#">sub06-04</a></li>
-								</ul>
-							</li>
-						</ul>
-					</nav>
-				</div>
-				<!-- // wrapper -->
-			</div>
-			<!-- // top -->
-		</header>
+		<header id="header" data-include-file="./html/common/header.html" class="includeJs"></header>
+    
+    <main id="main">
+      <!-- notices -->
+      <section id="notices">
+        <div class="wrapper">
+          <p class="alt-letter">No charge on delievery from $12</p>
+        </div>
+      </section>
+
+      
+      <!-- banners -->
+      <section id="banners">
+        <div class="wrapper">
+          <article class="banner"> <div class="pic"></div> <div class="title campaign">Lorem, ipsum dolor.</div> </article>
+          <article class="banner"> <div class="pic"></div> <div class="title special">Lorem, ipsum dolor.</div> </article>
+          <article class="banner"> <div class="pic"></div> <div class="title special">Lorem, ipsum dolor.</div> </article>
+          <article class="banner"> <div class="pic"></div> <div class="title special">Lorem, ipsum dolor.</div> </article>
+        </div>
+      </section>
 
 
-		<!-- notices -->
-		<section id="notices">
-			<div class="wrapper">
-				<p class="alt-letter">No charge on delievery from $12</p>
-			</div>
-		</section>
+      <!-- midNav -->
+      <section id="midNav">
+        <div class="wrapper">
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+        </div>
+      </section>
 
-		
-		<!-- banners -->
-		<section id="banners">
-			<div class="wrapper">
-				<article class="banner"> <div class="pic"></div> <div class="title campaign">Lorem, ipsum dolor.</div> </article>
-				<article class="banner"> <div class="pic"></div> <div class="title special">Lorem, ipsum dolor.</div> </article>
-				<article class="banner"> <div class="pic"></div> <div class="title special">Lorem, ipsum dolor.</div> </article>
-				<article class="banner"> <div class="pic"></div> <div class="title special">Lorem, ipsum dolor.</div> </article>
-			</div>
-		</section>
+      
+      <!-- news -->
+      <section id="news">
+        <div class="wrapper">
 
-
-		<!-- midNav -->
-		<section id="midNav">
-			<div class="wrapper">
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-			</div>
-		</section>
-
-		
-		<!-- news -->
-		<section id="news">
-			<div class="wrapper">
-
-			</div>
-		</section>
+        </div>
+      </section>
 
 
-		<!-- events -->
-		<section id="events">
-			<div class="wrapper">
-				
-			</div>
+      <!-- events -->
+      <section id="events">
+        <div class="wrapper">
+          
+        </div>
 
-		</section>
-
-
-		<!-- special -->
-		<section id="special">
-			<div class="wrapper">
-				<h1 class="title"><span>Specials</span></h1>
-			</div>
-		</section>
+      </section>
 
 
-		<!-- recommen -->
-		<section id="recommen">
-			<div class="wrapper">
-				<h1 class="title"><span>Recommendations</span></h1>
-				<ul class="slide slide_wrap">
-					<li class="slide_item item1">
-						<ul class="image">
-							<li> <div class="pic"></div> <div class="info">1-1</div> </li>
-							<li> <div class="pic"></div> <div class="info">1-2</div> </li>
-							<li> <div class="pic"></div> <div class="info">1-3</div> </li>
-							<li> <div class="pic"></div> <div class="info">1-4</div> </li>
-							<li> <div class="pic"></div> <div class="info">1-5</div> </li>
-						</ul>
-					</li>
-					<li class="slide_item item2">
-						<ul class="image">
-							<li> <div class="pic"></div> <div class="info">2-1</div> </li>
-							<li> <div class="pic"></div> <div class="info">2-2</div> </li>
-							<li> <div class="pic"></div> <div class="info">2-3</div> </li>
-							<li> <div class="pic"></div> <div class="info">2-4</div> </li>
-							<li> <div class="pic"></div> <div class="info">2-5</div> </li>
-						</ul>
-					</li>
-					<li class="slide_item item3">
-						<ul class="image">
-							<li> <div class="pic"></div> <div class="info">3-1</div> </li>
-							<li> <div class="pic"></div> <div class="info">3-2</div> </li>
-							<li> <div class="pic"></div> <div class="info">3-3</div> </li>
-							<li> <div class="pic"></div> <div class="info">3-4</div> </li>
-							<li> <div class="pic"></div> <div class="info">3-5</div> </li>
-						</ul>
-					</li>
-					<li class="slide_prev_button slide_button">&lt;</li>
-					<li class="slide_next_button slide_button">&gt;</li>
-					<li class="slide_pagination"></li>
-				</ul>
-			</div>
-		</section>
+      <!-- special -->
+      <section id="special">
+        <div class="wrapper">
+          <h1 class="title"><span>Specials</span></h1>
+        </div>
+      </section>
 
 
-		<!-- weeklyRank -->
-		<section id="weeklyRank">
-			<div class="wrapper">
-				
-			</div>
-		</section>
+      <!-- recommen -->
+      <section id="recommen">
+        <div class="wrapper">
+          <h1 class="title"><span>Recommendations</span></h1>
+          <ul class="slide slide_wrap">
+            <li class="slide_item item1">
+              <ul class="image">
+                <li> <img class="pic"></img> <div class="info">1-1</div> </li>
+                <li> <img class="pic"></img> <div class="info">1-2</div> </li>
+                <li> <img class="pic"></img> <div class="info">1-3</div> </li>
+                <li> <img class="pic"></img> <div class="info">1-4</div> </li>
+                <li> <img class="pic"></img> <div class="info">1-5</div> </li>
+              </ul>
+            </li>
+            <li class="slide_item item2">
+              <ul class="image">
+                <li> <img class="pic"></img> <div class="info">2-1</div> </li>
+                <li> <img class="pic"></img> <div class="info">2-2</div> </li>
+                <li> <img class="pic"></img> <div class="info">2-3</div> </li>
+                <li> <img class="pic"></img> <div class="info">2-4</div> </li>
+                <li> <img class="pic"></img> <div class="info">2-5</div> </li>
+              </ul>
+            </li>
+            <li class="slide_item item3">
+              <ul class="image">
+                <li> <img class="pic"></img> <div class="info">3-1</div> </li>
+                <li> <img class="pic"></img> <div class="info">3-2</div> </li>
+                <li> <img class="pic"></img> <div class="info">3-3</div> </li>
+                <li> <img class="pic"></img> <div class="info">3-4</div> </li>
+                <li> <img class="pic"></img> <div class="info">3-5</div> </li>
+              </ul>
+            </li>
+            <li class="slide_prev_button slide_button">&lt;</li>
+            <li class="slide_next_button slide_button">&gt;</li>
+            <li class="slide_pagination"></li>
+          </ul>
+        </div>
+      </section>
+
+
+      <!-- weeklyRank -->
+      <section id="weeklyRank">
+        <div class="wrapper">
+          
+        </div>
+      </section>
 
 
 
-		<!-- recentlyChecked -->
-		<section id="recentlyChecked">
-			<div class="wrapper">
-				
-			</div>
-		</section>
+      <!-- recentlyChecked -->
+      <section id="recentlyChecked">
+        <div class="wrapper">
+          
+        </div>
+      </section>
 
 
-		<!-- merits -->
-		<section id="merits">
-			<div class="wrapper">
-				
-			</div>
-		</section>
+      <!-- merits -->
+      <section id="merits">
+        <div class="wrapper">
+          
+        </div>
+      </section>
+    </main>
+
 
 
 		<!-- guides -->
-		<section id="guides">
-			<div class="wrapper">
-				
-			</div>
-		</section>
+		<section id="guides" data-include-file="./html/common/guides.html" class="includeJs"></section>
 
 
 		<!-- footer -->
-		<footer id="footer">
-			<div class="wrapper">
-				
-			</div>
-		</footer>
+		<footer id="footer" data-include-file="./html/common/footer.html" class="includeJs"></footer>
 	</div>
 </body>
 </html>
