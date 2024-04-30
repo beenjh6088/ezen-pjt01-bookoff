@@ -299,102 +299,7 @@ recommen
 	background-color: transparent;
 	/* border: 1px dashed blue; */
 }
-#recommen .slide {
-	display: flex;
-	flex-wrap: nowrap;
-	overflow: hidden;
-	position: relative;
-	width: 100%;
 
-	/* to stop dragging DOM elements */
-	/* user-select: none; */
-	/* border: 1px dashed blue; */
-}
-#recommen .slide .slide_item {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-  position: relative;
-  left: 0px;
-	width: 100%;
-	height: 180px;
-	flex-shrink: 0;
-	transition: left 0.15s;
-	/* border: 1px dashed red; */
-}
-#recommen .slide .slide_item .image {
-  background: transparent;
-  /* border: 1px dashed red; */
-}
-#recommen .slide .slide_item .image > li {
-  width: 110px;
-  height: 143px;
-  display: inline-block;
-  margin-right: 18px;
-  /* border: 1px dashed blue; */
-}
-#recommen .slide .slide_item .image > li:last-child {
-  margin-right: 0;
-}
-#recommen .slide .slide_item .image > li:hover {
-  opacity: 0.6;
-}
-#recommen .slide .slide_item .image > li img {
-  width: 110px;
-  height: 91px;
-  display: block;
-  background: url(../images/alphabet_sequence.png) no-repeat;
-  /* border: 1px dashed green; */
-}
-#recommen .slide .item1 .image > li img {
-  background-size: 670% 590%;
-  background-position: -19px -21px;
-}
-#recommen .slide .item2 .image > li img {
-  background-size: 670% 590%;
-  background-position: -137px -21px;
-}
-#recommen .slide .item3 .image > li img {
-  background-size: 670% 590%;
-  background-position: -255px -21px;
-}
-#recommen .slide .slide_button {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: absolute;
-	top: calc(50% - 16px);
-	width: 32px;
-	height: 32px;
-	border-radius: 100%;
-	color: #003894;
-	background-color: white;
-	border: 1px solid #003894;
-	cursor: pointer;
-	/* border: 1px dashed red; */
-}
-#recommen .slide .slide_prev_button {
-	left: 10px;
-}
-#recommen .slide .slide_next_button {
-  right: 10px;
-}
-#recommen .slide .slide_pagination {
-	display: flex;
-	gap: 5px;
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	transform: translateX(-50%);
-}
-#recommen .slide .slide_pagination > li {
-  color: #7fb5ff88;
-  cursor: pointer;
-  font-size: 25px;
-}
-#recommen .slide .slide_pagination > li.active {
-  color: #7fb5ff;
-}
 
 
 /* 
@@ -404,8 +309,59 @@ weeklyRank
 */
 #weeklyRank {
 	height: 385px;
+	/* border: 1px dashed red; */
 }
-
+#weeklyRank .wrapper {
+	background-color: transparent;
+	/* border: 1px dashed blue; */
+}
+#weeklyRank .slide {
+  margin-top: 20px;
+	/* overflow: visible; */
+	/* border: 1px dashed green; */
+}
+#weeklyRank .slide .slide_item {
+	align-items: start;
+  height: 210px;
+}
+#weeklyRank .slide .slide_item .image > li {
+	/* border: 1px dashed red; */
+  width: 123px;
+  height: 181px;
+}
+#weeklyRank .slide .slide_item .image > li .rank {
+  overflow:hidden;
+  text-align: left;
+  /* border: 1px dashed blue; */
+}
+#weeklyRank .slide .slide_item .image > li .rank img {
+  float: left;
+  width: 24px;
+  height: 24px;
+  margin-right: 4px;
+	/* border: 1px dashed green; */
+  display: none; 
+}
+#weeklyRank .slide .slide_item .image > li .rank img.reword {
+  display:block;
+}
+/* 
+#weeklyRank .slide .slide_item:first-child .image > li:nth-child(n):nth-child(-n+3) .rank img {
+	border: 1px dashed red;
+  display: block;
+}
+ */
+#weeklyRank .slide .slide_item .image > li .rank span {
+  float: left;
+  height: 24px;
+  line-height: 24px;
+  font-size: 14px;
+	/* border: 1px dashed green; */
+}
+#weeklyRank .slide .slide_item .image > li .pic {
+  width: 100%;
+  height: 124px;
+}
 
 /* 
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
