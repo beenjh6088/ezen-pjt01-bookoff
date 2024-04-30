@@ -253,7 +253,7 @@ special
 */
 #special {
 	height: 255px;
-  border: 1px dashed red;
+  /* border: 1px dashed red; */
 }
 #special .title span {
 	letter-spacing: 0.0375em;
@@ -263,14 +263,14 @@ special
   padding: 0 2%;
   position: relative;
   overflow: hidden;
-  border: 1px dashed red;
+  /* border: 1px dashed red; */
 }
 #special .container > li {
   width: 110px;
   height: 150px;
   float: left;
   margin-right: 10px;
-  border: 1px dashed red;
+  /* border: 1px dashed red; */
 }
 #special .container > li:last-child {
   margin-right: 0;
@@ -278,7 +278,17 @@ special
 #special .container > li img {
   width: 100%;
   height: 110px;
-  border: 1px dashed blue;
+  /* border: 1px dashed blue; */
+}
+#special .container > li .info {
+  width: 100%;
+  height: 40px;
+  /* border: 1px dashed blue; */
+}
+#special .container > li .info span {
+  font-size: 12px;
+  word-wrap: break-word;
+  
 }
 
 /* 

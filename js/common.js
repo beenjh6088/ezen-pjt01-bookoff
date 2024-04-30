@@ -1,8 +1,3 @@
-// window.onload = function() {
-  // include html file
-  // includeHtml();
-// }
-
 function includeHtml() {
   const includeTarget = document.querySelectorAll('.includeJs');
   includeTarget.forEach(function(el, idx) {
