@@ -10,9 +10,12 @@ default
 	padding: 0;
 	box-sizing: border-box;
 }
-a:link, a:visited, a:hover, a:focus {
+a:link, a:visited {
   color: #000;
   text-decoration: none;
+}
+a:hover, a:focus {
+  color: #003894;
 }
 ul {list-style: none;}
 img[alt] {
