@@ -7,8 +7,8 @@
 	<link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/main.css">
 	<script src="js/jquery-2.1.1.js"></script>
-	<script src="js/common.js"></script>
-	<script src="js/main.js"></script>
+	<script defer src="js/common.js"></script>
+	<script defer src="js/main.js"></script>
 	<link rel="icon" href="logo_bookoff.ico">
   <script>
     window.onload = function() {
@@ -19,7 +19,7 @@
       makeSlider("#recommen");
 
       // weeklyRank
-      makeSlider("#weeklyRank");
+      makeSlider("#weeklyRank .sub01");
       
     }
   </script>
@@ -164,7 +164,7 @@
         <div class="wrapper">
           <h1 class="title"><span>weeklyRank</span></h1>
           <ul class="maintab">
-            <li class="submenu active"><a href="javascript:void();">Dept01_A</a>
+            <li class="submenu sub01 active"><a href="javascript:;">Dept01_A</a>
               <ul class="slide slide_wrap">
                 <li class="slide_item item1">
                   <ul class="image">
@@ -206,9 +206,11 @@
                 <li class="slide_pagination"></li>
               </ul>
             </li>
-            <li class="submenu"><a href="javascript:void();">Dept01_B</a>
-              <ul class="slide slide_wrap" style="width: 95%; height:200px; background-color:red;"></ul>
-              <!-- <ul class="slide slide_wrap">
+            <li class="submenu sub02 "><a href="javascript:;">Dept01_B</a>
+              <!-- red -->
+              <!-- <ul class="slide slide_wrap" style="width: 95%; height:200px; background-color:red;"></ul> -->
+              
+              <ul class="slide slide_wrap">
                 <li class="slide_item item1">
                   <ul class="image">
                     <li><div class="rank"><img class="reword" src="images/UI//Property 1=Icon, Property 2=GoldCrown.png" alt="rank"></img><span>1st</span></div> <img class="pic" src="images/dummy_images.png"   alt="picture"></img> <div class="info">2-1-1</div> </li>
@@ -247,18 +249,22 @@
                 <li class="slide_prev_button slide_button">&lt;</li>
                 <li class="slide_next_button slide_button">&gt;</li>
                 <li class="slide_pagination"></li>
-              </ul> -->
+              </ul>
             </li>
-            <li class="submenu"><a href="javascript:void();">Dept01_C</a>
+            <li class="submenu sub03"><a href="javascript:;">Dept01_C</a>
+              <!-- orange -->
               <ul class="slide slide_wrap" style="width: 95%; height:200px; background-color:orange;"></ul>
             </li>
-            <li class="submenu"><a href="javascript:void();">Dept01_D</a>
+            <li class="submenu sub04"><a href="javascript:;">Dept01_D</a>
+              <!-- yellow -->
               <ul class="slide slide_wrap" style="width: 95%; height:200px; background-color:yellow;"></ul>
             </li>
-            <li class="submenu"><a href="javascript:void();">Dept01_E</a>
+            <li class="submenu sub05"><a href="javascript:;">Dept01_E</a>
+              <!-- yellowgreen -->
               <ul class="slide slide_wrap" style="width: 95%; height:200px; background-color:yellowgreen;"></ul>
             </li>
-            <li class="submenu"><a href="javascript:void();">Dept01_F</a>
+            <li class="submenu sub06"><a href="javascript:;">Dept01_F</a>
+              <!-- green -->
               <ul class="slide slide_wrap" style="width: 95%; height:200px; background-color:green;"></ul>
             </li>
           </ul>
