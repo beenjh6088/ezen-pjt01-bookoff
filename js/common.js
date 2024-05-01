@@ -22,7 +22,7 @@ function includeHtml() {
 
 
 function makeSlider(target) {
-  // console.log(target)
+  console.log(target)
   // 슬라이크 전체 크기(width 구하기)
   const slide = document.querySelector(target+" "+".slide");
   let slideWidth = slide.clientWidth;

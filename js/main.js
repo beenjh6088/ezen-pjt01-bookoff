@@ -4,5 +4,6 @@ submenus.forEach((el, index) => {
     // console.log(`#weeklyRank .sub0${index+1}`);
     submenus.forEach((i) => i.classList.remove("active"));
     submenus[index].classList.add("active");
+    makeSlider(`#weeklyRank .sub0${index+1}`);
   })
 })
