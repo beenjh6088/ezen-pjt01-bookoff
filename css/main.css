@@ -301,9 +301,49 @@ weeklyRank
 	background-color: transparent;
 	/* border: 1px dashed blue; */
 }
-#weeklyRank .slide {
+#weeklyRank .maintab {
+  position: relative;
   margin-top: 20px;
+	/* border: 1px dashed red; */
+  /* overflow: hidden; */
+}
+#weeklyRank .maintab .submenu {
+  float: left;
+	/* border: 1px dashed blue; */
+}
+#weeklyRank .maintab .submenu a {
+  color: #aaa;
+}
+#weeklyRank .maintab .submenu.active a {
+  color: #003894;
+}
+#weeklyRank .maintab .submenu > a {
+  display: inline-block;
+  padding: 4px 8px;
+  font-weight: bold;
+  position: relative;
+	/* border: 1px dashed blue; */
+}
+
+#weeklyRank .maintab .submenu:hover > a:after {
+  content: '';
+  width: 80%;
+  height: 2px;
+  background-color: #003894;
+  opacity: 0.5;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#weeklyRank  .slide {
+  position: absolute;
+  background-color: white;
+  left:0;
+  /* top:28px; */
+  /* margin-top: 20px; */
 	/* overflow: visible; */
+  border-top: 2px solid #eee;
 	/* border: 1px dashed green; */
 }
 #weeklyRank .slide .slide_item {
