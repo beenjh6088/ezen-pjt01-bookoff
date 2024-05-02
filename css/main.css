@@ -455,6 +455,11 @@ merits
   padding-top: 3%;
   padding-bottom: 3%;
 }
-#merits .button-regular {
-  display: inline-block;
+#merits .buttons {
+  text-align: center;
+}
+#merits .buttons .button-icon {
+  border: none;
+  background-color: #003894;
+  color: #fff;
 }

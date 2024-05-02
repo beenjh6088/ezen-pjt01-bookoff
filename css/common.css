@@ -61,19 +61,33 @@ img[alt] {
 }
 .button-icon {
 	position: relative;
-	padding-left: 48px;
-	background-color: red;
+	padding: 0 48px;
+	background-color: #fff;
+  border: 1px solid #003894;
+  color: #003894;
 }
 .button-icon:after {
 	content: '';
+  box-sizing: border-box;
 	position: absolute;
 	left: 8%;
 	top: 50%;
 	transform: translateY(-50%);
 	width: 24px;
 	height: 24px;
-	background: url(../images/ui/Property\ 1=Icon\,\ Property\ 2=Undefined.png) no-repeat center/cover;
-	border: 1px solid red;
+  z-index: 0;
+	/* background: url(../images/ui/Property\ 1=Icon\,\ Property\ 2=Undefined.png) no-repeat center/cover; */
+  /* border: 1px dashed green; */
+}
+.button-icon > img {
+	position: absolute;
+	left: 8%;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 24px;
+	height: 24px;
+  z-index: 1;
+  /* border: 1px dashed red; */
 }
 .col-cnt01 { width: 100%; }
 .col-cnt02 { width: 50%; }
