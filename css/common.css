@@ -350,7 +350,39 @@ guides
 	height: 52px;
 	background-color: #ebebeb;
 }
-
+#guides .guides {
+  float: left;
+  width: 85%;
+  height: 100%;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  border: 1px dashed red;
+}
+#guides .guides .guide {
+  border: 1px dashed blue;
+}
+#guides .guides .guide a {
+  display: block;
+  font-size: 12px;
+}
+#guides .buttons {
+  float: right;
+  width: 15%;
+  height: 100%;
+  line-height: 100%;
+  border: 1px dashed red;
+}
+#guides .buttons a {
+  /* display: block; */
+  border: 1px dashed blue;
+}
+#guides .buttons a img {
+  border: 1px dashed green;
+  display: block;
+}
 
 /* 
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
