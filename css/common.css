@@ -21,6 +21,9 @@ ul {list-style: none;}
 img[alt] {
 	font-size: 16px;
 }
+input {
+  outline: none;
+}
 .wrapper {
 	width: 746px;
 	height: 100%;
@@ -159,75 +162,128 @@ header
 	height: 50px;
 	/* clear: both; */
 }
+/* 
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+header logo
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
 #header .logo {
 	width: 150px;
 	height: 50px;
 	margin-right: 27px;
-	border: 1px dashed rgba(0,0,0,0.3);
+	/* border: 1px dashed rgba(0,0,0,0.3); */
 	position: relative;
 	float: left;
 }
-#header .logo:after {
-	content:"Logo";
-	background-color: #fff;
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	text-align: center;
-	line-height: 50px;
-	font-size: 16px;
-	font-weight: normal;
+#header .logo img {
+  display: block;
+  width: 150px;
+  height: 35px;
+  margin: 7.5px 0;
+  object-fit: cover;
+  /* border: 1px dashed red; */
 }
+/* 
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+header searchArea 
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
 #header .searchArea {
 	width: 327px;
 	height: 50px;
 	margin-right: 48px;
-	border: 1px dashed rgba(0,0,0,0.3);
+	/* border: 1px dashed rgba(0,0,0,0.3); */
 	position: relative;
 	float: left;
 }
-#header .searchArea:after {
-	content:"Searchbar";
-	background-color: #fff;
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	text-align: center;
-	line-height: 50px;
-	font-size: 16px;
-	font-weight: normal;
+#header .searchArea form {
+  width: 100%;
+  height: 100%;
+  /* border: 1px dashed red; */
+  text-align: center;
+  /* margin: 0 auto; */
 }
+#header .searchArea .searchbar {
+  float:left;
+  width: 80%;
+  height: 60%;
+  margin: 10.4815px 0 10.4815px 21.98px;
+  border: 3px solid #003894;
+  border-right: none;
+  padding-left: 4px;
+}
+#header .searchArea .searchbar:active {
+  border: none;
+}
+#header .searchArea .searchicon {
+  float: left;
+  width: 30px;
+  height: 60%;
+  margin: 10.4815px auto;
+  border: 3px solid #003894;
+  /* border: 1px dashed blue; */
+}
+#header .searchArea .searchicon img {
+  float: left;
+  /* display: block; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+header icons 
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
 #header .icons {
 	width: 194px;
 	height: 50px;
-	border: 1px dashed rgba(0,0,0,0.3);
+	/* border: 1px dashed rgba(0,0,0,0.3); */
 	position: relative;
 	float: right;
 }
-#header .icons:after {
-	content:"Icons";
-	background-color: #fff;
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	text-align: center;
-	line-height: 50px;
-	font-size: 16px;
-	font-weight: normal;
-}
+
 #header .icons li {
 	float: left;
+  /* 
+  10.4% : 
+    total margin : 194px(.icons) - {24px(.icons img) * 3} = 122px
+    both margins per each image : 122px / 6 = 20.33...
+    ratio of width to margin: 20.33..px / 194px = 10.4810..
+  */
+  margin: 0 10.4%;
+  /*
+  54.16% : 
+    50(.icons) - 24(.icons img) = 26px
+    26px = a rest of margin
+    26/2 = top margin + bottom margin = 13px
+    13/24 = 13/height of img = 54.16%
+  */
+  transform: translateY(54.16%);
 }
+#header .icons li:hover {
+  opacity: 0.6;
+}
+#header .icons li a {
+  display: block;
+  /* border: 1px solid red; */
+}
+#header .icons li a img {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+/* 
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+header gnb 
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
 #header #gnb {
 	width: 100%;
 	height: 40px;
-	border: 1px dashed rgba(0,0,0,0.3);
+	/* border: 1px dashed rgba(0,0,0,0.3); */
 }
 #header #gnb .mainMenu {
 	width: 100%;
