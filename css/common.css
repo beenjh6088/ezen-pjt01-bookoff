@@ -42,6 +42,39 @@ img[alt] {
 	position: absolute;
 	left: -9999em;
 }
+.title {
+	text-transform: capitalize;
+}
+.button-regular, .button-icon  {
+	display: inline-block;
+	width: 255px;
+	height: 40px;
+	border-radius: 20px;
+	background-color: #003894;
+	cursor: pointer;
+	color: #fff;
+	padding: 12px 24px;
+	border: none;
+}
+.button-regular:hover, .button-icon:hover {
+	opacity: 0.6;
+}
+.button-icon {
+	position: relative;
+	padding-left: 48px;
+	background-color: red;
+}
+.button-icon:after {
+	content: '';
+	position: absolute;
+	left: 8%;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 24px;
+	height: 24px;
+	background: url(../images/ui/Property\ 1=Icon\,\ Property\ 2=Undefined.png) no-repeat center/cover;
+	border: 1px solid red;
+}
 .col-cnt01 { width: 100%; }
 .col-cnt02 { width: 50%; }
 .col-cnt03 { width: 33.33%; }
