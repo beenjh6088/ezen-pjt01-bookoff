@@ -1,3 +1,5 @@
+const duration = 3000;
+
 function includeHtml() {
   const includeTarget = document.querySelectorAll('.includeJs');
   includeTarget.forEach(function(el, idx) {
@@ -216,7 +218,7 @@ function makeSlider(target) {
   // 기본적으로 슬라이드 루프 시작하기
   let loopInterval = setInterval(() => {
     nextMove();
-  }, 3000);
+  }, duration);
 
   // 슬라이드에 마우스가 올라간 경우 루프 멈추기
   slide.addEventListener("mouseover", () => {
@@ -227,6 +229,6 @@ function makeSlider(target) {
   slide.addEventListener("mouseout", () => {
     loopInterval = setInterval(() => {
       nextMove();
-    }, 3000);
+    }, duration);
   });
 }

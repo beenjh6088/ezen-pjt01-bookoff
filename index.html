@@ -25,6 +25,9 @@
       rankSliders.forEach((obj, idx) => {makeSlider("#weeklyRank .sub"+String(idx+1).padStart(2, "0"))});
 
       
+      makeSlider("#recentlyChecked");
+
+      
     }
   </script>
 </head>
@@ -58,12 +61,12 @@
       <section id="midNav">
         <div class="wrapper">
           <ul class="cards">
-            <li class="card"> <img class="pic"></img> <div class="info">texttexttexttexttext</div> </li>
-            <li class="card"> <img class="pic"></img> <div class="info">text</div> </li>
-            <li class="card"> <img class="pic"></img> <div class="info">text</div> </li>
-            <li class="card"> <img class="pic"></img> <div class="info">text</div> </li>
-            <li class="card"> <img class="pic"></img> <div class="info">text</div> </li>
-            <li class="card"> <img class="pic"></img> <div class="info">text</div> </li>
+            <li class="card"> <img class="pic" src="images/UI/Property 1=Icon, Property 2=Undefined.png" alt="icon"></img> <div class="info">texttexttexttexttext</div> </li>
+            <li class="card"> <img class="pic" src="images/UI/Property 1=Icon, Property 2=Undefined.png" alt="icon"></img> <div class="info">text</div> </li>
+            <li class="card"> <img class="pic" src="images/UI/Property 1=Icon, Property 2=Undefined.png" alt="icon"></img> <div class="info">text</div> </li>
+            <li class="card"> <img class="pic" src="images/UI/Property 1=Icon, Property 2=Undefined.png" alt="icon"></img> <div class="info">text</div> </li>
+            <li class="card"> <img class="pic" src="images/UI/Property 1=Icon, Property 2=Undefined.png" alt="icon"></img> <div class="info">text</div> </li>
+            <li class="card"> <img class="pic" src="images/UI/Property 1=Icon, Property 2=Undefined.png" alt="icon"></img> <div class="info">text</div> </li>
           </ul>
         </div>
       </section>
@@ -166,7 +169,7 @@
       <!-- weeklyRank -->
       <section id="weeklyRank">
         <div class="wrapper">
-          <h1 class="title"><span>weeklyRank</span></h1>
+          <h1 class="title"><span>Weekly Rank</span></h1>
           <ul class="maintab">
             <li class="submenu sub01 active"><a href="javascript:;">Dept01_A</a>
               <ul class="slide slide_wrap">
@@ -211,9 +214,6 @@
               </ul>
             </li>
             <li class="submenu sub02 "><a href="javascript:;">Dept01_B</a>
-              <!-- red -->
-              <!-- <ul class="slide slide_wrap" style="width: 95%; height:200px; background-color:red;"></ul> -->
-              
               <ul class="slide slide_wrap">
                 <li class="slide_item item1">
                   <ul class="image">
@@ -256,9 +256,6 @@
               </ul>
             </li>
             <li class="submenu sub03"><a href="javascript:;">Dept01_C</a>
-              <!-- orange -->
-              <!-- <ul class="slide slide_wrap" style="width: 95%; height:200px; background-color:orange;"></ul> -->
-
               <ul class="slide slide_wrap">
                 <li class="slide_item item1">
                   <ul class="image">
@@ -301,9 +298,6 @@
               </ul>
             </li>
             <li class="submenu sub04"><a href="javascript:;">Dept01_D</a>
-              <!-- yellow -->
-              <!-- <ul class="slide slide_wrap" style="width: 95%; height:200px; background-color:yellow;"></ul> -->
-
               <ul class="slide slide_wrap">
                 <li class="slide_item item1">
                   <ul class="image">
@@ -346,9 +340,6 @@
               </ul>
             </li>
             <li class="submenu sub05"><a href="javascript:;">Dept01_E</a>
-              <!-- yellowgreen -->
-              <!-- <ul class="slide slide_wrap" style="width: 95%; height:200px; background-color:yellowgreen;"></ul> -->
-
             <ul class="slide slide_wrap">
               <li class="slide_item item1">
                 <ul class="image">
@@ -391,9 +382,6 @@
             </ul>
             </li>
             <li class="submenu sub06"><a href="javascript:;">Dept01_F</a>
-              <!-- green -->
-              <!-- <ul class="slide slide_wrap" style="width: 95%; height:200px; background-color:green;"></ul> -->
-
               <ul class="slide slide_wrap">
                 <li class="slide_item item1">
                   <ul class="image">
@@ -444,7 +432,27 @@
       <!-- recentlyChecked -->
       <section id="recentlyChecked">
         <div class="wrapper">
-          
+          <h1 class="title"><span>recently Checked</span></h1>
+          <ul class="slide slide_wrap">
+            <li class="slide_item item1">
+              <ul class="image">
+                <li> <img class="pic" src="images/dummy_images.png" alt="picture"></img> <div class="info">1-1</div> </li>
+                <li> <img class="pic" src="images/dummy_images.png" alt="picture"></img> <div class="info">1-2</div> </li>
+                <li> <img class="pic" src="images/dummy_images.png" alt="picture"></img> <div class="info">1-3</div> </li>
+                <li> <img class="pic" src="images/dummy_images.png" alt="picture"></img> <div class="info">1-4</div> </li>
+                <li> <img class="pic" src="images/dummy_images.png" alt="picture"></img> <div class="info">1-5</div> </li>
+              </ul>
+            </li>
+            <li class="slide_item item2">
+              <ul class="image">
+                <li> <img class="pic" src="images/dummy_images.png" alt="picture"></img> <div class="info">2-1</div> </li>
+                <li> <img class="pic" src="images/dummy_images.png" alt="picture"></img> <div class="info">2-2</div> </li>
+              </ul>
+            </li>
+            <li class="slide_prev_button slide_button">&lt;</li>
+            <li class="slide_next_button slide_button">&gt;</li>
+            <li class="slide_pagination"></li>
+          </ul>
         </div>
       </section>
 
@@ -452,7 +460,33 @@
       <!-- merits -->
       <section id="merits">
         <div class="wrapper">
-          
+          <h1 class="title"><span>merits</span></h1>
+          <section class="container">
+            <article class="infoEntity">
+              <div class="icon"><img src="images/UI/Property 1=Icon, Property 2=Undefined.png" alt="icon"></div>
+              <div class="content">
+                If you get yours in Store
+                a delievery fee is Free
+              </div>
+            </article>
+            <article class="infoEntity">
+              <div class="icon"><img src="images/UI/Property 1=Icon, Property 2=Undefined.png" alt="icon"></div>
+              <div class="content">
+                You can get a bundle of
+                commics at lowest price 
+                simply
+              </div>
+            </article>
+            <article class="infoEntity">
+              <div class="icon"><img src="images/UI/Property 1=Icon, Property 2=Undefined.png" alt="icon"></div>
+              <div class="content">
+                Mobile Sevice is avaliable simply
+              </div>
+            </article>
+          </section>
+          <button class="button-regular">HelpDesk</button>
+          <button class="button-regular">HelpDesk</button>
+          <button class="button-icon">HelpDesk</button>
         </div>
       </section>
     </main>

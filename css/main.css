@@ -108,7 +108,7 @@ midNav
 #midNav .cards .card img {
   width: 45px;
   height: 38px;
-  border: 2px solid #003894;
+  /* border: 2px solid #003894; */
   border-radius: 5px;
   position: absolute;
   left: 50%;
@@ -401,6 +401,9 @@ recentlyChecked
 #recentlyChecked {
 	height: 318px;
 }
+#recentlyChecked h1 {
+  margin-bottom: 20px;
+}
 
 
 /* 
@@ -410,4 +413,48 @@ merits
 */
 #merits {
 	height: 254px;
+}
+#merits .title {
+  margin-bottom: 20px;
+}
+#merits .container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom :30px;
+  /* border: 1px dashed red; */
+}
+#merits .container .infoEntity {
+  width: 33%;
+  display: flex;
+  /* border: 1px dashed blue; */
+}
+#merits .container .infoEntity .icon {
+  width: 28%;
+  height: 70px;
+  background: #f5f5f5;
+  /* border: 1px dashed black; */
+}
+#merits .container .infoEntity .icon img {
+  display: block;
+  width: 80%;
+  height: 80%;
+  margin: 10% auto;
+}
+#merits .container .infoEntity .content {
+  width: 100%;
+  height: 70px;
+  /* line-height: 70px; */
+  padding-right: 10%;
+  /* border: 1px dashed black; */
+  background: linear-gradient(to right, #f5f5f5 0%, #ffffff 90%);
+  font-size: 14px;
+  overflow: hidden;
+  word-wrap: break-word;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+#merits .button-regular {
+  display: inline-block;
 }
