@@ -158,19 +158,21 @@ header
 */
 #header {
 	height: 90px;
-  /* position: fixed; */
 }
 #header .top {
-	position: absolute;
+  position: fixed;
+  left: 50%;
+  top: 0;
+  transform: translatex(-50%);
 	width: 100%;
 	height: 90px;
 	background: #fff;
 	transition: all 0.3s;
 	/* border: 1px dashed blue; */
+  z-index: 3;
 }
 #header .top .grp {
 	height: 50px;
-	/* clear: both; */
 }
 /* 
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
