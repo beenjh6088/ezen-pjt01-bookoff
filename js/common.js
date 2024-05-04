@@ -1,24 +1,15 @@
 const duration = 3000;
+let mainMenus = null;
 
-async function init() {
+
+function init() {
   includeHtml();
-  console.log("includeHtml completed");
   fnHeader();
 }
 
-async function fnHeader() {
-  // console.log("mainMenus");
-  arr = document.getElementById("test");
-  console.log(arr)
-
-
-  // console.log(document.querySelector(".top"))
-  // console.log(mainMenus)
-  // mainMenus.forEach(function(el, idx) {
-    // console.log('bb')
-    // el.addEventListener('hover', function() {
-    // })
-  // });
+function fnHeader() {
+  mainMenus = document.querySelectorAll(".mainMenu > li");
+  // console.log(mainMenus);
 }
 
 
@@ -36,7 +27,9 @@ function includeHtml() {
           this.status === 404 ? (el.innerHTML = 'include not found.') : null
         }
       }
-      xhttp.open('GET', targetFile, true);
+      // xhttp.open('GET', targetFile, true);
+      // asynchronism = false
+      xhttp.open('GET', targetFile, false);
       xhttp.send();
       return;
     }
