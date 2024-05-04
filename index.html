@@ -13,9 +13,9 @@
   <script>
     window.onload = function() {
       const rankSliders = document.querySelectorAll("#weeklyRank .submenu");
-      
+
       // include html file
-      includeHtml();
+      init();
 
       // recommen
       makeSlider("#recommen");
@@ -26,17 +26,15 @@
 
       // recentlyChecked
       makeSlider("#recentlyChecked");
-
       
     }
   </script>
 </head>
 <body>
-	
 	<div id="container">
 		<!-- header -->
 		<header id="header" data-include-file="./html/common/header.html" class="includeJs"></header>
-    
+
     <main id="main">
       <!-- notices -->
       <section id="notices">
@@ -45,7 +43,6 @@
         </div>
       </section>
 
-      
       <!-- banners -->
       <section id="banners">
         <div class="wrapper">
@@ -503,5 +500,6 @@
 		<!-- footer -->
 		<footer id="footer" data-include-file="./html/common/footer.html" class="includeJs"></footer>
 	</div>
+
 </body>
 </html>

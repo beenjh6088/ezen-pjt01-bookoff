@@ -1,5 +1,28 @@
 const duration = 3000;
 
+async function init() {
+  includeHtml();
+  console.log("includeHtml completed");
+  fnHeader();
+}
+
+async function fnHeader() {
+  // console.log("mainMenus");
+  arr = document.getElementById("test");
+  console.log(arr)
+
+
+  // console.log(document.querySelector(".top"))
+  // console.log(mainMenus)
+  // mainMenus.forEach(function(el, idx) {
+    // console.log('bb')
+    // el.addEventListener('hover', function() {
+    // })
+  // });
+}
+
+
+
 function includeHtml() {
   const includeTarget = document.querySelectorAll('.includeJs');
   includeTarget.forEach(function(el, idx) {
@@ -24,7 +47,8 @@ function includeHtml() {
 
 
 function makeSlider(target) {
-  console.log(target)
+  // console.log(target)
+  
   // 슬라이크 전체 크기(width 구하기)
   const slide = document.querySelector(target+" "+".slide");
   let slideWidth = slide.clientWidth;
