@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+main {
+  width: 100%;
+  /* border: 1px dashed red; */
+}
+main > .wrapper {
+  display: flex;
+}
+/* 
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+navi
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
+main #navi {
+  width: 140px;
+  /* border: 1px dashed red; */
+}
+main #navi[data-include-file="../nav/nav-06-setBulk.html"] {
+  display: none;
+}
+main #navi .title {
+  font-size: 18px;
+  padding-top: 10px;
+}
+main #navi .mainmenu > li {
+  padding-top: 10px;
+}
+main #navi .mainmenu > li > a{
+  display: block;
+  font-weight: bold;
+  font-size: 14px;
+  border-top: 2px double #003894;
+  border-bottom: 2px double #003894;
+  padding: 4px 0;
+  word-wrap: break-word;
+}
+main #navi .mainmenu > li .submenu > li {
+  /* text-indent: 1em; */
+  padding-left: 1em;
+  padding-bottom: 14px;
+}
+main #navi .mainmenu > li .submenu > li:last-child {
+  padding-bottom: 10px;
+}
+main #navi .mainmenu > li .submenu > li:first-child {
+  padding-top: 10px;
+}
+main #navi .mainmenu > li .submenu > li > a {
+  font-size: 12px;
+  display: block;
+  word-wrap: break-word;
+}
+
+/* 
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+contents
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
+main #contents {
+  width: calc(100% - 140px);
+  border: 1px dashed blue;
+}
+main #contents[data-include-file="../contents/cont-06-setBulk.html"] {
+  width: 100%;
+}

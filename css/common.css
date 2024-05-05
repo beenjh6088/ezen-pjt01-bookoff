@@ -13,6 +13,12 @@ default
 html {
   scroll-behavior: smooth;
 }
+body {
+  font-size: 16px;
+  font-family: 'Times New Roman', Times, serif;
+  color: #333;
+  background:#fff;
+}
 a:link, a:visited {
   color: #000;
   text-decoration: none;
@@ -51,6 +57,7 @@ input {
 }
 .title {
 	text-transform: capitalize;
+  font-weight: bold;
 }
 .button-regular, .button-icon  {
 	display: inline-block;
@@ -348,6 +355,24 @@ header gnb
 	color: #fbfbfb;
 }
 
+
+/* 
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+notices
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
+#notices {
+	background-color: #ebebeb;
+	/* border: 1px dashed red; */
+}
+#notices .alt-letter {
+	height: 25px;
+	line-height:25px;
+	text-align: center;
+	color: #e6001e;
+	font-weight: bold;
+	/* border: 1px dashed blue; */
+}
 
 
 /* 

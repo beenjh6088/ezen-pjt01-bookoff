@@ -1,21 +1,5 @@
 @charset "utf-8";
-/* 
-■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-notices
-■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-*/
-#notices {
-	background-color: #ebebeb;
-	/* border: 1px dashed red; */
-}
-#notices .alt-letter {
-	height: 25px;
-	line-height:25px;
-	text-align: center;
-	color: #e6001e;
-	font-weight: bold;
-	/* border: 1px dashed blue; */
-}
+
 
 
 /* 
