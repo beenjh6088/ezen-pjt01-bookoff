@@ -1,18 +1,31 @@
 const duration = 3000;
+const url = `${window.location.protocol+"//"+window.location.host+"/"}`;
+let links = [];
 let mainMenus = null;
 
 
 function init() {
+  setAside();
   includeHtml();
   fnHeader();
+  setLink();
 }
 
 function fnHeader() {
   mainMenus = document.querySelectorAll(".mainMenu > li");
   // console.log(mainMenus);
+
+  // make box shadow in header
+  window.addEventListener("scroll", function() {
+    const headertop = document.querySelector("#header .top");
+    if(this.window.scrollY >= 32) {
+      headertop.style.boxShadow = "0 1px 4px rgba(0,0,0,0.6)";
+    }
+    if(this.window.scrollY == 0) {
+      headertop.style.boxShadow = "";
+    }
+  })
 }
-
-
 
 function includeHtml() {
   const includeTarget = document.querySelectorAll('.includeJs');
@@ -37,6 +50,35 @@ function includeHtml() {
 };
 
 
+function setLink() {
+  links = document.querySelectorAll(".link");
+  links.forEach(function(link, idx) {
+    let val = link.getAttribute("value");
+    let addr = url+val;
+    link.setAttribute("href", addr);
+  }); 
+}
+
+
+function setAside() {
+  let search = window.location.search;
+  let key = search.substring(search.indexOf("=")+1)
+  const navi = document.querySelector("main > aside");
+  if (search.includes("books")) {
+    navi.setAttribute("data-include-file", `../main/nav-01-${key}.html`)
+  }else if (search.includes("comics")) {
+    navi.setAttribute("data-include-file", `../main/nav-02-${key}.html`)
+  }else if (search.includes("cd")) {
+    navi.setAttribute("data-include-file", `../main/nav-03-${key}.html`)
+  }else if (search.includes("dvdBlueray")) {
+    navi.setAttribute("data-include-file", `../main/nav-04-${key}.html`)
+  }else if (search.includes("game")) {
+    navi.setAttribute("data-include-file", `../main/nav-05-${key}.html`)
+  }else if (search.includes("setBulk")) {
+    navi.setAttribute("data-include-file", `../main/nav-06-${key}.html`)
+  }
+  // console.log(window.location.url)
+}
 
 
 function makeSlider(target) {
@@ -249,3 +291,5 @@ function makeSlider(target) {
     }, duration);
   });
 }
+
+

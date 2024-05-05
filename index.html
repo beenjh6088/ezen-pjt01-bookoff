@@ -12,17 +12,16 @@
 	<link rel="icon" href="logo_bookoff.ico">
   <script>
     window.onload = function() {
-      const rankSliders = document.querySelectorAll("#weeklyRank .submenu");
-
       // 01. include html files
       // 02. make a header
       init();
-
+      
       // recommen
       makeSlider("#recommen");
-
+      
       // weeklyRank
       // run 'makeSlider' function as quantity of submenu
+      const rankSliders = document.querySelectorAll("#weeklyRank .submenu");
       rankSliders.forEach((obj, idx) => {makeSlider("#weeklyRank .sub"+String(idx+1).padStart(2, "0"))});
 
       // recentlyChecked
