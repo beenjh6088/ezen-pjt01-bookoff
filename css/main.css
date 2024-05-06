@@ -148,7 +148,7 @@ news
 }
 #news .container .theme {
   width: 50%;
-  height: 100%;
+  /* height: 100%; */
   float: left;
   /* border: 1px dashed blue; */
   /* padding: 30px 8px 50px 0; */
@@ -220,11 +220,13 @@ events
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 */
 #events {
-	height: 150px;
+	/* height: 150px; */
+	height: auto;
+  margin-bottom: 45px;
 }
 #events .container {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -233,10 +235,10 @@ events
   /* border: 1px dashed red; */
 }
 #events .container .event {
-  /* width: 230px; */
-  /* height: 40px; */
-  width: 30.83%;
-  height: 26.66%;
+  width: 230px;
+  height: 40px;
+  /* width: 30.83%; */
+  /* height: 26.66%; */
   background: linear-gradient(to right, #666 0% , #ebebeb 100%);
 }
 

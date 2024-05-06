@@ -14,6 +14,7 @@ function init() {
   fnHeader();
   setAbsLink();
   login();
+  setDate();
 }
 
 function fnHeader() {
@@ -100,7 +101,6 @@ function makeSlider(target) {
   
   // 슬라이크 전체 크기(width 구하기)
   const slide = document.querySelector(target+" "+".slide");
-  if(slide == null) return;
   let slideWidth = slide.clientWidth;
 
   // 버튼 엘리먼트 선택하기
@@ -307,6 +307,114 @@ function makeSlider(target) {
   });
 }
 
+function setDate() {
+  let hasyear = false;
+  let hasmonth = false;
+  let hasdate = false;
+  const plus = "+";
+  const minus = "-";
+  let times = document.querySelectorAll("time.this");
+  // console.log(times[0])
+  times.forEach((time, idx) => {
+    let odt = new Date();
+    // odt.setMonth(odt.getMonth()+2)
+    let ndt = new Date();
+    let oldyear = odt.getFullYear();
+    let oldmonth = odt.getMonth();
+    let olddate = odt.getDate();
+    let strDate = "";
+    // time.innerHTML = year+"/"+month+"/"+date;
+    let timeclasses = time.classList;
+    // console.log(timeclasses);
+    for(let i = 0; i < timeclasses.length; i++) {
+      if(timeclasses[i].includes("year")) {
+        if(timeclasses[i].includes(minus)) {
+          let index = timeclasses[i].indexOf(minus);
+          let variate = Number.parseInt(timeclasses[i].substring(index+1));
+          // year = eval(year-variate);
+          oldyear = oldyear - variate;
+        } else if(timeclasses[i].includes(plus)) {
+          let index = timeclasses[i].indexOf(plus);
+          let variate = Number.parseInt(timeclasses[i].substring(index+1));
+          // year = eval(year+variate);
+          oldyear = oldyear + variate;
+        }
+        hasyear = true;
+        ndt.setFullYear(oldyear);
+        // strDate = strDate + ndt.getFullYear();
+      } else if(timeclasses[i].includes("month")) {
+        if(timeclasses[i].includes(minus)) {
+          let index = timeclasses[i].indexOf(minus);
+          let variate = Number.parseInt(timeclasses[i].substring(index+1));
+          // month = eval(month-variate);
+          oldmonth = oldmonth - variate;
+        } else if(timeclasses[i].includes(plus)) {
+          let index = timeclasses[i].indexOf(plus);
+          let variate = Number.parseInt(timeclasses[i].substring(index+1));
+          // month = eval(month+variate);
+          oldmonth = oldmonth + variate;
+        }
+        hasmonth = true;
+        ndt.setMonth(oldmonth);
+        // strDate = strDate + ndt.getMonth()+1;
+      } else if(timeclasses[i].includes("date")){
+        if(timeclasses[i].includes(minus)) {
+          let index = timeclasses[i].indexOf(minus);
+          let variate = Number.parseInt(timeclasses[i].substring(index+1));
+          // date = eval(date-variate);
+          olddate = olddate - variate;
+        } else if(timeclasses[i].includes(plus)) {
+          let index = timeclasses[i].indexOf(plus);
+          let variate = Number.parseInt(timeclasses[i].substring(index+1));
+          // date = eval(date+variate);
+          olddate = olddate + variate;
+        }
+        hasdate = true;
+        ndt.setDate(olddate);
+        // strDate = strDate + ndt.getDate();
+      }
+    }
+    if(hasyear) {
+      strDate = ndt.getFullYear();
+      hasyear = false;
+    }
+    if(hasmonth) {
+      strDate = ndt.getMonth() + 1;
+      if(strDate == 1)        strDate = "January"   + "\t" + ndt.getFullYear();
+      else if(strDate == 2)   strDate = "February"  + "\t" + ndt.getFullYear();
+      else if(strDate == 3)   strDate = "March"     + "\t" + ndt.getFullYear();
+      else if(strDate == 4)   strDate = "April"     + "\t" + ndt.getFullYear();
+      else if(strDate == 5)   strDate = "May"       + "\t" + ndt.getFullYear();
+      else if(strDate == 6)   strDate = "June"      + "\t" + ndt.getFullYear();
+      else if(strDate == 7)   strDate = "July"      + "\t" + ndt.getFullYear();
+      else if(strDate == 8)   strDate = "August"    + "\t" + ndt.getFullYear();
+      else if(strDate == 9)   strDate = "September" + "\t" + ndt.getFullYear();
+      else if(strDate == 10)  strDate = "October"   + "\t" + ndt.getFullYear();
+      else if(strDate == 11)  strDate = "November"  + "\t" + ndt.getFullYear();
+      else if(strDate == 12)  strDate = "December"  + "\t" + ndt.getFullYear();
+      hasmonth = false;
+    }
+    if(hasdate) {
+      strDate = ndt.getMonth() + 1;
+      if(strDate == 1)        strDate = ndt.getDate() +" "+"January"   + "\t" + ndt.getFullYear();
+      else if(strDate == 2)   strDate = ndt.getDate() +" "+"February"  + "\t" + ndt.getFullYear();
+      else if(strDate == 3)   strDate = ndt.getDate() +" "+"March"     + "\t" + ndt.getFullYear();
+      else if(strDate == 4)   strDate = ndt.getDate() +" "+"April"     + "\t" + ndt.getFullYear();
+      else if(strDate == 5)   strDate = ndt.getDate() +" "+"May"       + "\t" + ndt.getFullYear();
+      else if(strDate == 6)   strDate = ndt.getDate() +" "+"June"      + "\t" + ndt.getFullYear();
+      else if(strDate == 7)   strDate = ndt.getDate() +" "+"July"      + "\t" + ndt.getFullYear();
+      else if(strDate == 8)   strDate = ndt.getDate() +" "+"August"    + "\t" + ndt.getFullYear();
+      else if(strDate == 9)   strDate = ndt.getDate() +" "+"September" + "\t" + ndt.getFullYear();
+      else if(strDate == 10)  strDate = ndt.getDate() +" "+"October"   + "\t" + ndt.getFullYear();
+      else if(strDate == 11)  strDate = ndt.getDate() +" "+"November"  + "\t" + ndt.getFullYear();
+      else if(strDate == 12)  strDate = ndt.getDate() +" "+"December"  + "\t" + ndt.getFullYear();
+      // strDate = strDate + ndt.getDate();
+      hasdate = false;
+    }
+    time.innerHTML = strDate;
+    console.log(ndt.toDateString());
+  });
+}
 
 function login() {
   if(islogin) {

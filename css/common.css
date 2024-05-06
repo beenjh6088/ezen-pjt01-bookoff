@@ -112,6 +112,7 @@ input {
 .brdr {border: 1px dashed red;}
 .brdg {border: 1px dashed green;}
 .brdb {border: 1px dashed blue;}
+.bg-gray {background: #f8f8f8;}
 
 /* web font */
 @font-face {
