@@ -22,8 +22,10 @@
       // weeklyRank
       // run 'makeSlider' function as quantity of submenu
       const rankSliders = document.querySelectorAll("#weeklyRank .submenu");
-      rankSliders.forEach((obj, idx) => {makeSlider("#weeklyRank .sub"+String(idx+1).padStart(2, "0"))});
-      activateSlideTab();
+      if(!(rankSliders == null || rankSliders.length == 0 || rankSliders == undefined)) {
+        rankSliders.forEach((obj, idx) => {makeSlider("#weeklyRank .sub"+String(idx+1).padStart(2, "0"))});
+        activateSlideTab();
+      }
 
       // recentlyChecked
       makeSlider("#recentlyChecked");
