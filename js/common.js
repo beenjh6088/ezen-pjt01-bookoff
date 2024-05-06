@@ -1,5 +1,9 @@
 const duration = 3000;
 const url = `${window.location.protocol+"//"+window.location.host+"/"}`;
+let userinfo = {};
+let header = null;
+let islogin = false;
+// let islogin = true;
 let links = [];
 let mainMenus = null;
 
@@ -9,15 +13,17 @@ function init() {
   includeHtml();
   fnHeader();
   setAbsLink();
+  login();
 }
 
 function fnHeader() {
   mainMenus = document.querySelectorAll(".mainMenu > li");
+  header = document.querySelector("#header");
   // console.log(mainMenus);
 
   // make box shadow in header
   window.addEventListener("scroll", function() {
-    const headertop = document.querySelector("#header .top");
+    let headertop = header.querySelector(".top");
     if(this.window.scrollY >= 32) {
       headertop.style.boxShadow = "0 1px 4px rgba(0,0,0,0.6)";
     }
@@ -65,7 +71,7 @@ function setAside() {
   let key = search.substring(search.indexOf("=")+1)
   const navi = document.querySelector("main .wrapper #navi");
   const cont = document.querySelector("main .wrapper #contents")
-  console.log(cont)
+  // console.log(cont)
   if (search.includes("books")) {
     navi.setAttribute("data-include-file", `../nav/nav-01-${key}.html`);
     cont.setAttribute("data-include-file", `../contents/cont-01-${key}.html`);
@@ -300,4 +306,14 @@ function makeSlider(target) {
   });
 }
 
+function login() {
+  if(islogin) {
+    let icons = header.querySelectorAll(".icons li");
+    icons.forEach(function(li, idx) {
+      let iconimg = li.querySelector("img");
+      let imgsrc = iconimg.getAttribute("src");
+      iconimg.setAttribute("src", imgsrc.replace("Inactive",""));
+    })
+  }
+}
 

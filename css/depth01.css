@@ -6,6 +6,8 @@ main {
 }
 main > .wrapper {
   display: flex;
+  /* gap: 30px; */
+  gap: 4.02%;
 }
 /* 
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
@@ -67,4 +69,34 @@ main #contents[data-include-file="../contents/cont-06-setBulk.html"] {
 main #contents .wrapper {
   width: 100%;
   /* border: 1px dashed red; */
+}
+
+/* 
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+contents events
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
+main #contents #events {
+	height: auto;
+}
+main #contents #events h1 {
+  /* margin-bottom: 20px; */
+  margin-bottom: 3.47%;
+}
+main #contents #events .container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 13px;
+  /* border: 1px dashed red; */
+}
+main #contents #events .container .event {
+  width: 180px;
+  height: 65px;
+  /* width: 30.83%; */
+  /* height: 26.66%; */
+  background: linear-gradient(to right, #666 0% , #ebebeb 100%);
 }
