@@ -11,17 +11,21 @@ banners
 	height: 260px;
 }
 #banners .wrapper {
-	height: 260px;
+  height: 100%;
 	/* border: 1px dashed red; */
 }
 #banners .banner {
-	width: 174px;
-	height: 200px;
+	/* width: 174px; */
+  width: 23.3%;
+	/* height: 200px; */
+  height: 76.92%;
 	border: 1px solid #eee;
 	float: left;
 	margin-top: 30px;
-	margin-right: 9.5px;
-	border-radius: 10px;
+	/* margin-right: 9.5px; */
+  margin-right: 1.27%;
+	/* border-radius: 10px; */
+	/* border-radius: 5.74%; */
 	box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
 	overflow: hidden;
 }
@@ -29,20 +33,25 @@ banners
 	opacity: 0.5;
 }
 #banners .banner:first-child {
-	margin-left: 9.5px;
+  /* margin-left: 9.5px; */
+	margin-left: 1.27%;
 }
 #banners .banner .pic {
-	width: 174px;
-	height: 134px;
-	background: url(../images/bookOff.jpg) no-repeat center top;
+	/* width: 174px; */
+  width: 100%;
+	/* height: 134px; */
+	height: 67%;
+	background: url(../images/bookOff.jpg) no-repeat center/cover;
 }
 #banners .banner .title {
 	position: relative;
-	padding: 15px 18px;
+	/* padding: 15px 18px; */
+  padding: 10.67% 12.8%;
 }
 #banners .banner .title:after {
 	content: '';
-	padding: 1px 5px;
+	/* padding: 1px 5px; */
+  padding: 0.711% 3.55%;
 	background-color: #e6001e;
 	text-align: center;
 	font-size: 10px;
@@ -75,12 +84,15 @@ midNav
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 18px;
+  /* gap: 18px; */
+  gap: 2.41%;
   /* border: 1px dashed red; */
 }
 #midNav .cards .card {
-  width: 112px;
-  height: 95px;
+  /* width: 112px; */
+  width: 15.01%;
+  /* height: 95px; */
+  height: 76%;
   border-radius: 5px;
   background-color: #fff;
   position: relative;
@@ -90,8 +102,10 @@ midNav
   opacity: 0.6;
 }
 #midNav .cards .card img {
-  width: 45px;
-  height: 45px;
+  /* width: 45px; */
+  /* height: 45px; */
+  width: 41.15%;
+  height: 47.36%;
   /* border: 2px solid #003894; */
   border-radius: 5px;
   position: absolute;
@@ -100,8 +114,10 @@ midNav
   transform: translateX(-50%) translateY(-50%);
 }
 #midNav .cards .card .info {
-  width: 50px;
-  height: 29px;
+  /* width: 50px; */
+  /* height: 29px; */
+  width: 45.73%;
+  height: 30.52%;
   font-size: 12px;
   padding: 5px 0 0 0;
   position: absolute;
@@ -133,21 +149,25 @@ news
   height: 100%;
   float: left;
   /* border: 1px dashed blue; */
-  padding: 30px 8px 50px 0;
+  /* padding: 30px 8px 50px 0; */
+  padding: 4.02% 1.07% 6.70% 0;
 }
 #news .container .theme:before {
   content: "";
   float: left;
   width: 4px;
-  height: 24px;
+  /* height: 24px; */
+  height: 10.43%;
   background-color: #003894;
   border-radius: 2px;
-  margin-right: 7px;
+  /* margin-right: 7px; */
+  margin-right: 1.87%;
 }
 #news .container .theme .title {
   /* border: 1px dashed red; */
   display: inline-block;
-  margin-bottom: 22px;
+  /* margin-bottom: 22px; */
+  margin-bottom: 5.89%;
 }
 #news .container .theme li {
   border-top : 1px solid #ebebeb;
@@ -159,10 +179,12 @@ news
   opacity: 0.6;
 }
 #news .container .latest li {
-  padding: 21.5px 0;
+  /* padding: 21.5px 0; */
+  padding: 5.76% 0;
 }
 #news .container .hits li {
-  padding: 11px 0;
+  /* padding: 11px 0; */
+  padding: 2.94% 0;
 }
 #news .container .theme li img {
   /* display: block; */
@@ -209,9 +231,10 @@ events
   /* border: 1px dashed red; */
 }
 #events .container .event {
-  max-width: 100%;
-  width: 230px;
-  height: 40px;
+  /* width: 230px; */
+  /* height: 40px; */
+  width: 30.83%;
+  height: 26.66%;
   background: linear-gradient(to right, #666 0% , #ebebeb 100%);
 }
 
@@ -229,15 +252,20 @@ special
 	letter-spacing: 0.0375em;
 }
 #special .container {
-  margin-top: 20px;
+  width: 100%;
+  height: 100%;
+  /* margin-top: 20px; */
+  margin-top: 2.68%;
   padding: 0 2%;
   position: relative;
   overflow: hidden;
   /* border: 1px dashed red; */
 }
 #special .container > li {
-  width: 110px;
-  height: 150px;
+  /* width: 110px; */
+  /* height: 150px; */
+  width: 14.74%;
+  height: 58.82%;
   float: left;
   margin-right: 10px;
   /* border: 1px dashed red; */
@@ -247,11 +275,12 @@ special
 }
 #special .container > li img {
   width: 100%;
-  height: 110px;
+  /* height: 110px; */
+  height: 73.33%
   /* border: 1px dashed blue; */
 }
 #special .container > li .info {
-  height: 40px;
+  height: calc(100% - 73.33%);
   word-wrap: break-word;
   /* border: 1px dashed blue; */
 }

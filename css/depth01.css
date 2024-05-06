@@ -59,8 +59,12 @@ contents
 */
 main #contents {
   width: calc(100% - 140px);
-  border: 1px dashed blue;
+  /* border: 1px dashed blue; */
 }
 main #contents[data-include-file="../contents/cont-06-setBulk.html"] {
   width: 100%;
+}
+main #contents .wrapper {
+  width: 100%;
+  /* border: 1px dashed red; */
 }
