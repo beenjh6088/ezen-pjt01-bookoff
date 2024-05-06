@@ -5,17 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>BOOK_OFF</title>
   <link rel="stylesheet" href="../../css/common.css">
-  <link rel="stylesheet" href="../../css/main.css">
   <link rel="stylesheet" href="../../css/depth01.css">
 	<script defer src="../../js/jquery-2.1.1.js"></script>
   <script defer src="../../js/common.js"></script>
+  <script defer src="../../js/main.js"></script>
   <link rel="icon" href="../../logo_bookoff.ico">
   <script>
     window.onload = function() {
       init();
-      
+
       // recommen
       makeSlider("#recommen");
+
+      // weeklyRank
+      // run 'makeSlider' function as quantity of submenu
+      const rankSliders = document.querySelectorAll("#weeklyRank .submenu");
+      rankSliders.forEach((obj, idx) => {makeSlider("#weeklyRank .sub"+String(idx+1).padStart(2, "0"))});
+      activateSlideTab();
+
+      
     }
   </script>
 </head>
