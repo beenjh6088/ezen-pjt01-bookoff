@@ -78,6 +78,12 @@ contents recommen
 */
 main #contents #recommen {
   height: 280px;
+  position: relative;
+}
+main #contents #recommen:before {
+  position: absolute;
+  top:0;
+  left:0;
 }
 
 /* 
