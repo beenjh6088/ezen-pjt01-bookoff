@@ -7,9 +7,10 @@ let islogin = false;
 // let islogin = true;
 let links = [];
 let mainMenus = null;
-
+let bookobj = null;
 
 function init() {
+  bookobj = JSON.parse(JSON.stringify(BookObj));
   setAside();
   includeHtml();
   fnHeader();
