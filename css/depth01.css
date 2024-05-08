@@ -80,30 +80,11 @@ contents recommen
 main #contents #recommen {
   height: 280px;
   position: relative;
-  /* border: 1px solid red; */
 }
-main #contents #recommen .bg-gray {
-  width: 200vw;
-  height: 100%;
+main #contents #recommen:before {
   position: absolute;
-  left: -100vw;
-  top: -0%;
-  /* border: 1px solid blue; */
-}
-main #contents #recommen .wrapper {
-  position: absolute;
-  left: 0;
-  top: 0;
-  margin-top: 20px;
-}
-
-/* 
-■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-contents special02
-■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-*/
-main #contents #special02 {
-  margin-top: 20px;
+  top:0;
+  left:0;
 }
 
 /* 

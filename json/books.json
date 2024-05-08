@@ -1,0 +1,9 @@
+BookObj = {
+  "books" : [
+    {"code":"b001", "name":"a", "author":"aa", "publisher":"puble_a", "price":100, "isNew":false},
+    {"code":"b002", "name":"b", "author":"bb", "publisher":"puble_b", "price":200, "isNew":true},
+    {"code":"b003", "name":"c", "author":"cc", "publisher":"puble_c", "price":300, "isNew":false},
+    {"code":"b004", "name":"d", "author":"dd", "publisher":"puble_d", "price":400, "isNew":true},
+    {"code":"b005", "name":"e", "author":"ee", "publisher":"puble_e", "price":500, "isNew":false},
+  ]
+}

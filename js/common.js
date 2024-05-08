@@ -1,3 +1,4 @@
+
 const duration = 3000;
 const url = `${window.location.protocol+"//"+window.location.host+"/"}`;
 let userinfo = {};
