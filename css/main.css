@@ -248,18 +248,18 @@ events
 special 
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 */
-#special {
+[id ^= "special"]{
 	height: 255px;
   /* border: 1px dashed red; */
 }
-#special h1  {
+[id ^= "special"] h1  {
   /* margin-bottom: 20px; */
   margin-bottom: 2.68%;
 }
-#special h1 span {
+[id ^= "special"] h1 span {
 	letter-spacing: 0.0375em;
 }
-#special .container {
+[id ^= "special"] .container {
   width: 100%;
   height: 100%;
   padding: 0 2%;
@@ -267,7 +267,7 @@ special
   overflow: hidden;
   /* border: 1px dashed red; */
 }
-#special .container > li {
+[id ^= "special"] .container > li {
   /* width: 110px; */
   /* height: 150px; */
   width: 14.74%;
@@ -276,16 +276,16 @@ special
   margin-right: 10px;
   /* border: 1px dashed red; */
 }
-#special .container > li:last-child {
+[id ^= "special"] .container > li:last-child {
   margin-right: 0;
 }
-#special .container > li img {
+[id ^= "special"] .container > li img {
   width: 100%;
   /* height: 110px; */
   height: 73.33%
   /* border: 1px dashed blue; */
 }
-#special .container > li .info {
+[id ^= "special"] .container > li .info {
   height: calc(100% - 73.33%);
   word-wrap: break-word;
   /* border: 1px dashed blue; */
