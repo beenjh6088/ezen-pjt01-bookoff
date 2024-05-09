@@ -81,11 +81,15 @@ main #contents #recommen {
   height: 280px;
   position: relative;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d64441bbc66288f3d1814b195c1b63e5dad80c8c
 }
 main #contents #recommen:before {
   position: absolute;
   top:0;
   left:0;
+<<<<<<< HEAD
 =======
   /* border: 1px solid red; */
 }
@@ -112,6 +116,8 @@ contents special02
 main #contents #special02 {
   margin-top: 20px;
 >>>>>>> e6c5dbf2d95ef821ca3de14a3775099fe9e46075
+=======
+>>>>>>> d64441bbc66288f3d1814b195c1b63e5dad80c8c
 }
 
 /* 
