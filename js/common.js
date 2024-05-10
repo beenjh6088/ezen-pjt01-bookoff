@@ -8,15 +8,22 @@ let islogin = false;
 let links = [];
 let mainMenus = null;
 let bookarr = null;
+let userarr = null;
+
 
 function init() {
-  bookarr = JSON.parse(JSON.stringify(BookObj)).books;
+  setData();
   setAside();
   includeHtml();
   fnHeader();
   setAbsLink();
   login();
   setDate();
+}
+
+function setData() {
+  bookarr = JSON.parse(JSON.stringify(BookObj)).books;
+  userarr = JSON.parse(JSON.stringify(UserObj)).users;
 }
 
 function fnHeader() {

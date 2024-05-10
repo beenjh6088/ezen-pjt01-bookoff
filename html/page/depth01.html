@@ -9,7 +9,8 @@
 	<script defer src="../../js/jquery-2.1.1.js"></script>
   <script defer src="../../js/common.js"></script>
   <script defer src="../../js/main.js"></script>
-  <script src="../../json/books.json" ></script>
+  <script src="../../json/book.json" ></script>
+  <script src="../../json/user.json" ></script>
   <link rel="icon" href="../../logo_bookoff.ico">
   <script>
     window.onload = function() {
@@ -27,10 +28,9 @@
         activateSlideTab();
       }
 
-      // console.log(bookarr)
-      for(let book of bookarr) {
-        console.log(book)
-      }
+      // console.log("depth01");
+      // console.log(`books : ${bookarr.length}`);console.log(`users : ${userarr.length}`);
+
     }
   </script>
 </head>
