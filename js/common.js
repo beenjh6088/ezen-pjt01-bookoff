@@ -13,12 +13,11 @@ let userarr = null;
 
 function init() {
   setData();
-  setAside();
+  // setAside();
   includeHtml();
   fnHeader();
   setAbsLink();
   login();
-  setDate();
 }
 
 function setData() {
@@ -81,25 +80,27 @@ function setAside() {
   let key = search.substring(search.indexOf("=")+1)
   const navi = document.querySelector("main .wrapper #navi");
   const cont = document.querySelector("main .wrapper #contents")
+  // console.log(`search : ${search}`)
+  // console.log(`key : ${key}`)
   // console.log(cont)
   if (search.includes("books")) {
-    navi.setAttribute("data-include-file", `../nav/nav-01-${key}.html`);
-    cont.setAttribute("data-include-file", `../contents/cont-01-${key}.html`);
+    navi.setAttribute("data-include-file", `${url}/html/nav/nav-01-${key}.html`);
+    cont.setAttribute("data-include-file", `${url}/html/contents/cont-01-${key}.html`);
   }else if (search.includes("comics")) {
-    navi.setAttribute("data-include-file", `../nav/nav-02-${key}.html`);
-    cont.setAttribute("data-include-file", `../contents/cont-02-${key}.html`);
+    navi.setAttribute("data-include-file", `${url}/html/nav/nav-02-${key}.html`);
+    cont.setAttribute("data-include-file", `${url}/html/contents/cont-02-${key}.html`);
   }else if (search.includes("cd")) {
-    navi.setAttribute("data-include-file", `../nav/nav-03-${key}.html`);
-    cont.setAttribute("data-include-file", `../contents/cont-03-${key}.html`);
+    navi.setAttribute("data-include-file", `${url}/html/nav/nav-03-${key}.html`);
+    cont.setAttribute("data-include-file", `${url}/html/contents/cont-03-${key}.html`);
   }else if (search.includes("dvdBluray")) {
-    navi.setAttribute("data-include-file", `../nav/nav-04-${key}.html`);
-    cont.setAttribute("data-include-file", `../contents/cont-04-${key}.html`);
+    navi.setAttribute("data-include-file", `${url}/html/nav/nav-04-${key}.html`);
+    cont.setAttribute("data-include-file", `${url}/html/contents/cont-04-${key}.html`);
   }else if (search.includes("game")) {
-    navi.setAttribute("data-include-file", `../nav/nav-05-${key}.html`);
-    cont.setAttribute("data-include-file", `../contents/cont-05-${key}.html`);
+    navi.setAttribute("data-include-file", `${url}/html/nav/nav-05-${key}.html`);
+    cont.setAttribute("data-include-file", `${url}/html/contents/cont-05-${key}.html`);
   }else if (search.includes("setBulk")) {
-    navi.setAttribute("data-include-file", `../nav/nav-06-${key}.html`);
-    cont.setAttribute("data-include-file", `../contents/cont-06-${key}.html`);
+    navi.setAttribute("data-include-file", `${url}/html/nav/nav-06-${key}.html`);
+    cont.setAttribute("data-include-file", `${url}/html/contents/cont-06-${key}.html`);
   }
   // console.log(window.location.url)
 }
