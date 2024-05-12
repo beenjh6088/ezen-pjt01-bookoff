@@ -9,12 +9,19 @@ let links = [];
 let mainMenus = null;
 let bookarr = null;
 let userarr = null;
+let depth01 = null;
+let depth02 = null;
+let depth03 = null;
+let amt_all = 0;
+let amt_depth01 = 0;
+let amt_depth02 = 0;
+let amt_depth03 = 0;
 
 
 function init() {
-  setData();
   // setAside();
   includeHtml();
+  setData();
   fnHeader();
   setAbsLink();
   login();
@@ -75,32 +82,74 @@ function setAbsLink() {
 }
 
 
+// function setAside() {
+//   let search = window.location.search;
+//   let key = search.substring(search.indexOf("=")+1)
+//   const navi = document.querySelector("main .wrapper #navi");
+//   const cont = document.querySelector("main .wrapper #contents")
+//   console.log(`search : ${search}`)
+//   console.log(`key : ${key}`)
+//   console.log(cont)
+//   if (search.includes("books")) {
+//     navi.setAttribute("data-include-file", `${url}/html/nav/nav-01-${key}.html`);
+//     cont.setAttribute("data-include-file", `${url}/html/contents/cont-01-${key}.html`);
+//   }else if (search.includes("comics")) {
+//     navi.setAttribute("data-include-file", `${url}/html/nav/nav-02-${key}.html`);
+//     cont.setAttribute("data-include-file", `${url}/html/contents/cont-02-${key}.html`);
+//   }else if (search.includes("cd")) {
+//     navi.setAttribute("data-include-file", `${url}/html/nav/nav-03-${key}.html`);
+//     cont.setAttribute("data-include-file", `${url}/html/contents/cont-03-${key}.html`);
+//   }else if (search.includes("dvdBluray")) {
+//     navi.setAttribute("data-include-file", `${url}/html/nav/nav-04-${key}.html`);
+//     cont.setAttribute("data-include-file", `${url}/html/contents/cont-04-${key}.html`);
+//   }else if (search.includes("game")) {
+//     navi.setAttribute("data-include-file", `${url}/html/nav/nav-05-${key}.html`);
+//     cont.setAttribute("data-include-file", `${url}/html/contents/cont-05-${key}.html`);
+//   }else if (search.includes("setBulk")) {
+//     navi.setAttribute("data-include-file", `${url}/html/nav/nav-06-${key}.html`);
+//     cont.setAttribute("data-include-file", `${url}/html/contents/cont-06-${key}.html`);
+//   }
+//   // console.log(window.location.url)
+// }
+
+
 function setAside() {
-  let search = window.location.search;
-  let key = search.substring(search.indexOf("=")+1)
-  const navi = document.querySelector("main .wrapper #navi");
-  const cont = document.querySelector("main .wrapper #contents")
-  // console.log(`search : ${search}`)
-  // console.log(`key : ${key}`)
-  // console.log(cont)
-  if (search.includes("books")) {
-    navi.setAttribute("data-include-file", `${url}/html/nav/nav-01-${key}.html`);
-    cont.setAttribute("data-include-file", `${url}/html/contents/cont-01-${key}.html`);
-  }else if (search.includes("comics")) {
-    navi.setAttribute("data-include-file", `${url}/html/nav/nav-02-${key}.html`);
-    cont.setAttribute("data-include-file", `${url}/html/contents/cont-02-${key}.html`);
-  }else if (search.includes("cd")) {
-    navi.setAttribute("data-include-file", `${url}/html/nav/nav-03-${key}.html`);
-    cont.setAttribute("data-include-file", `${url}/html/contents/cont-03-${key}.html`);
-  }else if (search.includes("dvdBluray")) {
-    navi.setAttribute("data-include-file", `${url}/html/nav/nav-04-${key}.html`);
-    cont.setAttribute("data-include-file", `${url}/html/contents/cont-04-${key}.html`);
-  }else if (search.includes("game")) {
-    navi.setAttribute("data-include-file", `${url}/html/nav/nav-05-${key}.html`);
-    cont.setAttribute("data-include-file", `${url}/html/contents/cont-05-${key}.html`);
-  }else if (search.includes("setBulk")) {
-    navi.setAttribute("data-include-file", `${url}/html/nav/nav-06-${key}.html`);
-    cont.setAttribute("data-include-file", `${url}/html/contents/cont-06-${key}.html`);
+  let search = (window.location.search)
+  let queryArr = search.split("?")[1].split("&");
+  depth01 = (queryArr[0] != undefined && queryArr[0] != null) ? queryArr[0].substring(queryArr[0].indexOf("=")+1) : null;
+  depth02 = (queryArr[1] != undefined && queryArr[1] != null) ? queryArr[1].substring(queryArr[1].indexOf("=")+1) : null;
+  depth03 = (queryArr[2] != undefined && queryArr[2] != null) ? queryArr[2].substring(queryArr[2].indexOf("=")+1) : null;
+  if(depth01 != null && (depth02 == null || depth03 == null)) {
+    const navi = document.querySelector("main .wrapper #navi");
+    const cont = document.querySelector("main .wrapper #contents");
+    if(navi == null || cont == null) return;
+    if (depth01.includes("books")) {
+      navi.setAttribute("data-include-file", `${url}/html/nav/nav-01-${depth01}.html`);
+      cont.setAttribute("data-include-file", `${url}/html/contents/cont-01-${depth01}.html`);
+    }else if (depth01.includes("comics")) {
+      navi.setAttribute("data-include-file", `${url}/html/nav/nav-02-${depth01}.html`);
+      cont.setAttribute("data-include-file", `${url}/html/contents/cont-02-${depth01}.html`);
+    }else if (depth01.includes("cd")) {
+      navi.setAttribute("data-include-file", `${url}/html/nav/nav-03-${depth01}.html`);
+      cont.setAttribute("data-include-file", `${url}/html/contents/cont-03-${depth01}.html`);
+    }else if (depth01.includes("dvdBluray")) {
+      navi.setAttribute("data-include-file", `${url}/html/nav/nav-04-${depth01}.html`);
+      cont.setAttribute("data-include-file", `${url}/html/contents/cont-04-${depth01}.html`);
+    }else if (depth01.includes("game")) {
+      navi.setAttribute("data-include-file", `${url}/html/nav/nav-05-${depth01}.html`);
+      cont.setAttribute("data-include-file", `${url}/html/contents/cont-05-${depth01}.html`);
+    }else if (depth01.includes("setBulk")) {
+      navi.setAttribute("data-include-file", `${url}/html/nav/nav-06-${depth01}.html`);
+      cont.setAttribute("data-include-file", `${url}/html/contents/cont-06-${depth01}.html`);
+    }
+  } else {
+    const filter = document.querySelector("main .wrapper #filter");
+    const list = document.querySelector("main .wrapper #list");
+
+    if(filter == null || list == null) return;
+    filter.setAttribute("data-include-file", `${url}/html/filter/filter.html`);
+    list.setAttribute("data-include-file", `${url}/html/list/list.html`);
+
   }
   // console.log(window.location.url)
 }

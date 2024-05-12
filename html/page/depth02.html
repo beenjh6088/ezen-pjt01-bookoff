@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>BOOK_OFF</title>
   <link rel="stylesheet" href="../../css/common.css">
-  <link rel="stylesheet" href="../../css/depth01.css">
+  <link rel="stylesheet" href="../../css/depth02.css">
 	<script defer src="../../js/jquery-2.1.1.js"></script>
   <script defer src="../../js/common.js"></script>
-  <script defer src="../../js/main.js"></script>
+  <script defer src="../../js/depth02.js"></script>
   <script src="../../json/book.json" ></script>
   <script src="../../json/user.json" ></script>
   <link rel="icon" href="../../logo_bookoff.ico">
@@ -16,11 +16,12 @@
     window.onload = function() {
       setAside();
       init();
-
+      fetchData();
 
       // console.log("depth01");
       // console.log(`books : ${bookarr.length}`);console.log(`users : ${userarr.length}`);
-
+      let search = window.location.search;
+      // document.write(search)
     }
   </script>
 </head>
@@ -39,11 +40,10 @@
 
       <div class="wrapper">
         <!-- aside -->
-        <!-- <aside id="navi" data-include-file="" class="includeJs"></aside> -->
-  
-  depth02
+        <aside id="filter" data-include-file="" class="includeJs"></aside>
+        
         <!-- contents -->
-        <!-- <section id="contents"  data-include-file="" class="includeJs"></section> -->
+        <section id="list"  data-include-file="" class="includeJs"></section>
       </div>
     </main>
 

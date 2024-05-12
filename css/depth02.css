@@ -1,0 +1,16 @@
+#filter {
+  width: 190px;
+}
+#list {
+  width: calc(100% - 190px);
+}
+
+legend {
+  padding: 10px 0;
+  border-bottom: 1px solid #003894;
+  font-size: 20px;
+  font-weight: bold;
+}
+#filter .category {
+  border-bottom: 1px solid #ddd;
+}

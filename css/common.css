@@ -148,7 +148,11 @@ input {
 			 url('font/webcafeIcon.ttf') format('truetype'),
 			 url('font/webcafeIcon.svg#webcaferegular') format('svg');
 }
-
+main > .wrapper {
+  display: flex;
+  /* gap: 30px; */
+  gap: 4.02%;
+}
 
 /* 
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
