@@ -4,16 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="../../css/filter.css">
 </head>
 <body>
 
   
-  <form action="javascript:;" name="searchfilter">
+  <form action="javascript:;" class="filterForm" name="searchfilter">
     <legend>Filter</legend>
+
+    <!-- status -->
     <div class="container-check">
       <input type="checkbox" name="status" value="onstock">onstock
       <input type="checkbox" name="status" value="secondhand">secondhand
     </div>
+
+    <!-- category -->
     <ul class="category">
       <li class="depth all"><a href="javascript:;"></a></li>
       <li class="depth depth01"><a href="javascript:;"></a></li>

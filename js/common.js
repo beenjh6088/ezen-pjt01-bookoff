@@ -116,9 +116,9 @@ function setAbsLink() {
 function setAside() {
   let search = (window.location.search)
   let queryArr = search.split("?")[1].split("&");
-  depth01 = (queryArr[0] != undefined && queryArr[0] != null) ? queryArr[0].substring(queryArr[0].indexOf("=")+1) : null;
-  depth02 = (queryArr[1] != undefined && queryArr[1] != null) ? queryArr[1].substring(queryArr[1].indexOf("=")+1) : null;
-  depth03 = (queryArr[2] != undefined && queryArr[2] != null) ? queryArr[2].substring(queryArr[2].indexOf("=")+1) : null;
+  depth01 = (queryArr[0] != undefined && queryArr[0] != null) ? queryArr[0].substring(queryArr[0].indexOf("=")+1).replaceAll("%20", " ").replaceAll("%27", "'") : null;
+  depth02 = (queryArr[1] != undefined && queryArr[1] != null) ? queryArr[1].substring(queryArr[1].indexOf("=")+1).replaceAll("%20", " ").replaceAll("%27", "'") : null;
+  depth03 = (queryArr[2] != undefined && queryArr[2] != null) ? queryArr[2].substring(queryArr[2].indexOf("=")+1).replaceAll("%20", " ").replaceAll("%27", "'") : null;
   if(depth01 != null && (depth02 == null || depth03 == null)) {
     const navi = document.querySelector("main .wrapper #navi");
     const cont = document.querySelector("main .wrapper #contents");

@@ -1,16 +1,41 @@
 #filter {
   width: 190px;
+  padding: 8px;
+  /* border: 1px dashed red; */
 }
 #list {
   width: calc(100% - 190px);
 }
-
-legend {
+#filter > form {
+  font-size: 14px;
+}
+#filter > form legend {
   padding: 10px 0;
+  margin-bottom: 10px;
   border-bottom: 1px solid #003894;
   font-size: 20px;
   font-weight: bold;
 }
+/* container-check */
+#filter .container-check {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+#filter .container-check > input {
+  vertical-align: middle;
+  margin-right: 3px;
+}
+/* category */
 #filter .category {
-  border-bottom: 1px solid #ddd;
+  width: 100%;
+}
+#filter .category li > a {
+  display: block;
+  margin-bottom: 8px;
+  width: 98%;
+  word-break: break-all;
+}
+#filter .category li > a span {
+  float: right;
 }

@@ -13,6 +13,7 @@ function fetchData() {
       return pre;
     }, 0);
     amt_depth02 = bookarr.reduce(function(pre, cur, index) {
+      console.log(`${cur.depth02}\t\t${depth02}`)
       if(cur.depth02 == depth02) {pre ++;}
       return pre;
     }, 0);
@@ -31,13 +32,13 @@ function fetchData() {
     const cateFormat = "<a href='#'>?</a>"
     categoryList.forEach(function(li, idx) {
       if(li.className.includes("all")) {
-        li.innerHTML = cateFormat.replace("?", `All (${new Intl.NumberFormat().format(amt_all)})`);
+        li.innerHTML = cateFormat.replace("?", `All <span>(${new Intl.NumberFormat().format(amt_all)})</span>`);
       }else if(li.className.includes("depth01")) {
-        li.innerHTML = cateFormat.replace("?", `${depth01} (${new Intl.NumberFormat().format(amt_depth01)})`);
+        li.innerHTML = cateFormat.replace("?", `${depth01} <span>(${new Intl.NumberFormat().format(amt_depth01)})</span>`);
       }else if(li.className.includes("depth02")) {
-        li.innerHTML = cateFormat.replace("?", `${depth02} (${new Intl.NumberFormat().format(amt_depth02)})`);
+        li.innerHTML = cateFormat.replaceAll("?", `${depth02} <span>(${new Intl.NumberFormat().format(amt_depth02)})</span>`);
       }else if(li.className.includes("depth03")) {
-        li.innerHTML = cateFormat.replace("?", `${depth03} (${new Intl.NumberFormat().format(amt_depth03)})`);
+        li.innerHTML = cateFormat.replace("?", `${depth03} <span>(${new Intl.NumberFormat().format(amt_depth03)})</span>`);
       }
       // console.log(li.className)
     });
