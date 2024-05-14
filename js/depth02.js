@@ -13,7 +13,7 @@ function fetchData() {
       return pre;
     }, 0);
     amt_depth02 = bookarr.reduce(function(pre, cur, index) {
-      console.log(`${cur.depth02}\t\t${depth02}`)
+      // console.log(`${cur.depth02}\t\t${depth02}`)
       if(cur.depth02 == depth02) {pre ++;}
       return pre;
     }, 0);
@@ -25,6 +25,22 @@ function fetchData() {
     console.log(`amt_depth01: ${amt_depth01}`)
     console.log(`amt_depth02: ${amt_depth02}`)
     console.log(`amt_depth03: ${amt_depth03}`)
+
+    let arr = [];
+    arr.push(1);
+    console.log(`arr`)
+    console.log(arr)
+    // sbl_depth03 = bookarr.reduce((acc, cur) => {
+    //   console.log(`${depth02} \t\t ${cur.depth02}\t\t${cur.depth03}`)
+    //   if(depth02 == cur.depth02) {
+    //     acc.push(cur.depth03);
+    //     return acc;
+    //     // return acc.push(cur.depth03);
+    //   }
+    // }, []);
+
+    console.log('slb')
+    console.log(sbl_depth03)
     // const price = 14340;
     // console.log(new Intl.NumberFormat('en-Us', {style:'currency',currency:'USD'}).format(price));
 
@@ -38,6 +54,7 @@ function fetchData() {
       }else if(li.className.includes("depth02")) {
         li.innerHTML = cateFormat.replaceAll("?", `${depth02} <span>(${new Intl.NumberFormat().format(amt_depth02)})</span>`);
       }else if(li.className.includes("depth03")) {
+        
         li.innerHTML = cateFormat.replace("?", `${depth03} <span>(${new Intl.NumberFormat().format(amt_depth03)})</span>`);
       }
       // console.log(li.className)

@@ -12,6 +12,12 @@ let userarr = null;
 let depth01 = null;
 let depth02 = null;
 let depth03 = null;
+let bookdic = [];
+let set_depth01 = null;
+let set_depth02 = null;
+let set_depth03 = null;
+let sbl_depth02 = null;
+let sbl_depth03 = null;
 let amt_all = 0;
 let amt_depth01 = 0;
 let amt_depth02 = 0;
@@ -21,10 +27,11 @@ let amt_depth03 = 0;
 function init() {
   // setAside();
   includeHtml();
-  setData();
+  // setData();
   fnHeader();
   setAbsLink();
   login();
+  // console.log(bookarr)
 }
 
 function setData() {
@@ -114,6 +121,7 @@ function setAbsLink() {
 
 
 function setAside() {
+  setData();
   let search = (window.location.search)
   let queryArr = search.split("?")[1].split("&");
   depth01 = (queryArr[0] != undefined && queryArr[0] != null) ? queryArr[0].substring(queryArr[0].indexOf("=")+1).replaceAll("%20", " ").replaceAll("%27", "'") : null;
@@ -147,6 +155,34 @@ function setAside() {
     const list = document.querySelector("main .wrapper #list");
 
     if(filter == null || list == null) return;
+
+    console.log(`depth02 ${depth02}`)
+    let set_depth01 = bookarr.reduce((acc, cur) => {
+      if(acc.includes(cur.depth01)) {
+        return acc;
+      }else {
+        return [...acc, cur.depth01];
+      }
+    }, []);
+    let set_depth02 = bookarr.reduce((acc, cur) => {
+      if(acc.includes(cur.depth02)) {
+        return acc;
+      }else {
+        return [...acc, cur.depth02];
+      }
+    }, []);
+    let set_depth03 = bookarr.reduce((acc, cur) => {
+      if(acc.includes(cur.depth03)) {
+        return acc;
+      }else {
+        return [...acc, cur.depth03];
+      }
+    }, []);
+    console.log(set_depth01);
+    console.log(set_depth02);
+    console.log(set_depth03);
+
+    
     filter.setAttribute("data-include-file", `${url}/html/filter/filter.html`);
     list.setAttribute("data-include-file", `${url}/html/list/list.html`);
 
