@@ -10,7 +10,7 @@
   font-size: 14px;
 }
 #filter > form > * {
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 #filter > form > *:last-child {
   margin-bottom: 0;
