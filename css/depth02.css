@@ -9,32 +9,44 @@
 #filter > form {
   font-size: 14px;
 }
+#filter > form > * {
+  margin-bottom: 16px;
+}
+#filter > form > *:last-child {
+  margin-bottom: 0;
+}
 #filter > form legend {
   padding: 10px 0;
-  margin-bottom: 10px;
-  border-bottom: 1px solid #003894;
+  /* margin-bottom: 16px; */
+  border-bottom: 2px solid #003894;
   font-size: 20px;
   font-weight: bold;
 }
 /* container-check */
 #filter .container-check {
   width: 100%;
-  text-align: center;
-  margin-bottom: 10px;
+  /* margin-bottom: 16px; */
 }
-#filter .container-check > input {
+#filter .container-check p {
+  margin-bottom: 8px;
+}
+#filter .container-check p input {
   vertical-align: middle;
-  margin-right: 3px;
+  margin-right: 4px;
 }
 /* category */
 #filter .category {
   width: 100%;
+  border-bottom: 1px solid #ddd;
 }
 #filter .category .depth > a {
   display: block;
   margin-bottom: 8px;
   width: 98%;
   word-break: break-all;
+}
+#filter .category .depth.active > a {
+  text-decoration: underline;
 }
 #filter .category .depth > a span {
   float: right;

@@ -84,6 +84,7 @@ function fetchData() {
           let lDepth03 = document.createElement("li");
           lDepth03.classList.add("depth");
           lDepth03.classList.add("depth03");
+          arr_depth03[i] == depth03 ? lDepth03.classList.add("active") : null;
           lDepth03.innerHTML = `<a href='#'>${arr_depth03[i]}<span>(${new Intl.NumberFormat().format(obj_depth03[i][''+arr_depth03[i]])})</span></a>`
           li.parentElement.appendChild(lDepth03);
         }
