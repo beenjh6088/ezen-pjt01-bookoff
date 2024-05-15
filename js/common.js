@@ -31,6 +31,7 @@ function init() {
   fnHeader();
   setAbsLink();
   login();
+  setCurrency();
   // console.log(bookarr)
 }
 
@@ -522,3 +523,38 @@ function login() {
   }
 }
 
+function setCurrency() {
+  var currencyInputs = document.querySelectorAll('input[type="currency"]')
+  var currency = 'USD' // https://www.currency-iso.org/dam/downloads/lists/list_one.xml
+  
+  // bind event listeners
+  currencyInputs.forEach((currencyInput)=> {
+    currencyInput.addEventListener('blur', onBlur)
+    currencyInput.addEventListener('keyup', onkeyup);
+  })
+  
+  
+  function onkeyup() {
+    let val = this.value;
+    this.value = val.replace(/[^0-9.]/g, "").replace(/\.+/g, ".");
+
+  }
+
+  function localStringToNumber( s ){
+    return Number(String(s).replace(/[^0-9.,-]+/g,"").replace(/^\./, ""))
+  }
+  
+  function onBlur(e){
+    var value = e.target.value
+  
+    var options = {
+        maximumFractionDigits : 2,
+        style                 : "currency",
+        currency              : currency,
+        currencyDisplay       : "symbol"
+    }
+    e.target.value = (value || value === 0) 
+      ? localStringToNumber(value).toLocaleString("en-US", options)
+      : ''
+  }
+}

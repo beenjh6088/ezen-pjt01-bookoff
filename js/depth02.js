@@ -73,7 +73,7 @@ function fetchData() {
       if(li.className.includes("all")) {
         li.innerHTML = cateFormat.replace("?", `All <span>(${new Intl.NumberFormat().format(amt_all)})</span>`);
       }else if(li.className.includes("depth01")) {
-        li.innerHTML = cateFormat.replace("?", `${depth01} <span>(${new Intl.NumberFormat().format(amt_depth01)})</span>`);
+        li.innerHTML = cateFormat.replace("?", `${depth01} <span>(${new Intl.NumberFormat().format(amt_depth01)})</span>`).replace("#", `${url}/html/page/depth01.html?depth01=${depth01}`);
       }else if(li.className.includes("depth02")) {
         li.innerHTML = cateFormat.replaceAll("?", `${depth02} <span>(${new Intl.NumberFormat().format(amt_depth02)})</span>`);
       }else if(li.className.includes("depth03")) {

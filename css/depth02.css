@@ -55,4 +55,52 @@
 #filter .category .depth.depth01 a {padding-left: 8px; color: #113100;}
 #filter .category .depth.depth02 a {padding-left: 16px; color: #406781;}
 #filter .category .depth.depth03 a {padding-left: 24px; color: #906B4C;}
-
+#filter .container-keyword > p  {
+  width: 100%;
+  padding-left: 0;
+  overflow: hidden;
+  margin-bottom: 4px;
+  /* border: 1px dashed red; */
+}
+#filter .container-keyword > p > label {
+  float: left;
+  width: 40%;
+  text-align: right;
+  padding-right: 4px;
+  /* border: 1px dashed blue; */
+}
+#filter .container-keyword > p > input {
+  float: left;
+  width: 60%;
+  /* border: 1px dashed blue; */
+}
+/* author */
+#filter .container-author p input {
+  width: 100%;
+}
+/* price */
+#filter .container-price p {
+  display: flex;
+  justify-content: space-between;
+}
+#filter .container-price p .range {
+  width: 43%;
+}
+/* releasedate */
+#filter .continaer-releasedate p {
+  display: flex;
+  justify-content: space-between;
+}
+/* search */
+#filter .container-buttons {
+  width: 100%;
+  /* border: 1px dashed red; */
+}
+#filter .container-buttons .button-regular {
+  display: block;
+  width: 90%;
+  letter-spacing: 2px;
+  font-weight:bold;
+  font-size: 16px;
+  margin: 0 auto;
+}
