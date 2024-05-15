@@ -1,4 +1,4 @@
-function fetchData() {
+function fetchFilter() {
   // console.log("depth02.js");
   // console.log(`books : ${bookarr.length}`);console.log(`users : ${userarr.length}`);
   // console.log(bookarr);
@@ -63,8 +63,8 @@ function fetchData() {
       // console.log(`${arr_depth03[i]}\t\t${cnt}`)
       obj_depth03[i][''+arr_depth03[i]] = cnt;
     }
-    console.log(arr_depth03)
-    console.log(obj_depth03)
+    // console.log(arr_depth03)
+    // console.log(obj_depth03)
 
 
     const categoryList = category.querySelectorAll("li.depth");
@@ -96,3 +96,17 @@ function fetchData() {
 
 
 
+function fetchList() {
+  // console.log(depth01);
+  // console.log(depth02);
+  // console.log(depth03);
+  // console.log(bookarr);
+  let curlist = bookarr.map((book) => {
+    if(book.depth01 === depth01 && book.depth02 === depth02 && book.depth03 === depth03) {
+      return book;
+    }
+  }).filter(function(book) {
+    if(book != undefined) return book;
+  });
+  console.log(curlist);
+}
