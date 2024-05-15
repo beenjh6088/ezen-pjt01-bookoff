@@ -156,7 +156,7 @@ function setAside() {
 
     if(filter == null || list == null) return;
 
-    console.log(`depth02 ${depth02}`)
+    // console.log(`depth02 ${depth02}`)
     let set_depth01 = bookarr.reduce((acc, cur) => {
       if(acc.includes(cur.depth01)) {
         return acc;
@@ -178,9 +178,9 @@ function setAside() {
         return [...acc, cur.depth03];
       }
     }, []);
-    console.log(set_depth01);
-    console.log(set_depth02);
-    console.log(set_depth03);
+    // console.log(set_depth01);
+    // console.log(set_depth02);
+    // console.log(set_depth03);
 
     
     filter.setAttribute("data-include-file", `${url}/html/filter/filter.html`);
@@ -507,7 +507,7 @@ function setDate() {
       hasdate = false;
     }
     time.innerHTML = strDate;
-    console.log(ndt.toDateString());
+    // console.log(ndt.toDateString());
   });
 }
 

@@ -154,6 +154,28 @@ main > .wrapper {
   gap: 4.02%;
 }
 
+/* Color Theme Swatches in Hex */
+.Digital-Alphabet-Books-1-hex { color: #113100; }
+.Digital-Alphabet-Books-2-hex { color: #406781; }
+.Digital-Alphabet-Books-3-hex { color: #906B4C; }
+.Digital-Alphabet-Books-4-hex { color: #DE570A; }
+.Digital-Alphabet-Books-5-hex { color: #0A0A0F; }
+
+/* Color Theme Swatches in RGBA */
+.Digital-Alphabet-Books-1-rgba { color: rgba(17, 49, 0, 1); }
+.Digital-Alphabet-Books-2-rgba { color: rgba(63, 103, 128, 1); }
+.Digital-Alphabet-Books-3-rgba { color: rgba(144, 107, 75, 1); }
+.Digital-Alphabet-Books-4-rgba { color: rgba(221, 86, 10, 1); }
+.Digital-Alphabet-Books-5-rgba { color: rgba(10, 10, 14, 1); }
+
+/* Color Theme Swatches in HSLA */
+.Digital-Alphabet-Books-1-hsla { color: hsla(99, 100, 9, 1); }
+.Digital-Alphabet-Books-2-hsla { color: hsla(203, 33, 37, 1); }
+.Digital-Alphabet-Books-3-hsla { color: hsla(27, 30, 43, 1); }
+.Digital-Alphabet-Books-4-hsla { color: hsla(21, 91, 45, 1); }
+.Digital-Alphabet-Books-5-hsla { color: hsla(240, 19, 4, 1); }
+
+
 /* 
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 container 

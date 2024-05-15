@@ -30,12 +30,17 @@
 #filter .category {
   width: 100%;
 }
-#filter .category li > a {
+#filter .category .depth > a {
   display: block;
   margin-bottom: 8px;
   width: 98%;
   word-break: break-all;
 }
-#filter .category li > a span {
+#filter .category .depth > a span {
   float: right;
 }
+#filter .category .depth.all {padding-left: 0;}
+#filter .category .depth.depth01 a {padding-left: 8px; color: #113100;}
+#filter .category .depth.depth02 a {padding-left: 16px; color: #406781;}
+#filter .category .depth.depth03 a {padding-left: 24px; color: #906B4C;}
+

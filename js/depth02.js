@@ -21,28 +21,51 @@ function fetchData() {
       if(cur.depth03 == depth03) {pre ++;}
       return pre;
     }, 0);
-    console.log(`amt_all: ${amt_all}`);
-    console.log(`amt_depth01: ${amt_depth01}`)
-    console.log(`amt_depth02: ${amt_depth02}`)
-    console.log(`amt_depth03: ${amt_depth03}`)
-
-    let arr = [];
-    arr.push(1);
-    console.log(`arr`)
-    console.log(arr)
-    // sbl_depth03 = bookarr.reduce((acc, cur) => {
-    //   console.log(`${depth02} \t\t ${cur.depth02}\t\t${cur.depth03}`)
-    //   if(depth02 == cur.depth02) {
-    //     acc.push(cur.depth03);
-    //     return acc;
-    //     // return acc.push(cur.depth03);
+    // console.log(`amt_all: ${amt_all}`);
+    // console.log(`amt_depth01: ${amt_depth01}`)
+    // console.log(`amt_depth02: ${amt_depth02}`)
+    // console.log(`amt_depth03: ${amt_depth03}`)
+    // let arr = bookarr.map(function(book) {
+    //   if(book.depth02 == depth02){
+    //     return book;
     //   }
-    // }, []);
+    // }).filter(book => {
+    //   if(book != undefined) return book;
+    // })
+    let arr_depth02 = bookarr.map(function(book) {
+      if(book.depth02 == depth02){
+        return book;
+      }
+    }).filter((book, index)=> {
+      if(book != undefined) return book
+    });
+    let arr_depth03 = [];
+    for(let i = 0; i < arr_depth02.length; i++){
+      if(arr_depth03.includes(arr_depth02[i].depth03)) {
+        arr_depth03;
+      }else {
+        arr_depth03.push(arr_depth02[i].depth03);
+      }
+    }
+    let cnt_depth03 = arr_depth03.length;
+    let obj_depth03 = [cnt_depth03];
+    for(let i = 0; i < arr_depth03.length; i++) {
+      obj_depth03[i] = {};
+      // obj_depth03[i][''+arr_depth03[i]] = 0;
+    }
+    for(let i = 0; i <arr_depth03.length; i++) {
+      let cnt = 0;
+      for(let j = 0; j < arr_depth02.length; j++) {
+        if(arr_depth03[i] === arr_depth02[j].depth03) {
+          cnt++;
+        }
+      }
+      // console.log(`${arr_depth03[i]}\t\t${cnt}`)
+      obj_depth03[i][''+arr_depth03[i]] = cnt;
+    }
+    console.log(arr_depth03)
+    console.log(obj_depth03)
 
-    console.log('slb')
-    console.log(sbl_depth03)
-    // const price = 14340;
-    // console.log(new Intl.NumberFormat('en-Us', {style:'currency',currency:'USD'}).format(price));
 
     const categoryList = category.querySelectorAll("li.depth");
     const cateFormat = "<a href='#'>?</a>"
@@ -54,8 +77,16 @@ function fetchData() {
       }else if(li.className.includes("depth02")) {
         li.innerHTML = cateFormat.replaceAll("?", `${depth02} <span>(${new Intl.NumberFormat().format(amt_depth02)})</span>`);
       }else if(li.className.includes("depth03")) {
-        
-        li.innerHTML = cateFormat.replace("?", `${depth03} <span>(${new Intl.NumberFormat().format(amt_depth03)})</span>`);
+        // li.innerHTML = cateFormat.replace("?", `${depth03} <span>(${new Intl.NumberFormat().format(amt_depth03)})</span>`);
+
+        for(let i = 0; i < obj_depth03.length; i++) {
+          // console.log(obj_depth03[i])
+          let lDepth03 = document.createElement("li");
+          lDepth03.classList.add("depth");
+          lDepth03.classList.add("depth03");
+          lDepth03.innerHTML = `<a href='#'>${arr_depth03[i]}<span>(${new Intl.NumberFormat().format(obj_depth03[i][''+arr_depth03[i]])})</span></a>`
+          li.parentElement.appendChild(lDepth03);
+        }
       }
       // console.log(li.className)
     });
