@@ -43,7 +43,11 @@
   display: block;
   margin-bottom: 8px;
   width: 98%;
-  word-break: break-all;
+  /* word-break: break-all; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /* border: 1px dashed red; */
 }
 #filter .category .depth.active > a {
   text-decoration: underline;

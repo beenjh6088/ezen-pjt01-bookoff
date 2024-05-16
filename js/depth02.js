@@ -33,6 +33,7 @@ function fetchFilter() {
     //   if(book != undefined) return book;
     // })
     let arr_depth02 = bookarr.map(function(book) {
+      console.log(`${book.depth02}\t\t${depth02}`)
       if(book.depth02 == depth02){
         return book;
       }
@@ -63,8 +64,14 @@ function fetchFilter() {
       // console.log(`${arr_depth03[i]}\t\t${cnt}`)
       obj_depth03[i][''+arr_depth03[i]] = cnt;
     }
-    // console.log(arr_depth03)
-    // console.log(obj_depth03)
+    console.log('depth02')
+    console.log(depth02)
+    console.log('arr_depth02')
+    console.log(arr_depth02)
+    console.log('arr_depth03')
+    console.log(arr_depth03)
+    console.log('obj_depth03')
+    console.log(obj_depth03)
 
 
     const categoryList = category.querySelectorAll("li.depth");
