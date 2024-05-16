@@ -110,37 +110,68 @@
 }
 #list .cotainer-handler {
   height: 30px;
-  border: 1px dashed black;
+  /* border: 1px dashed black; */
   clear: both;
   font-size: 16px;
 }
 #list .cotainer-handler .left {
   height: 100%;
   float: left;
-  border: 1px dashed blue;
+  /* border: 1px dashed blue; */
 }
 #list .cotainer-handler .location {
   height: 100%;
-  border: 1px dashed plum;
+  /* border: 1px dashed plum; */
 }
 #list .cotainer-handler .location p {
   height: 100%;
+  line-height: 30px;
+  /* border: 1px dashed red; */
 }
 #list .cotainer-handler .right {
   height: 100%;
   float: right;
-  border: 1px dashed blue;
+  /* border: 1px dashed blue; */
 }
 #list .cotainer-handler .disposition {
   height: 100%;
-  border: 1px dashed plum;
-  float:left;
+  line-height: 30px;
+  /* border: 1px dashed plum; */
+  float: left;
+  display: flex;
+}
+#list .cotainer-handler .disposition a {
+  /* border: 1px dashed red; */
+  /* display: block; */
+  /* width: 30px; */
+  /* height: 30px; */
+  margin: 0 16px;
+}
+#list .cotainer-handler .disposition a img {
+  width: 100%;
+  vertical-align: bottom;
+  /* height: 100%; */
+  /* display: block;  */
+  /* border: 1px dashed red; */
+
+}
+#list .cotainer-handler .disposition a:first-child {
+  margin-right: 0;
+}
+#list .cotainer-handler .disposition a:hover {
+  opacity: 0.6;
 }
 #list .cotainer-handler .quantity {
   height: 100%;
-  border: 1px dashed plum;
+  line-height: 30px;
+  /* border: 1px dashed plum; */
   float:left;
-  
+  padding: 0 0 0 16px;
+}
+#list .cotainer-handler .quantity select {
+  width: 60px;
+  text-align: center;
+  /* border-radius: 0px; */
 }
 #list .container-itemlist {
   width: 100%;

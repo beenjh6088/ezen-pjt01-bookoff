@@ -100,9 +100,9 @@ function fetchList() {
   const location = document.querySelector("#list .location");
   location.innerHTML = `<p>${depth01} > ${depth02} > ${depth03}</p>`
 
-  console.log(depth01);
-  console.log(depth02);
-  console.log(depth03);
+  // console.log(depth01);
+  // console.log(depth02);
+  // console.log(depth03);
   // console.log(bookarr);
   let curlist = bookarr.map((book) => {
     if(book.depth01 === depth01 && book.depth02 === depth02 && book.depth03 === depth03) {
