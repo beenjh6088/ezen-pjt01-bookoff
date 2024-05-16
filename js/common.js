@@ -32,7 +32,6 @@ function init() {
   setAbsLink();
   login();
   setCurrency();
-  // console.log(bookarr)
 }
 
 function setData() {
@@ -43,7 +42,6 @@ function setData() {
 function fnHeader() {
   mainMenus = document.querySelectorAll(".mainMenu > li");
   header = document.querySelector("#header");
-  // console.log(mainMenus);
 
   // make box shadow in header
   window.addEventListener("scroll", function() {
