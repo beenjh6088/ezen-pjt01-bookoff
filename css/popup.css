@@ -1,0 +1,12 @@
+/* stranger */
+.container-stranger {
+  width: 217px;
+  height: 126px;
+  background-color: #fff;
+}
+.container-stranger .button-regular {
+  width: 207px;
+  height: 45px;
+  font-size: 18px;
+  color: #f5f5f5;
+}
