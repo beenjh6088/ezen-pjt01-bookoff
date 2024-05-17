@@ -111,6 +111,33 @@ function fetchList() {
   }).filter(function(book) {
     if(book != undefined) return book;
   });
-  console.log(curlist);
+  // console.log(curlist);
+
+}
+
+function inspireEvent() {
+
+  // disposition
+  let dpo_icons = document.querySelectorAll("#list .disposition .icon");
+  dpo_icons.forEach((icon) => {
+    icon.addEventListener("click", function() {
+      let siblings = this.parentElement.children;
+      for(let sib of siblings) {
+        sib.classList.remove("active");
+      }
+      this.classList.add("active");
+      let itemlist = document.querySelector("#list .container-itemlist");
+
+      // console.log(icon.classList)
+      if(icon.classList.contains("list")) {
+        itemlist.classList.remove("grid");
+        itemlist.classList.add("list");
+      }else if(icon.classList.contains("grid")) {
+        itemlist.classList.remove("list");
+        itemlist.classList.add("grid");
+      }
+    })
+  });
+
 
 }
