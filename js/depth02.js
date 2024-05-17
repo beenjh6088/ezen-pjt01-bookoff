@@ -104,6 +104,7 @@ function fetchList() {
   // console.log(depth02);
   // console.log(depth03);
   // console.log(bookarr);
+  // filter books a user select
   let curlist = bookarr.map((book) => {
     if(book.depth01 === depth01 && book.depth02 === depth02 && book.depth03 === depth03) {
       return book;

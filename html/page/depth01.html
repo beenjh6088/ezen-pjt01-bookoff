@@ -28,6 +28,8 @@
         rankSliders.forEach((obj, idx) => {makeSlider("#weeklyRank .sub"+String(idx+1).padStart(2, "0"))});
         activateSlideTab();
       }
+      localStorage.setItem("displaymode", "list")
+      localStorage.setItem("show_qnt", 12)
 
       // console.log("depth01");
       // console.log(`books : ${bookarr.length}`);console.log(`users : ${userarr.length}`);
