@@ -111,13 +111,52 @@ function fetchList() {
   }).filter(function(book) {
     if(book != undefined) return book;
   });
-  // console.log(curlist);
+
+  // init displayicons
+  let displaymode = localStorage.getItem("displaymode");
+  let dpo_icons = document.querySelectorAll("#list .disposition .icon");
+  dpo_icons.forEach((icon) => {
+    if(icon.classList.contains(displaymode)) {
+      let siblings = icon.parentElement.children;
+      for(let sib of siblings) {
+        sib.classList.remove("active");
+      }
+      icon.classList.add("active");
+    }
+  })
+
+  // init displaymode
+  let itemlist = document.querySelector("#list .container-itemlist");
+  itemlist.classList.add(displaymode);
+
+  // init quantity to show
+  let show_qnt_select = document.querySelector("#list .qnt_show");
+  let show_qntList = show_qnt_select.options;
+  let show_qnt = localStorage.getItem("show_qnt");
+  // console.log(`show_qnt`);
+  // console.log(show_qnt);
+  for(let qnt of show_qntList) {
+    if(qnt.value == show_qnt) show_qntList.selectedIndex = qnt.index;
+  }
+  // make quantity of show as much as you pick
+  // let lDepth03 = document.createElement("li");
+  // lDepth03.classList.add("depth");
+  // lDepth03.classList.add("depth03");
+  // arr_depth03[i] == depth03 ? lDepth03.classList.add("active") : null;
+  // lDepth03.innerHTML = `<a href='${url}/html/page/depth02.html?depth01=${depth01}&depth02=${depth02}&depth03=${arr_depth03[i]}'>${arr_depth03[i]}<span>(${new Intl.NumberFormat().format(obj_depth03[i][''+arr_depth03[i]])})</span></a>`
+  // li.parentElement.appendChild(lDepth03);
+  for(let i = 0; i < show_qnt; i++) {
+    let li_item = document.createElement("li");
+    li_item.classList.add("item");
+    li_item.innerText = i+1;
+    itemlist.appendChild(li_item);
+  }
 
 }
 
 function inspireEvent() {
 
-  // disposition
+  // display icon
   let dpo_icons = document.querySelectorAll("#list .disposition .icon");
   dpo_icons.forEach((icon) => {
     icon.addEventListener("click", function() {
@@ -126,18 +165,40 @@ function inspireEvent() {
         sib.classList.remove("active");
       }
       this.classList.add("active");
+      
       let itemlist = document.querySelector("#list .container-itemlist");
-
-      // console.log(icon.classList)
-      if(icon.classList.contains("list")) {
-        itemlist.classList.remove("grid");
-        itemlist.classList.add("list");
-      }else if(icon.classList.contains("grid")) {
-        itemlist.classList.remove("list");
-        itemlist.classList.add("grid");
+      if(icon.classList.contains("active")) {
+        // console.log(icon.classList)
+        if(icon.classList.contains("list")) {
+          itemlist.classList.remove("grid");
+          localStorage.setItem("displaymode", "list");
+          itemlist.classList.add(localStorage.getItem("displaymode"));
+        } else if(icon.classList.contains("grid")) {
+          itemlist.classList.remove("list");
+          localStorage.setItem("displaymode", "grid");
+          itemlist.classList.add(localStorage.getItem("displaymode"));
+        }
       }
+
     })
   });
+
+  // quantity
+  let show_qnt_select = document.querySelector("#list .qnt_show");
+  let show_qntList = show_qnt_select.options;
+  show_qnt_select.addEventListener("change", function() {
+    let show_qnt = show_qntList[show_qnt_select.selectedIndex].value;
+    localStorage.setItem("show_qnt", show_qnt);
+    // console.log(show_qnt)
+    let itemlist = document.querySelector("#list .container-itemlist");
+    itemlist.innerHTML = "";
+    for(let i = 0; i < show_qnt; i++) {
+      let li_item = document.createElement("li");
+      li_item.classList.add("item");
+      li_item.innerText = i+1;
+      itemlist.appendChild(li_item);
+    }
+  })
 
 
 }
