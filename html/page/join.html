@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+	<link rel="stylesheet" href="../../css/common.css">
+	<link rel="stylesheet" href="../../css/join.css">
+	<script src="../../js/jquery-2.1.1.js"></script>
+	<script defer src="../../js/common.js"></script>
+  <script src="../../json/book.json" ></script>
+  <script src="../../json/user.json" ></script>
+  <script>
+    window.onload = function() {
+      // 01. include html files
+      // 02. make a header
+      init();
+    }
+  </script>
+</head>
+<body>
+  <div id="container">
+		<!-- header -->
+		<header id="header" data-include-file="./html/common/header.html" class="includeJs"></header>
+
+    <main id="main">
+      <div class="wrapper">
+        
+      </div>
+    </main>
+
+		<!-- guides -->
+		<section id="guides" data-include-file="./html/common/guides.html" class="includeJs"></section>
+
+
+		<!-- footer -->
+		<footer id="footer" data-include-file="./html/common/footer.html" class="includeJs"></footer>
+  </div>
+  </div>
+</body>
+</html>

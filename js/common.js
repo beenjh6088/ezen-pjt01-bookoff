@@ -3,8 +3,7 @@ const duration = 3000;
 const url = `${window.location.protocol+"//"+window.location.host+"/"}`;
 let userinfo = {};
 let header = null;
-let islogin = false;
-// let islogin = true;
+let isLogin = false;
 let links = [];
 let mainMenus = null;
 let bookarr = null;
@@ -52,13 +51,15 @@ function fnHeader() {
     if(this.window.scrollY == 0) {
       headertop.style.boxShadow = "";
     }
-  })
+  });
+  
 }
 
 function includeHtml() {
   const includeTarget = document.querySelectorAll('.includeJs');
   includeTarget.forEach(function(el, idx) {
     const targetFile = el.dataset.includeFile;
+    // console.log(targetFile)
     if(targetFile){
       let xhttp = new XMLHttpRequest();
 
@@ -70,7 +71,8 @@ function includeHtml() {
       }
       // xhttp.open('GET', targetFile, true);
       // asynchronism = false
-      xhttp.open('GET', targetFile, false);
+      // xhttp.open('GET', targetFile, false);
+      xhttp.open('GET', url+targetFile, false);
       xhttp.send();
       return;
     }
@@ -131,23 +133,35 @@ function setAside() {
     const cont = document.querySelector("main .wrapper #contents");
     if(navi == null || cont == null) return;
     if (depth01.includes("books")) {
-      navi.setAttribute("data-include-file", `${url}/html/nav/nav-01-${depth01}.html`);
-      cont.setAttribute("data-include-file", `${url}/html/contents/cont-01-${depth01}.html`);
+      // navi.setAttribute("data-include-file", `${url}/html/nav/nav-01-${depth01}.html`);
+      // cont.setAttribute("data-include-file", `${url}/html/contents/cont-01-${depth01}.html`);
+      navi.setAttribute("data-include-file", `html/nav/nav-01-${depth01}.html`);
+      cont.setAttribute("data-include-file", `html/contents/cont-01-${depth01}.html`);
     }else if (depth01.includes("comics")) {
-      navi.setAttribute("data-include-file", `${url}/html/nav/nav-02-${depth01}.html`);
-      cont.setAttribute("data-include-file", `${url}/html/contents/cont-02-${depth01}.html`);
+      // navi.setAttribute("data-include-file", `${url}/html/nav/nav-02-${depth01}.html`);
+      // cont.setAttribute("data-include-file", `${url}/html/contents/cont-02-${depth01}.html`);
+      navi.setAttribute("data-include-file", `html/nav/nav-02-${depth01}.html`);
+      cont.setAttribute("data-include-file", `html/contents/cont-02-${depth01}.html`);
     }else if (depth01.includes("cd")) {
-      navi.setAttribute("data-include-file", `${url}/html/nav/nav-03-${depth01}.html`);
-      cont.setAttribute("data-include-file", `${url}/html/contents/cont-03-${depth01}.html`);
+      // navi.setAttribute("data-include-file", `${url}/html/nav/nav-03-${depth01}.html`);
+      // cont.setAttribute("data-include-file", `${url}/html/contents/cont-03-${depth01}.html`);
+      navi.setAttribute("data-include-file", `html/nav/nav-03-${depth01}.html`);
+      cont.setAttribute("data-include-file", `html/contents/cont-03-${depth01}.html`);
     }else if (depth01.includes("dvdBluray")) {
-      navi.setAttribute("data-include-file", `${url}/html/nav/nav-04-${depth01}.html`);
-      cont.setAttribute("data-include-file", `${url}/html/contents/cont-04-${depth01}.html`);
+      // navi.setAttribute("data-include-file", `${url}/html/nav/nav-04-${depth01}.html`);
+      // cont.setAttribute("data-include-file", `${url}/html/contents/cont-04-${depth01}.html`);
+      navi.setAttribute("data-include-file", `html/nav/nav-04-${depth01}.html`);
+      cont.setAttribute("data-include-file", `html/contents/cont-04-${depth01}.html`);
     }else if (depth01.includes("game")) {
-      navi.setAttribute("data-include-file", `${url}/html/nav/nav-05-${depth01}.html`);
-      cont.setAttribute("data-include-file", `${url}/html/contents/cont-05-${depth01}.html`);
+      // navi.setAttribute("data-include-file", `${url}/html/nav/nav-05-${depth01}.html`);
+      // cont.setAttribute("data-include-file", `${url}/html/contents/cont-05-${depth01}.html`);
+      navi.setAttribute("data-include-file", `html/nav/nav-05-${depth01}.html`);
+      cont.setAttribute("data-include-file", `html/contents/cont-05-${depth01}.html`);
     }else if (depth01.includes("setBulk")) {
-      navi.setAttribute("data-include-file", `${url}/html/nav/nav-06-${depth01}.html`);
-      cont.setAttribute("data-include-file", `${url}/html/contents/cont-06-${depth01}.html`);
+      // navi.setAttribute("data-include-file", `${url}/html/nav/nav-06-${depth01}.html`);
+      // cont.setAttribute("data-include-file", `${url}/html/contents/cont-06-${depth01}.html`);
+      navi.setAttribute("data-include-file", `html/nav/nav-06-${depth01}.html`);
+      cont.setAttribute("data-include-file", `html/contents/cont-06-${depth01}.html`);
     }
   } else {
     const filter = document.querySelector("main .wrapper #filter");
@@ -182,8 +196,8 @@ function setAside() {
     // console.log(set_depth03);
 
     
-    filter.setAttribute("data-include-file", `${url}/html/filter/filter.html`);
-    list.setAttribute("data-include-file", `${url}/html/list/list.html`);
+    filter.setAttribute("data-include-file", `html/filter/filter.html`);
+    list.setAttribute("data-include-file", `html/list/list.html`);
 
   }
   // console.log(window.location.url)
@@ -511,14 +525,36 @@ function setDate() {
 }
 
 function login() {
-  if(islogin) {
-    let icons = header.querySelectorAll(".icons li");
+  localStorage.setItem("isLogin", isLogin)
+  let icons = header.querySelectorAll("#header .icons li");
+  if(isLogin) {
     icons.forEach(function(li, idx) {
       let iconimg = li.querySelector("img");
       let imgsrc = iconimg.getAttribute("src");
-      iconimg.setAttribute("src", imgsrc.replace("Inactive",""));
+      iconimg.setAttribute("src", imgsrc.replace("off","on"));
+    })
+  }else {
+    // console.log("ff")
+    let pop_stranger = document.querySelector("#header .pop_stranger");
+    icons.forEach(function(li, idx) {
+      li.addEventListener("click", function() {
+        // console.log(pop_stranger)
+        pop_stranger.classList.add("active");
+        let offset = -80+(30*idx);
+        pop_stranger.style.transform = `translate(${offset}%, 0)`;
+      })
+    })
+    document.addEventListener("mouseup", function(e) {
+      // console.log(e)
+      // console.log(e.target)
+      // console.log(e.target.closest(".pop_stranger"))
+      if(!(e.target.closest(".pop_stranger"))) pop_stranger.classList.remove("active");
     })
   }
+}
+
+function openPopup(path, title, style) {
+  window.open(path, title, style);
 }
 
 function setCurrency() {
