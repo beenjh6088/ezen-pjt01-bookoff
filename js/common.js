@@ -3,7 +3,7 @@ const duration = 3000;
 const url = `${window.location.protocol+"//"+window.location.host+"/"}`;
 let userinfo = {};
 let header = null;
-// let isLogin = false;
+// let isLogin = Boolean(localStorage.getItem("isLogin"));
 let links = [];
 let mainMenus = null;
 let bookarr = [];
@@ -56,6 +56,19 @@ function fnHeader() {
       headertop.style.boxShadow = "";
     }
   });
+  
+  let ulIcons = document.querySelector("#header .icons");
+  console.log("fnHeader isLogin")
+  let isLogin = localStorage.getItem("isLogin");
+  console.log(isLogin)
+  if(isLogin == 'true' ){
+    console.log("fnHeader login true")
+    ulIcons.classList.add("login")
+  }else if(isLogin=='false') {
+    console.log("fnHeader login true")
+    ulIcons.classList.remove("login")
+
+  }
   
 }
 
@@ -528,75 +541,97 @@ function setDate() {
   });
 }
 
-// function login() {
-//   console.log("login")
-//   let isLogin = localStorage.getItem("isLogin");
-//   console.log(isLogin)
-//   // localStorage.setItem("isLogin", isLogin)
-//   let icons = header.querySelectorAll("#header .icons li");
-//   if(isLogin == true) {
-//     icons.forEach(function(li, idx) {
-//       let iconimg = li.querySelector("img");
-//       let imgsrc = iconimg.getAttribute("src");
-//       iconimg.setAttribute("src", imgsrc.replace("off","on"));
-//     })
-//   }else {
-//     // console.log("ff")
-//     let pop_stranger = document.querySelector("#header .pop_stranger");
-//     icons.forEach(function(li, idx) {
-//       li.addEventListener("click", function() {
-//         // console.log(pop_stranger)
-//         pop_stranger.classList.add("active");
-//         let offset = -80+(30*idx);
-//         pop_stranger.style.transform = `translate(${offset}%, 0)`;
-//       })
-//     })
-//     document.addEventListener("mouseup", function(e) {
-//       // console.log(e)
-//       // console.log(e.target)
-//       // console.log(e.target.closest(".pop_stranger"))
-//       if(!(e.target.closest(".pop_stranger"))) pop_stranger.classList.remove("active");
-//     })
-//   }
-// }
-
-
 function login() {
   console.log("login")
-  let isLogin = localStorage.getItem("isLogin");
-  console.log(isLogin)
+  // isLogin = localStorage.getItem("isLogin");
+  // let isLogin = Boolean(localStorage.getItem("isLogin"));
+  // console.log(isLogin)
   // localStorage.setItem("isLogin", isLogin)
   let icons = header.querySelectorAll("#header .icons li");
-  if(isLogin == true) {
-    icons.forEach(function(li, idx) {
-      let iconimg = li.querySelector("img");
-      let imgsrc = iconimg.getAttribute("src");
-      iconimg.setAttribute("src", imgsrc.replace("off","on"));
-    })
-  }else {
+  // if(isLogin == true) {
+  //   icons.forEach(function(li, idx) {
+  //     let iconimg = li.querySelector("img");
+  //     let imgsrc = iconimg.getAttribute("src");
+  //     iconimg.setAttribute("src", imgsrc.replace("off","on"));
+  //   })
+  // }else {
     // console.log("ff")
     let pop_stranger = document.querySelector("#header .pop_stranger");
+    let pop_userinfo = document.querySelector("#header .pop_userinfo");
+    let isLogin = localStorage.getItem("isLogin");
     icons.forEach(function(li, idx) {
       li.addEventListener("click", function() {
         // console.log(pop_stranger)
-        pop_stranger.classList.add("active");
-        let offset = -80+(30*idx);
-        pop_stranger.style.transform = `translate(${offset}%, 0)`;
+        if(isLogin == "true") {
+          pop_userinfo.classList.add("active");
+          let offset = -80+(30*idx);
+          pop_userinfo.style.transform = `translate(${offset}%, 0)`;
+        } else if(isLogin == "false") {
+          pop_stranger.classList.add("active");
+          let offset = -80+(30*idx);
+          pop_stranger.style.transform = `translate(${offset}%, 0)`;
+        }
       })
     })
     document.addEventListener("mouseup", function(e) {
       // console.log(e)
       // console.log(e.target)
       // console.log(e.target.closest(".pop_stranger"))
+      if(!(e.target.closest(".pop_userinfo"))) pop_userinfo.classList.remove("active");
       if(!(e.target.closest(".pop_stranger"))) pop_stranger.classList.remove("active");
     })
-  }
+  // }
 }
+
+
+// function login() {
+//   // localStorage.setItem("isLogin", isLogin)
+//   let pop_stranger = document.querySelector("#header .pop_stranger");
+//   let pop_userinfo = document.querySelector("#header .pop_userinfo");
+
+//   let icons = header.querySelectorAll("#header .icons li");
+//   icons.forEach(function(li, idx) {
+//     li.addEventListener("click", function() {
+//       console.log("login")
+//       let isLogin = Boolean(localStorage.getItem("isLogin"));
+//       console.log(isLogin)
+//       if(isLogin == true) {
+//         pop_stranger.classList.remove("active");
+//         pop_userinfo.classList.add("active");
+//         let offset = -80+(30*idx);
+//         pop_userinfo.style.transform = `translate(${offset}%, 0)`;
+//       }else if(isLogin == false) {
+//         pop_userinfo.classList.remove("active");
+//         pop_stranger.classList.add("active");
+//         let offset = -80+(30*idx);
+//         pop_stranger.style.transform = `translate(${offset}%, 0)`;
+
+//       }
+//     })
+//   });
+  
+//   document.addEventListener("mouseup", function(e) {
+//     let isLogin = localStorage.getItem("isLogin");
+//     if(isLogin == true) {
+//       if(!(e.target.closest(".pop_userinfo"))) pop_userinfo.classList.remove("active");
+//     }
+//   })
+
+
+//   document.addEventListener("mouseup", function(e) {
+//     let isLogin = localStorage.getItem("isLogin");
+//     if(isLogin == false) {
+//       if(!(e.target.closest(".pop_stranger"))) pop_stranger.classList.remove("active");
+//     }
+//   })
+// }
+
+
 
 function logout() {
   console.log("logout");
   localStorage.setItem("isLogin", false);
-  // login();
+  if(document.referrer) location.href = url;
 }
 
 function openPopup(path, title, style) {

@@ -13,11 +13,17 @@ function checkAuth() {
     if(inp_email == userarr[i].email) res_email = true;
     if(inp_password == userarr[i].password) res_password = true;
   }
-  console.log(res_email && res_password)
+  // console.log(res_email && res_password)
+  let ulIcons = document.querySelector("#header .icons");
+  console.log(ulIcons)
+  ulIcons.classList.add("login")
   if(res_email && res_password) {
     localStorage.setItem("isLogin", true);
-    history.go(-1);
+    if(document.referrer) {
+      location.href = document.referrer;
+    }
   }
   // return res_email && res_password;
 }
+
 

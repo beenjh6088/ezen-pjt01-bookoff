@@ -440,7 +440,7 @@ header stranger
   display: none;
 }
 #header .container-icons .pop_userinfo.active {
-  display: active;
+  display: block;
 }
 #header .container-icons .pop_userinfo .container-userinfo li {
   width: 245px;
