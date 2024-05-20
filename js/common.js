@@ -3,11 +3,11 @@ const duration = 3000;
 const url = `${window.location.protocol+"//"+window.location.host+"/"}`;
 let userinfo = {};
 let header = null;
-let isLogin = false;
+// let isLogin = false;
 let links = [];
 let mainMenus = null;
-let bookarr = null;
-let userarr = null;
+let bookarr = [];
+let userarr = [];
 let depth01 = null;
 let depth02 = null;
 let depth03 = null;
@@ -26,7 +26,7 @@ let amt_depth03 = 0;
 function init() {
   // setAside();
   includeHtml();
-  // setData();
+  setData();
   fnHeader();
   setAbsLink();
   login();
@@ -36,12 +36,16 @@ function init() {
 function setData() {
   bookarr = JSON.parse(JSON.stringify(BookObj)).books;
   userarr = JSON.parse(JSON.stringify(UserObj)).users;
+  // console.log(`setdata`)
+  // console.log(userarr)
+  // localStorage.setItem("bookarr", bookarr);
+  // localStorage.setItem("userarr", userarr);
 }
 
 function fnHeader() {
   mainMenus = document.querySelectorAll(".mainMenu > li");
   header = document.querySelector("#header");
-
+  
   // make box shadow in header
   window.addEventListener("scroll", function() {
     let headertop = header.querySelector(".top");
@@ -525,9 +529,12 @@ function setDate() {
 }
 
 function login() {
-  localStorage.setItem("isLogin", isLogin)
+  console.log("login")
+  let isLogin = localStorage.getItem("isLogin");
+  console.log(isLogin)
+  // localStorage.setItem("isLogin", isLogin)
   let icons = header.querySelectorAll("#header .icons li");
-  if(isLogin) {
+  if(isLogin == true) {
     icons.forEach(function(li, idx) {
       let iconimg = li.querySelector("img");
       let imgsrc = iconimg.getAttribute("src");
@@ -551,6 +558,12 @@ function login() {
       if(!(e.target.closest(".pop_stranger"))) pop_stranger.classList.remove("active");
     })
   }
+}
+
+function logout() {
+  console.log("logout");
+  localStorage.setItem("isLogin", false);
+  // login();
 }
 
 function openPopup(path, title, style) {

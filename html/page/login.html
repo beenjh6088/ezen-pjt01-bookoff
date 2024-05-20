@@ -8,13 +8,18 @@
 	<link rel="stylesheet" href="../../css/login.css">
 	<script src="../../js/jquery-2.1.1.js"></script>
 	<script defer src="../../js/common.js"></script>
+	<script defer src="../../js/login.js"></script>
   <script src="../../json/book.json" ></script>
   <script src="../../json/user.json" ></script>
+  <link rel="icon" href="../../logo_bookoff.ico">
   <script>
     window.onload = function() {
       // 01. include html files
       // 02. make a header
       init();
+
+      // checkAuth();
+
     }
   </script>
 </head>
@@ -40,8 +45,8 @@
                 <img src="../../images/UI//password_off.png" alt="icon_password">
               </div>
               <div class="area area-buttons">
-                <button class="button-regular">Login</button>
-                <button class="button-icon">Login with line</button>
+                <a class="button-regular" href="javascript:;" onclick="checkAuth();">Login</a>
+                <a class="button-icon"  href="javascript:;">Login with line</a>
               </div>
               <div class="area area-help">
                 <a href="javascript:;">Forgot your password?</a>
@@ -57,7 +62,7 @@
                 It is required to be our member.
               </p>
               <div class="area area-buttons">
-                <button class="button-regular">Join</button>
+                <a class="button-regular" href="./join.html">Join</a>
               </div>
             </div>
           </div>
