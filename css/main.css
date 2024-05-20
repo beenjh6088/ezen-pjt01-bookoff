@@ -46,6 +46,7 @@ banners
   background-size: 100% 100%;
 }
 #banners .banner .title {
+  font-size: 14px;
 	position: relative;
 	/* padding: 15px 18px; */
   padding: 10.67% 12.8%;

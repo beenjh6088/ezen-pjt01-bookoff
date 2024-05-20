@@ -1,15 +1,19 @@
 main {
   width: 100%;
   background-color: #f5f5f5;
-  border: 1px dashed red;
+  /* border: 1px dashed red; */
 }
 main .wrapper {
-  border: 1px dashed red;
+  /* border: 1px dashed brown; */
   height: calc(100vh - 90px - 175px - 52px);
+  min-height: 760px;
+  /* min-height: 660px; */
   padding: 85px 0;
   flex-wrap: wrap;
+  flex-direction: column;
+  gap : 0;
 }
-main .wrapper .title {
+main .wrapper > .title {
   width: 100%;
   height: 55px;
   font-size: 30px;
@@ -19,12 +23,99 @@ main .wrapper .title {
 
 main .container-member {
   width: 100%;
+
   /* height: calc(100vh - 90px - 175px - 52px); */
   background-color: #f5f5f5;
   display: flex;
+  flex-direction: row;
   gap : 10px;
 }
 main .container-member > * {
   width: 100%;
   background-color: #fff;
+  /* height: 500px; */
+}
+main .container-member > div {
+  width: 100%;
+  padding: 29px 14px 29px 64px;
+  /* border: 1px dashed red; */
+}
+main .container-member .paragraph {
+  width: 100%;
+  /* border: 1px dashed blue; */
+}
+main .container-member .paragraph > .title {
+  font-size: 24px;
+  /* border: 1px dashed blue; */
+}
+main .container-member .paragraph .area {
+  position: relative;
+  /* border: 1px dashed blue; */
+}
+main .container-member .paragraph .area .title {
+  font-size: 16px;
+}
+main .container-member .paragraph .area input {
+  display: block;
+  width: 100%;
+  height: 31px;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  border: 1px solid #999999;
+  padding-left: 17px;
+}
+main .container-member .container-login .area img {
+  position: absolute;
+  right: 16px;
+  bottom : 3px;
+}
+main .container-member .container-login .area.area-buttons {
+  padding: 58px 0;
+}
+main .container-member .container-login .area button {
+  display: block;
+  width: 85%;
+  height: 45px;
+  margin: 0 auto 15px;
+  font-size: 14px;
+}
+main .container-member .container-login .area button:last-child {
+  margin: 0 auto;
+}
+main .container-member .container-login .area .button-regular {
+  background-color: #F68A25;
+}
+main .container-member .container-login .area .button-icon {
+  background-color: #00C300;
+  border: none;
+  color: #FBFBFB;
+}
+main .container-member .container-login .area .button-icon:after {
+  background: url(../images/UI/icon_line.png);
+}
+main .container-member .container-login .area-help > a {
+  font-size: 12px;
+  color: #003894;
+  display: block;
+  margin-bottom: 6px;
+}
+main .container-member .container-login .area-help > a:last-child {
+  margin-bottom: 0;
+}
+main .container-member > .join  {
+  width: 100%;
+  padding: 29px 0 0 0;
+  /* border: 1px dashed green; */
+} 
+main .container-member > .join .container-join {
+  width: 76%;
+  margin: 0 auto;
+  /* border: 1px dashed red; */
+  text-align: justify;
+}
+main .container-member > .join .container-join .area-buttons {
+  padding-top: 31px;
+}
+main .container-member > .join .container-join .area-buttons .button-regular {
+  width: 100%;
 }
