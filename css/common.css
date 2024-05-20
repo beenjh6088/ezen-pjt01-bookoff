@@ -345,21 +345,27 @@ header icons
 }
 #header .container-icons .icons li a {
   display: block;
-  /* border: 1px solid red; */
-}
-#header .container-icons .icons li a img {
-  display: block;
   width: 24px;
   height: 24px;
+  /* border: 1px solid red; */
 }
-#header .container-icons .icons.login .icon01 {
-
+#header .container-icons .icons li a.icon01 {
+  background: url(../images/UI/wishlist_off.png) no-repeat center/cover;
 }
-#header .container-icons .icons.login .icon02 {
-
+#header .container-icons .icons li a.icon02 {
+  background: url(../images/UI/userinfo_off.png) no-repeat center/cover;
 }
-#header .container-icons .icons.login .icon03 {
-
+#header .container-icons .icons li a.icon03 {
+  background: url(../images/UI/cartlist_off.png) no-repeat center/cover;
+}
+#header .container-icons .icons.login li a.icon01 {
+  background: url(../images/UI/wishlist_on.png) no-repeat center/cover;
+}
+#header .container-icons .icons.login li a.icon02 {
+  background: url(../images/UI/userinfo_on.png) no-repeat center/cover;
+}
+#header .container-icons .icons.login li a.icon03 {
+  background: url(../images/UI/cartlist_on.png) no-repeat center/cover;
 }
 /* 
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
@@ -420,6 +426,37 @@ header stranger
   font-size: 18px;
   font-weight: bold;
   letter-spacing: 1px;
+}
+
+#header .container-icons .pop_userinfo {
+  background-color: #fff;
+  border: 1px dashed red;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  border: 1px solid #eee;
+  box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.3);
+  z-index: 1;
+  display: none;
+}
+#header .container-icons .pop_userinfo.active {
+  display: active;
+}
+#header .container-icons .pop_userinfo .container-userinfo li {
+  width: 245px;
+  height: 45px;
+  line-height: 45px;
+  border-bottom: 1px solid #eee;
+}
+#header .container-icons .pop_userinfo .container-userinfo li:hover {
+  opacity: 0.6;
+}
+#header .container-icons .pop_userinfo .container-userinfo li:last-child {
+  border-bottom: 0;
+}
+#header .container-icons .pop_userinfo .container-userinfo li a{
+  display: block;
+  padding-left: 25px;
 }
 /* 
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■

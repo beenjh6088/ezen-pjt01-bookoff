@@ -528,6 +528,39 @@ function setDate() {
   });
 }
 
+// function login() {
+//   console.log("login")
+//   let isLogin = localStorage.getItem("isLogin");
+//   console.log(isLogin)
+//   // localStorage.setItem("isLogin", isLogin)
+//   let icons = header.querySelectorAll("#header .icons li");
+//   if(isLogin == true) {
+//     icons.forEach(function(li, idx) {
+//       let iconimg = li.querySelector("img");
+//       let imgsrc = iconimg.getAttribute("src");
+//       iconimg.setAttribute("src", imgsrc.replace("off","on"));
+//     })
+//   }else {
+//     // console.log("ff")
+//     let pop_stranger = document.querySelector("#header .pop_stranger");
+//     icons.forEach(function(li, idx) {
+//       li.addEventListener("click", function() {
+//         // console.log(pop_stranger)
+//         pop_stranger.classList.add("active");
+//         let offset = -80+(30*idx);
+//         pop_stranger.style.transform = `translate(${offset}%, 0)`;
+//       })
+//     })
+//     document.addEventListener("mouseup", function(e) {
+//       // console.log(e)
+//       // console.log(e.target)
+//       // console.log(e.target.closest(".pop_stranger"))
+//       if(!(e.target.closest(".pop_stranger"))) pop_stranger.classList.remove("active");
+//     })
+//   }
+// }
+
+
 function login() {
   console.log("login")
   let isLogin = localStorage.getItem("isLogin");
