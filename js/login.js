@@ -1,6 +1,6 @@
 function checkAuth() {
-  console.log('checkauth');
-  console.log(userarr);
+  // console.log('checkauth');
+  // console.log(userarr);
   let res_email = false;
   let res_password = false;
 
@@ -13,11 +13,12 @@ function checkAuth() {
     if(inp_email == userarr[i].email) res_email = true;
     if(inp_password == userarr[i].password) res_password = true;
   }
-  // console.log(res_email && res_password)
+  console.log(`res_email && res_password`)
+  console.log(res_email && res_password)
   let ulIcons = document.querySelector("#header .icons");
-  console.log(ulIcons)
-  ulIcons.classList.add("login")
-  if(res_email && res_password) {
+  // console.log(ulIcons)
+  if(res_email == true && res_password == true) {
+    ulIcons.classList.add("login")
     localStorage.setItem("isLogin", true);
     if(document.referrer) {
       location.href = document.referrer;
