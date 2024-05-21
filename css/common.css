@@ -613,6 +613,8 @@ footer
 #footer {
 	height: 175px;
 	background-color: #003894;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
 }
 #footer .sns {
   padding: 18px 0;
