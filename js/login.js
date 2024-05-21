@@ -16,6 +16,9 @@ function checkAuth() {
   console.log(`res_email && res_password`)
   console.log(res_email && res_password)
   let ulIcons = document.querySelector("#header .icons");
+  let message = document.querySelector(".area-message #message");
+  console.log(`message`)
+  console.log(message)
   // console.log(ulIcons)
   if(res_email == true && res_password == true) {
     ulIcons.classList.add("login")
@@ -23,6 +26,8 @@ function checkAuth() {
     if(document.referrer) {
       location.href = document.referrer;
     }
+  }else {
+    message.innerText = "it is wrong information";
   }
   // return res_email && res_password;
 }

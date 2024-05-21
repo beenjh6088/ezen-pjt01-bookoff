@@ -69,8 +69,15 @@ main .container-member .container-login .area img {
   right: 16px;
   bottom : 3px;
 }
+main .container-member .area.area-message p {
+  width: 100%;
+  height: 30px;
+  color: red;
+  text-align: left;
+  padding-left: 17px;
+}
 main .container-member .area.area-buttons {
-  padding: 58px 0;
+  padding: 28px 0 58px 0;
 }
 main .container-member .area a {
   display: block;
