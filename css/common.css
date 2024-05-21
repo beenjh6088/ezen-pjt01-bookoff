@@ -34,7 +34,8 @@ input {
   outline: none;
 }
 .wrapper {
-	width: 746px;
+	/* width: 746px; */
+	width: 1040px;
 	height: 100%;
 	margin: 0 auto;
 	position: relative;
@@ -43,7 +44,8 @@ input {
 .grp {
 	width: 100%;
   background: #fff;
-	display: flex;
+	/* display: flex; */
+  /* gap: 0; */
 	position: relative;
 }
 .clear:after {
@@ -243,7 +245,8 @@ header logo
 #header .logo {
 	width: 150px;
 	height: 50px;
-	margin-right: 27px;
+	/* margin-right: 27px; */
+	/* margin-right: 54px; */
 	/* border: 1px dashed rgba(0,0,0,0.3); */
 	position: relative;
 	float: left;
@@ -262,12 +265,14 @@ header searchArea
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 */
 #header .searchArea {
-	width: 327px;
+	width: calc(90% - 194px - 150px);
 	height: 50px;
-	margin-right: 48px;
+	/* margin-right: 48px; */
 	/* border: 1px dashed rgba(0,0,0,0.3); */
 	position: relative;
 	float: left;
+	/* margin-right: 27px; */
+  margin: 0 5%;
 }
 #header .searchArea form {
   width: 100%;
@@ -278,12 +283,15 @@ header searchArea
 }
 #header .searchArea .searchbar {
   float:left;
-  width: 80%;
+  width: 94%;
   height: 60%;
-  margin: 10.4815px 0 10.4815px 21.98px;
+  /* margin: 10.4815px 0 10.4815px 21.98px; */
+  margin: 10.4815px 0 10.4815px 0;
   border: 3px solid #003894;
   border-right: none;
-  padding-left: 4px;
+  /* padding-left: 4px; */
+  /* padding: 0 10%; */
+  text-align: center;
 }
 #header .searchArea .searchbar:active {
   border: none;
@@ -312,6 +320,7 @@ header icons
 #header .container-icons {
   /* border: 1px dashed red; */
   position: relative;
+  float: right;
 }
 
 #header .container-mobileicon {
@@ -788,14 +797,8 @@ slider
     /* padding: 0 24px; */
     padding: 0 3%;
   }
-  #header .logo {
-    /* display: none; */
-  }
   #header .searchArea .searchbar {
     max-width: 100%;
-  }
-  #header .container-icons {
-    display: none;
   }
   #header .container-mobileicon {
     display: block;
