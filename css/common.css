@@ -823,12 +823,12 @@ slider
   }
 }
 
-@media all and (max-width:640px) {
+@media all and (max-width:1040px) {
 
   #header .logo {
     display: none;
   }
-  #header .searchArea {
-    margin-right: 96px;
+  .wrapper {
+    width: 100%
   }
 }
