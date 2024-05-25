@@ -1,3 +1,41 @@
 @media all and (max-width:370px) {
-  
+  .wrapper {
+    padding: 0 10px;
+    /* height: auto; */
+  }
+  #header {
+    height: 120px;
+  }
+  #header .top {
+    /* height: auto; */
+  }
+  #header .top .grp {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    position: relative;
+  }
+  #header .top .grp .burgershot {
+    display: block;
+  }
+  #header .top .grp .burgershot a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(../images/UI/hamburger.png) no-repeat center/cover;
+  }
+  #header .top .grp .searchArea {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 84%;
+    /* margin: 0 auto; */
+  }
+  #header .top .grp .searchArea .searchbar {
+    margin: 0;
+  }
+  #header #gnb {
+    display: none;
+  }
 }

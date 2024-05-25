@@ -7,13 +7,14 @@
   /* header */
   #header .grp {
     display: flex;
+    /* gap: 4px; */
     justify-content: space-between;
   }
   #header .grp .logo {
 
   }
   #header .grp .searchArea {
-    
+    margin: 0 8px;
   }
   #header .grp .searchArea form {
     position: relative;
@@ -63,5 +64,21 @@
   /* footer */
   #footer .wrapper {
     /* padding: 0 8px; */
+  }
+}
+@media all and (max-width:744px) {
+  #header .grp {
+    display: flex;
+    gap: 4px;
+    justify-content: flex-start;
+  }
+  #header .grp .searchArea {
+    flex-grow: 1;
+  }
+  #header .grp .container-icons {
+    flex-grow: 1;
+  }
+  #header .grp .container-icons .icons {
+    width: 100%;
   }
 }

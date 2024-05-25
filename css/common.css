@@ -239,6 +239,14 @@ header
 }
 /* 
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+header hamburger button
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+*/
+#header .burgershot {
+  display: none;
+}
+/* 
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 header logo
 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
 */
@@ -273,6 +281,7 @@ header searchArea
 	float: left;
 	/* margin-right: 27px; */
   margin: 0 5%;
+  transition: all 0.3s;
 }
 #header .searchArea form {
   width: 100%;
