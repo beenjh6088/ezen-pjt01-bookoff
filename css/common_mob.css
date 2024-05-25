@@ -6,12 +6,10 @@
   #header {
     height: 120px;
   }
-  #header .top {
-    /* height: auto; */
-  }
   #header .top .grp {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
     height: 60px;
     position: relative;
@@ -27,13 +25,40 @@
   }
   #header .top .grp .searchArea {
     position: absolute;
-    top: 60px;
-    left: 0;
-    width: 84%;
+    top: 70px;
+    left: 50%;
+    /* width: 100%; */
+    width: 80%;
+    margin:  0;
+    padding: 0;
+    transform: translate(-50%,0);
     /* margin: 0 auto; */
+  }
+  #header .top .grp .searchArea form {
+    padding: 0;
+    margin: 0;
   }
   #header .top .grp .searchArea .searchbar {
     margin: 0;
+  }
+  #header .top .grp .searchArea .searchicon {
+    margin: 0;
+  }
+  #header .grp .container-icons {
+    flex-grow: 0;
+  }
+  #header .grp .container-icons .icons {
+    flex-grow: 0;
+    width: 100%;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* gap: 0; */
+  }
+  #header .grp .container-icons .icons li {
+    flex-grow: 0;
+  }
+  #header .grp .container-icons .icons li:nth-child(2) {
+    display: none;
   }
   #header #gnb {
     display: none;

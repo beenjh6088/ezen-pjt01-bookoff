@@ -28,8 +28,6 @@
     top: 0;
     background-color: #fff;
   }
-  #header .grp .container-icons {
-  }
   #header .grp .container-icons .icons {
     width: 140px;
     display: flex;
@@ -80,5 +78,8 @@
   }
   #header .grp .container-icons .icons {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 0;
   }
 }
