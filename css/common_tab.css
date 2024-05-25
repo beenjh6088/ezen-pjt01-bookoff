@@ -1,0 +1,67 @@
+@media all and (max-width:1040px) {
+  .wrapper {
+    padding: 0 8px;
+    width: 100%
+  }
+  
+  /* header */
+  #header .grp {
+    display: flex;
+    justify-content: space-between;
+  }
+  #header .grp .logo {
+
+  }
+  #header .grp .searchArea {
+    
+  }
+  #header .grp .searchArea form {
+    position: relative;
+  }
+  #header .grp .searchArea form .searchbar {
+    width: 100%;
+  }
+  #header .grp .searchArea form .searchicon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #fff;
+  }
+  #header .grp .container-icons {
+  }
+  #header .grp .container-icons .icons {
+    width: 140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #header .grp .container-icons .icons li {
+    float:none;
+    transform: translateY(0%);
+    margin: 0 5.2%;
+  }
+
+  /* guides */
+  #guides .wrapper {
+    display: flex;
+  }
+  #guides .wrapper .container {
+    width: calc(100% - 24px);
+    gap: 4px;
+  }
+  #guides .wrapper .buttons {
+    width: auto;
+  }
+  #guides .wrapper .buttons a {
+    display: block;
+  }
+  #guides .wrapper .buttons a img {
+    display: block;
+    width: 100%;
+  }
+
+  /* footer */
+  #footer .wrapper {
+    /* padding: 0 8px; */
+  }
+}
