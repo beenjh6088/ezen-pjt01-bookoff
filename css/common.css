@@ -572,7 +572,7 @@ guides
 	height: 52px;
 	background-color: #ebebeb;
 }
-#guides .container {
+#guides .desktop .container {
   float: left;
   width: 85%;
   height: 100%;
@@ -582,18 +582,18 @@ guides
   gap: 25px;
   /* border: 1px dashed red; */
 }
-#guides .container .guide {
+#guides .desktop .container .guide {
   width: 100%;
   /* border: 1px dashed blue; */
 }
-#guides .container .guide a {
+#guides .desktop .container .guide a {
   width: 100%;
   display: flex;
   align-items: center;
   font-size: 10px;
   /* border: 1px dashed blue; */
 }
-#guides .container .guide a:before {
+#guides .desktop .container .guide a:before {
   content: '';
   display: inline-block;
   width: 18px;
@@ -601,7 +601,7 @@ guides
   /* border: 1px dashed green; */
   background: url(../images/UI/Property\ 1=Icon\,\ Property\ 2=Chevron-right.png) no-repeat center/cover;
 }
-#guides .buttons {
+#guides .desktop .buttons {
   float: right;
   width: 15%;
   height: 100%;
@@ -611,13 +611,16 @@ guides
   align-items: center;
   justify-content: right;
 }
-#guides .buttons a {
+#guides .desktop .buttons a {
   display: inline-block;
   /* border: 1px dashed blue; */
 }
-#guides .buttons a img {
+#guides .desktop .buttons a img {
   /* border: 1px dashed green; */
   display: block;
+}
+#guides .mobile {
+  display: none;
 }
 
 /* 

@@ -123,7 +123,7 @@ midNav
   /* height: 29px; */
   width: 45.73%;
   height: 30.52%;
-  font-size: 12px;
+  font-size: 16px;
   padding: 5px 0 0 0;
   position: absolute;
   left: 50%;
@@ -133,6 +133,7 @@ midNav
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  font-weight: bold;
 }
 #midNav.mobile {
   display: none;

@@ -38,20 +38,20 @@
   }
 
   /* guides */
-  #guides .wrapper {
+  #guides .desktop.wrapper {
     display: flex;
   }
-  #guides .wrapper .container {
+  #guides .desktop.wrapper .container {
     width: calc(100% - 24px);
     gap: 4px;
   }
-  #guides .wrapper .buttons {
+  #guides .desktop.wrapper .buttons {
     width: auto;
   }
-  #guides .wrapper .buttons a {
+  #guides .desktop.wrapper .buttons a {
     display: block;
   }
-  #guides .wrapper .buttons a img {
+  #guides .desktop.wrapper .buttons a img {
     display: block;
     width: 100%;
   }
