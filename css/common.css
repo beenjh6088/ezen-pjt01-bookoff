@@ -15,7 +15,7 @@ html {
 }
 body {
   font-size: 16px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Noto Sans KR', Times, serif;
   color: #333;
   background:#fff;
 }
@@ -72,6 +72,7 @@ input {
 	background-color: #003894;
 	cursor: pointer;
 	color: #fff;
+  font-family: 'Noto Sans KR';
 	/* padding: 12px 24px; */
   padding: 0 8px;
 	border: none;
@@ -805,4 +806,38 @@ slider
 }
 .slide .slide_pagination > li.active {
   color: #7fb5ff;
+}
+
+
+.popup {
+  display: none;
+}
+.popup .container_popup {
+  width: 300px;
+  height: 100%;
+  background-color: #ebebeb;
+  position: absolute;
+  margin-left: -300px;
+}
+.popup .container_popup .user {
+  width: 100%;
+  padding: 12px 8px;
+  background-color: #fff;
+}
+.popup .container_popup .user .button-regular {
+  display: block;
+  height: 45px;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 50px;
+}
+.popup .container_popup .user .button-regular.login {
+  background-color: #F68A25;
+}
+.popup .container_popup .user .button-regular.join {
+  background-color: #003894;
+}
+.popup .container_popup .user .button-regular:last-child {
+  margin-bottom: 0px;
 }

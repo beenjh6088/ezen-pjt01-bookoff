@@ -584,50 +584,6 @@ function login() {
 }
 
 
-// function login() {
-//   // localStorage.setItem("isLogin", isLogin)
-//   let pop_stranger = document.querySelector("#header .pop_stranger");
-//   let pop_userinfo = document.querySelector("#header .pop_userinfo");
-
-//   let icons = header.querySelectorAll("#header .icons li");
-//   icons.forEach(function(li, idx) {
-//     li.addEventListener("click", function() {
-//       console.log("login")
-//       let isLogin = Boolean(localStorage.getItem("isLogin"));
-//       console.log(isLogin)
-//       if(isLogin == true) {
-//         pop_stranger.classList.remove("active");
-//         pop_userinfo.classList.add("active");
-//         let offset = -80+(30*idx);
-//         pop_userinfo.style.transform = `translate(${offset}%, 0)`;
-//       }else if(isLogin == false) {
-//         pop_userinfo.classList.remove("active");
-//         pop_stranger.classList.add("active");
-//         let offset = -80+(30*idx);
-//         pop_stranger.style.transform = `translate(${offset}%, 0)`;
-
-//       }
-//     })
-//   });
-  
-//   document.addEventListener("mouseup", function(e) {
-//     let isLogin = localStorage.getItem("isLogin");
-//     if(isLogin == true) {
-//       if(!(e.target.closest(".pop_userinfo"))) pop_userinfo.classList.remove("active");
-//     }
-//   })
-
-
-//   document.addEventListener("mouseup", function(e) {
-//     let isLogin = localStorage.getItem("isLogin");
-//     if(isLogin == false) {
-//       if(!(e.target.closest(".pop_stranger"))) pop_stranger.classList.remove("active");
-//     }
-//   })
-// }
-
-
-
 function logout() {
   console.log("logout");
   localStorage.setItem("isLogin", false);

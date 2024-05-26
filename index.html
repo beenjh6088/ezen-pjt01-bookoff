@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/main.css">
 	<script src="js/jquery-2.1.1.js"></script>
 	<script defer src="js/common.js"></script>
+	<script defer src="js/common_mob.js"></script>
 	<script defer src="js/main.js"></script>
   <script src="json/book.json" ></script>
   <script src="json/user.json" ></script>
@@ -25,8 +26,8 @@
       
       // weeklyRank
       // run 'makeSlider' function as quantity of submenu
-      const rankSliders = document.querySelectorAll("#weeklyRank .submenu");
-      rankSliders.forEach((obj, idx) => {makeSlider("#weeklyRank .sub"+String(idx+1).padStart(2, "0"))});
+      const rankSliders = document.querySelectorAll("#weeklyRank.desktop .submenu");
+      rankSliders.forEach((obj, idx) => {makeSlider("#weeklyRank.desktop .sub"+String(idx+1).padStart(2, "0"))});
       activateSlideTab();
 
       // recentlyChecked
@@ -813,6 +814,23 @@
 		<!-- footer -->
 		<footer id="footer" data-include-file="./html/common/footer.html" class="includeJs"></footer>
 	</div>
+
+
+
+  <div class="popup ">
+    <div class="container_popup">
+      <div class="user">
+        <div class="button-regular login">Login</div>
+        <div class="button-regular join">Join</div>
+      </div>
+      <div class="category">
+
+      </div>
+      <div class="util">
+
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>
