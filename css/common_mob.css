@@ -1,9 +1,12 @@
-@media all and (max-width:370px) {
-  .wrapper {
-    padding: 0 10px;
-    /* height: auto; */
-  }
+@media all and (max-width:375px) {
+  /* header */
   #header {
+    height: 120px;
+  }
+  #header .top {
+    height: 120px;
+  }
+  #header .wrapper {
     height: 120px;
   }
   #header .top .grp {
@@ -62,5 +65,130 @@
   }
   #header #gnb {
     display: none;
+  }
+
+  /* main */
+  #main .wrapper {
+    padding: 0 16px;
+  }
+  #main > * {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+  #main > *:last-child {
+    margin-bottom: 0;
+  }
+  /* banner */
+  #main #banners.desktop {
+    display: none;
+  }
+  #main #banners.mobile {
+    display: block;
+    /* width: 100%; */
+  }
+  #main #banners.mobile .banner {
+    /* width: 343px; */
+    width: 100%;
+    height: 111px;
+    /* border: 1px dashed black; */
+    /* padding: 0 16px; */
+    clear: both;
+    /* padding-right: 16px; */
+    border-radius: 5px;
+    box-shadow: 0 4px 4px 0 rgba(221,221,221,0.6);
+    margin-bottom: 12px;
+  }
+  #main #banners.mobile .banner:last-child {
+    margin-bottom: 0px;
+  }
+  #main #banners.mobile .banner .pic {
+    float: left;
+    width: 140px;
+    height: 100%;
+    /* border: 1px dashed blue; */
+    background: url(../images/pattern_grayPlaid.jpg) no-repeat center/cover;
+  }
+  #main #banners.mobile .banner .title {
+    float: left;
+    margin: 0;
+    width: calc(100% - 140px - 16px);
+    height: 100%;
+    /* flex-grow: 0.5; */
+    /* padding-top: 20px; */
+    padding: 34px 14px 14px 14px;
+    /* border: 1px dashed blue; */
+    font-size: 16px;
+    position: relative;
+  }
+  #main #banners.mobile .banner .title:after {
+    content: '';
+    background-color: #e6001e;
+    text-align: center;
+    height: 20px;
+    box-sizing: border-box;
+    font-size: 12px;
+    font-weight: normal;
+    /* height: 20px; */
+    /* line-height: 20px; */
+    color: #fbfbfb;
+    position: absolute;
+    padding: 2px 8px;
+    top: 0;
+    left: 0;
+  }
+  #main #banners.mobile .banner .title.campaign:after {
+    content: 'campaign';
+  }
+  #main #banners.mobile .banner .title.special:after {
+    content: 'special';
+  }
+
+
+  /* midNav */
+  #main #midNav.desktop {
+    display: none;
+  }
+  #main #midNav.mobile {
+    display: block;
+    background: #003894;
+  }
+  #main #midNav.mobile .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 25px 0;
+  }
+  #main #midNav.mobile .cards .card {
+    width: 44.5%;
+    height:64px;
+    border-radius: 6px;
+    background-color: #fff;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 8px;
+  }
+  #main #midNav.mobile .cards .card .pic {
+    display: block;
+    width: 32px;
+    height: 32px;
+  }
+  #main #midNav.mobile .cards .card .info {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 32px;
+  }
+
+
+  /* news */
+  #main #news.desktop {
+    display: none;
+  }
+  #main #news.mobile {
+    display: block;
   }
 }

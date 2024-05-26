@@ -1,6 +1,6 @@
 @media all and (max-width:1040px) {
   .wrapper {
-    padding: 0 8px;
+    padding: 0 16px;
     width: 100%
   }
   
@@ -9,9 +9,6 @@
     display: flex;
     /* gap: 4px; */
     justify-content: space-between;
-  }
-  #header .grp .logo {
-
   }
   #header .grp .searchArea {
     margin: 0 8px;

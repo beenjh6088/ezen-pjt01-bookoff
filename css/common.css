@@ -556,6 +556,9 @@ notices
 	text-align: center;
 	color: #e6001e;
 	font-weight: bold;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 	/* border: 1px dashed blue; */
 }
 
