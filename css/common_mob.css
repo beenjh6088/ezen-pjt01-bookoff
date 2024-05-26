@@ -314,4 +314,66 @@
     height: 60px;
     background: url(../images/UI/Property\ 1=Icon\,\ Property\ 2=Chevron-right.png) no-repeat center;
   }
+
+
+  /* footer */
+  #footer .mobile {
+    display: block;
+  }
+  #footer .mobile  .sns {
+    /* width: 40.5%; */
+    width: 100%;
+    padding: 22px 0;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+  }
+  #footer .mobile  .sns li a {
+    display: block;
+  }
+  #footer .mobile  .sns li a img {
+    display: block;
+    width: 40px;
+    height: 40px;
+  }
+  #footer .mobile .info {
+    /* display: flex; */
+    clear: both;
+    padding: 22px 0;
+    overflow: hidden;
+    border-bottom: 1px solid #4D74B4;
+  }
+  #footer .mobile .info li {
+    display: inline;
+    padding: 0;
+    margin: 0;
+  }
+  #footer .mobile .info li:after {
+    content: '|';
+    color: #fff000;
+    display: inline;
+    margin: 0 8px;
+  }
+  #footer .mobile .info li:last-child:after {
+    content: '';
+    margin: 0;
+  }
+  #footer .mobile .info li a {
+    /* display: block; */
+    font-size: 14px;
+    color: #fff;
+  }
+  #footer .mobile .container {
+    padding: 22px 0;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+  }
+  #footer .mobile .container .license {
+    display: block;
+    margin-bottom: 18px;
+  }
+  #footer .mobile .container .copyright {
+    display: block;
+  }
 }
