@@ -542,7 +542,7 @@ function setDate() {
 }
 
 function login() {
-  console.log("login")
+  // console.log("login")
   // isLogin = localStorage.getItem("isLogin");
   // let isLogin = Boolean(localStorage.getItem("isLogin"));
   // console.log(isLogin)

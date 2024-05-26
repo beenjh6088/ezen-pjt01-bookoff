@@ -12,7 +12,7 @@
   #header .wrapper {
     height: 120px;
   }
-  #header .top .grp {
+  #header .top .wrapper .grp {
     display: flex;
     align-items: center;
     justify-content: space-between;
