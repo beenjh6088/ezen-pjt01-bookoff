@@ -836,6 +836,9 @@ slider
   height: 100vh;
   background-color : #fff;
 }
+.popup .container_popup .user.login .stranger {
+  display: none;
+}
 .popup .container_popup .stranger {
   width: 100%;
   padding: 12px 8px;
@@ -849,6 +852,9 @@ slider
   font-weight: bold;
   border-radius: 50px;
 }
+.popup .container_popup .stranger .button-regular a {
+  color:#fff;
+}
 .popup .container_popup .stranger .button-regular.login {
   background-color: #F68A25;
 }
@@ -858,16 +864,72 @@ slider
 .popup .container_popup .stranger .button-regular:last-child {
   margin-bottom: 0px;
 }
-.popup .container_popup .member {
+.popup .container_popup .user .member {
+  display: none;
+}
+.popup .container_popup .user.login .member {
+  /* display: block; */
   width: 100%;
   display: flex;
   flex-direction: column;
+  gap: 1px;
+}
+.popup .container_popup .member .who {
+  background-color: #fff;
+  padding: 4px 8px;
+}
+.popup .container_popup .member .who .name {
+  height: 23px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.popup .container_popup .member .who .avapoints {
+  height: 20px;
+  font-size: 14px;
+  font-weight: normal;
+}
+.popup .container_popup .member .who .amounts {
+  display: flex;
+  justify-content: right;
+}
+.popup .container_popup .member .who .amounts span {
+  font-size: 14px;
+  font-weight: bold;
+}
+.popup .container_popup .member .who .amounts .arrow {
+  width: 20px;
+  height: 20px;
+  background: url(../images/UI/Property\ 1=Icon\,\ Property\ 2=Chevron-right.png) no-repeat center;
+  cursor: pointer;
+}
+.popup .container_popup .member .menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.popup .container_popup .member .menu li {
+  background-color: #fff;
+  padding: 8px 16px;
+  height: 39px;
+}
+.popup .container_popup .member .menu li a {
+  display: block;
+  font-size: 16px;
+}
+.popup .container_popup .member .menu li.logout {
+  display: flex;
+  justify-content: space-between;
+}
+.popup .container_popup .member .menu li.logout span {
+  width: 24px;
+  background: url(../images/UI/Property\ 1=Icon\,\ Property\ 2=Logout.png) no-repeat center;
+  cursor: pointer;
 }
 .popup .container_popup .category .title {
   font-size: 20px;
   font-weight: normal;
   color: #003894;
-  padding: 0 16px 4px;
+  padding: 0 8px 4px;
   margin-bottom: 0;
   margin-top: 0;
   background-color: #fff;
@@ -891,6 +953,7 @@ slider
   display: block;
   width: 24px;
   height: 40px;
+  cursor: pointer;
 }
 .popup .container_popup .util .menu li {
   background-color: #fff;

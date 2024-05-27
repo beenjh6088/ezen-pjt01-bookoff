@@ -817,24 +817,26 @@
 
 
 
-  <div class="popup active">
+  <div class="popup ">
     <div class="container_popup">
-      <div class="stranger">
-        <div class="button-regular login">Login</div>
-        <div class="button-regular join">Join</div>
-      </div>
-      <div class="member">
-        <div class="who">
-          <p class="name">[Name]</p>
-          <p class="avapoints">Available Points</p>
-          <p class="amounts"><span>0 P</span><span class="arrow"></span></p>
+      <div class="user ">
+        <div class="stranger">
+          <div class="button-regular login"><a href="" class="link" value="html/page/login.html">Login</a></div>
+          <div class="button-regular join"><a href="" class="link" value="html/page/join.html">Join</a></div>
         </div>
-        <ul class="menu">
-          <li><a href="#">My Page</a></li>
-          <li><a href="#">Order History</a></li>
-          <li><a href="#">Coupons</a></li>
-          <li><a href="#">Logout</a></li>
-        </ul>
+        <div class="member">
+          <div class="who">
+            <p class="name">Name</p>
+            <p class="avapoints">Available Points</p>
+            <p class="amounts"><span>0 P</span><a class="arrow"></a></p>
+          </div>
+          <ul class="menu">
+            <li><a href="#">My Page</a></li>
+            <li><a href="#">Order History</a></li>
+            <li><a href="#">Coupons</a></li>
+            <li class="logout" onclick="logout()"><a href="#">Logout</a><span></span></li>
+          </ul>
+        </div>
       </div>
       <div class="category">
         <h2 class="title">Category</h2>
