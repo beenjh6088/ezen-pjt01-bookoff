@@ -33,12 +33,10 @@
     position: absolute;
     top: 70px;
     left: 50%;
-    /* width: 100%; */
     width: 80%;
     margin:  0;
     padding: 0;
     transform: translate(-50%,0);
-    /* margin: 0 auto; */
   }
   #header .top .grp .searchArea form {
     padding: 0;
@@ -56,9 +54,6 @@
   #header .grp .container-icons .icons {
     flex-grow: 0;
     width: 100%;
-    /* display: flex; */
-    /* justify-content: center; */
-    /* gap: 0; */
   }
   #header .grp .container-icons .icons li {
     flex-grow: 0;

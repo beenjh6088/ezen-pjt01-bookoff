@@ -853,6 +853,7 @@ slider
   border-radius: 50px;
 }
 .popup .container_popup .stranger .button-regular a {
+  display: block;
   color:#fff;
 }
 .popup .container_popup .stranger .button-regular.login {

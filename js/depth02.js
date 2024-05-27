@@ -115,7 +115,7 @@ function fetchList() {
 
   // init displayicons
   let displaymode = localStorage.getItem("displaymode");
-  let dpo_icons = document.querySelectorAll("#list .disposition .icon");
+  let dpo_icons = document.querySelectorAll("#list01 .disposition .icon");
   dpo_icons.forEach((icon) => {
     if(icon.classList.contains(displaymode)) {
       let siblings = icon.parentElement.children;

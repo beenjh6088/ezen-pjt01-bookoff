@@ -1,77 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="../../css/common.css">
-</head>
-<body>
+<form action="javascript:;" class="filterForm" name="searchfilter">
+  <legend>Filter</legend>
 
+  <!-- status -->
+  <div class="container-check">
+    <h4 class="title">status</h4>
+    <p><input type="checkbox" name="status" value="onstock">onstock</p>
+    <p><input type="checkbox" name="status" value="secondhand">secondhand</p>
+  </div>
+
+  <!-- category -->
+  <ul class="category">
+    <h4 class="title">category</h4>
+    <li class="depth all"><a href="javascript:;"></a></li>
+    <li class="depth depth01"><a href="javascript:;"></a></li>
+    <li class="depth depth02"><a href="javascript:;"></a></li>
+    <li class="depth depth03"><a href="javascript:;"></a></li>
+  </ul>
+
+  <!-- keyword -->
+  <div class="container-keyword">
+    <h4 class="title">keyword</h4>
+    <p><label for="ipt-include">including</label> <input id="ipt-include" type="text"></p>
+    <p><label for="ipt-exclude">excluding</label> <input id="ipt-exclude" type="text"></p>
+  </div>
+
+  <!-- author -->
+  <div class="container-author">
+    <h4 class="title">author</h4>
+    <p><input type="text"></p>
+  </div>
   
-  <form action="javascript:;" class="filterForm" name="searchfilter">
-    <legend>Filter</legend>
+  <!-- publisher -->
+  <div class="container-publisher">
+    <div class="title">publisher</div>
+    <p><input type="text"></p>
+  </div>
 
-    <!-- status -->
-    <div class="container-check">
-      <h4 class="title">status</h4>
-      <p><input type="checkbox" name="status" value="onstock">onstock</p>
-      <p><input type="checkbox" name="status" value="secondhand">secondhand</p>
-    </div>
+  <!-- price -->
+  <div class="container-price">
+    <h4 class="title">price</h4>
+    <p>
+      <input type="currency" class="range start">
+      <span> ~ </span>
+      <input type="currency" class="range end">
+    </p>
+  </div>
 
-    <!-- category -->
-    <ul class="category">
-      <h4 class="title">category</h4>
-      <li class="depth all"><a href="javascript:;"></a></li>
-      <li class="depth depth01"><a href="javascript:;"></a></li>
-      <li class="depth depth02"><a href="javascript:;"></a></li>
-      <li class="depth depth03"><a href="javascript:;"></a></li>
-    </ul>
+  <!-- releasedate -->
+  <div class="continaer-releasedate">
+    <h4 class="title">release date</h4>
+    <p>
+      <input type="date" class="edate" data-placeholder="YYYY-MM-DD" required aria-required="true">
+      <span> ~ </span>
+      <input type="date" class="edate" data-placeholder="YYYY-MM-DD" required aria-required="true">
+    </p>
+  </div>
 
-    <!-- keyword -->
-    <div class="container-keyword">
-      <h4 class="title">keyword</h4>
-      <p><label for="ipt-include">including</label> <input id="ipt-include" type="text"></p>
-      <p><label for="ipt-exclude">excluding</label> <input id="ipt-exclude" type="text"></p>
-    </div>
+  <!-- search -->
+  <div class="container-buttons">
+    <div class="button-regular">Search</div>
+  </div>
 
-    <!-- author -->
-    <div class="container-author">
-      <h4 class="title">author</h4>
-      <p><input type="text"></p>
-    </div>
-    
-    <!-- publisher -->
-    <div class="container-publisher">
-      <div class="title">publisher</div>
-      <p><input type="text"></p>
-    </div>
-
-    <!-- price -->
-    <div class="container-price">
-      <h4 class="title">price</h4>
-      <p>
-        <input type="currency" class="range start">
-        <span> ~ </span>
-        <input type="currency" class="range end">
-      </p>
-    </div>
-
-    <!-- releasedate -->
-    <div class="continaer-releasedate">
-      <h4 class="title">release date</h4>
-      <p>
-        <input type="date" class="edate" data-placeholder="YYYY-MM-DD" required aria-required="true">
-        <span> ~ </span>
-        <input type="date" class="edate" data-placeholder="YYYY-MM-DD" required aria-required="true">
-      </p>
-    </div>
-
-    <!-- search -->
-    <div class="container-buttons">
-      <div class="button-regular">Search</div>
-    </div>
-
-  </form>
-</body>
-</html>
+</form>
